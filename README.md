@@ -26,6 +26,11 @@ Update and Upgrade packages
 sudo apt update && sudo apt upgrade
 ```
 
+```shell
+sudo apt-get install unzip
+sudo apt-get install fontconfig
+```
+
 ## Fish
 ### Fish Install
 
@@ -59,6 +64,7 @@ fisher, version 4.4.4
 ```
 
 ### Fish Theme - bobthefish
+
 - [x] Installation
 
 - [oh-my-fish/theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
@@ -66,3 +72,18 @@ fisher, version 4.4.4
 ```shell
 fisher install oh-my-fish/theme-bobthefish
 ```
+
+### Cica font for bobthefish
+
+- [x] Installation
+
+```shell
+curl -L -O https://github.com/miiton/Cica/releases/download/v5.0.3/Cica_v5.0.3.zip
+unzip Cica_v5.0.3.zip -d temp
+sudo mkdir  /usr/share/fonts/truetype/cica
+sudo cp temp/*.ttf /usr/share/fonts/truetype/cica/
+sudo fc-cache -vf
+fc-list | grep -i cica
+```
+
+
