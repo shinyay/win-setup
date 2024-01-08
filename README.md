@@ -84,6 +84,9 @@ sudo mkdir  /usr/share/fonts/truetype/cica
 sudo cp temp/*.ttf /usr/share/fonts/truetype/cica/
 sudo fc-cache -vf
 fc-list | grep -i cica
+explorer.exe ./temp/
 ```
+
+Then install `*ttf`.
 
 
