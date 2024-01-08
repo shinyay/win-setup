@@ -25,3 +25,11 @@ Update and Upgrade packages
 ```shell
 sudo apt update && sudo apt upgrade
 ```
+
+### Fish
+
+- [x] Installation
+
+```shell
+sudo apt-get install fish
+```
