@@ -4,6 +4,8 @@
 # 1. Initial Setup
 ## VSCode
 
+- [x] Installation
+
 ```powershell
 winget search vscode
 winget install Microsoft.VisualStudioCode
