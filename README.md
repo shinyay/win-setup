@@ -15,3 +15,13 @@ Enable **Windows Subsystem for Linux**
 ```shell
 wsl --install
 ```
+
+### WSL Setup
+
+Update and Upgrade packages
+
+- [x] Configuration
+
+```shell
+sudo apt update && sudo apt upgrade
+```
