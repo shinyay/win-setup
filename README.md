@@ -57,3 +57,12 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 fisher -v
 fisher, version 4.4.4
 ```
+
+### Fish Theme - bobthefish
+- [x] Installation
+
+- [oh-my-fish/theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
+
+```shell
+fisher install oh-my-fish/theme-bobthefish
+```
