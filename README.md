@@ -6,6 +6,7 @@
 
 ```powershell
 winget search vscode
+winget install Microsoft.VisualStudioCode
 ```
 
 ## WSL
