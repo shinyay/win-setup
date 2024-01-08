@@ -41,6 +41,7 @@ sudo apt update && sudo apt upgrade
 ```shell
 sudo apt-get install unzip
 sudo apt-get install fontconfig
+sudo apt-get install wget ca-certificates
 ```
 
 ## Git
