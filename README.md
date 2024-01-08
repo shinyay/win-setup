@@ -8,6 +8,10 @@
 
 - [x] Installation
 
+Enable **Windows Subsystem for Linux**
+
+<img width="348" alt="Screenshot 2024-01-08 144911" src="https://github.com/shinyay/win-setup/assets/3072734/821dcbc2-0c8d-412d-8414-c26e63d74fdc">
+
 ```shell
 wsl --install
 ```
