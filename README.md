@@ -38,6 +38,20 @@ sudo apt-get install unzip
 sudo apt-get install fontconfig
 ```
 
+## Git
+
+- [x] Installation
+
+```shell
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update && sudo apt upgrade
+```
+
+```shell
+git --version
+git version 2.34.1
+```
+
 ## Fish
 ### Fish Install
 
