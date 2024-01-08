@@ -26,7 +26,8 @@ Update and Upgrade packages
 sudo apt update && sudo apt upgrade
 ```
 
-### Fish
+## Fish
+### Fish Install
 
 - [x] Installation
 
@@ -41,4 +42,18 @@ Configure `fish` as Default Shell
 ```shell
 chsh
 /usr/bin/fish
+```
+
+### Fisher
+A plugin manager for Fish (https://nicedoc.io/jorgebucaran/fisher)
+
+- [x] Installation
+
+```shell
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+```
+
+```
+fisher -v
+fisher, version 4.4.4
 ```
