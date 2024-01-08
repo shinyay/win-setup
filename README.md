@@ -33,3 +33,12 @@ sudo apt update && sudo apt upgrade
 ```shell
 sudo apt-get install fish
 ```
+
+Configure `fish` as Default Shell
+
+- [x] Configuration
+
+```shell
+chsh
+/usr/bin/fish
+```
