@@ -55,8 +55,48 @@ sudo apt update && sudo apt upgrade
 
 ```shell
 git --version
-git version 2.34.1
+git version 2.43.0
 ```
+
+### Git Global Configuration
+
+- [x] Configuration
+
+```shell
+git config --global user.name "shinyay" && \
+git config --global user.email "" && \
+git config --global core.quotepath false && \
+git config --global core.safecrlf true && \
+git config --global core.autocrlf false && \
+git config --global core.editor 'vim -c "set fenc=utf-8"' && \
+git config --global color.diff auto && \
+git config --global color.status auto && \
+git config --global color.branch auto && \
+git config pull.ff only
+```
+
+
+### SSH Key for GitHub
+
+#### Fine-grained personal access tokens
+
+- [x] [Generate new token](https://github.com/settings/tokens?type=beta)
+  - Repository access: `All repositories`
+  - Permissions - Repository permissions - Contents: `Read and write`
+
+#### ssh-keygen
+- [x] Generate SSH Key pair
+
+```
+ssh-keygen -t ed25519 -C 'mail address for github'
+cat $HOME/.ssh/id_ed25519.pub | clip.exe
+```
+
+#### SSH Keys on GitHub
+- [x] Add a public key on the following site:
+
+- [https://github.com/settings/keys](https://github.com/settings/keys)
+
 
 ## Fish
 ### Fish Install
