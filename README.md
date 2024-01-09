@@ -308,3 +308,53 @@ brew install peco
 fisher install oh-my-fish/plugin-peco
 abbr -
 ```
+
+### fzf
+
+Interactice command search
+
+- [fzf.fish](https://github.com/PatrickF1/fzf.fish)
+
+- [x] Installation fzf
+
+```
+brew install fzf
+```
+
+
+- [x] Installation bat
+- [bat](https://github.com/sharkdp/bat)
+cat clone with syntax highlight and Git integration
+
+```
+brew install bat
+```
+
+- [x] Installation fd
+- [fd](https://github.com/sharkdp/fd)
+find entries in your filesystem
+
+```
+brew install fd
+```
+
+- [x] Installation fzf
+- [fzf](https://github.com/PatrickF1/fzf.fish)
+interactive find 
+
+```
+fisher install PatrickF1/fzf.fish
+
+echo "### fzf.fish" | tee -a $HOME/.config/fish/config.fish
+echo "fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs" | tee -a $HOME/.config/fish/config.fish
+echo "" | tee -a $HOME/.config/fish/config.fish
+```
+
+|Key bind|Description|
+|--------|-----------|
+|`Ctrl`+`r`|Command history|
+|`Ctrl`+`v`|Environment variables|
+|`Ctrl`+`Alt`+`f`|Recursive listing|
+|`Ctrl`+`Alt`+`s`|`git status`|
+|`Ctrl`+`Alt`+`l`|`git log`|
+
