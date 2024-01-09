@@ -358,3 +358,14 @@ echo "" | tee -a $HOME/.config/fish/config.fish
 |`Ctrl`+`Alt`+`s`|`git status`|
 |`Ctrl`+`Alt`+`l`|`git log`|
 
+### z
+
+- [x] Installation
+
+By z, it tracks the directory you have visited
+
+- [jethrokuan/z](https://github.com/jethrokuan/z)
+
+```shell
+fisher install jethrokuan/z
+```
