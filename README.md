@@ -294,4 +294,17 @@ explorer.exe ./temp/
 
 Then install `*ttf`.
 
+## Fish Plugin
 
+### Peco
+- [x] Installation
+
+By pushing ctrl + r, you can search shell history
+
+- [oh-my-fish/plugin-peco](https://github.com/oh-my-fish/plugin-peco)
+
+```shell
+brew install peco
+fisher install oh-my-fish/plugin-peco
+abbr -
+```
