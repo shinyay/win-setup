@@ -152,8 +152,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 ```
 
 ```shell
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.config/fish/config.fish
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+brew doctor
 ```
 
 ## Fish
@@ -162,16 +162,39 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 - [x] Installation
 
 ```shell
-sudo apt-get install fish
+brew install fish
 ```
 
-Configure `fish` as Default Shell
-
-- [x] Configuration
+Check the PATH for `fish`.
 
 ```shell
-chsh
-/usr/bin/fish
+which fish
+
+/home/linuxbrew/.linuxbrew/bin/fish
+```
+
+Write the PATH for `fish` to define the valid shell.
+
+```shell
+sudo sh -c "echo /home/linuxbrew/.linuxbrew/bin/fish >> /etc/shells"
+```
+
+Define `fish` as a Default Shell.
+
+```shell
+chsh -s /home/linuxbrew/.linuxbrew/bin/fish
+```
+
+Reboot WSL and check `fish`.
+
+```shell
+echo $SHELL
+```
+
+Define the PATH of `brew` on `fish`.
+
+```shell
+echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.config/fish/config.fish
 ```
 
 ### Fisher
