@@ -91,6 +91,19 @@ sudo apt-get install build-essential
 dpkg -L wslu | grep bin/
 ```
 
+## Homebrew
+
+- [x] Installation
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+```
+
+```shell
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+brew doctor
+```
+
 ## Git
 
 - [x] Installation
@@ -143,17 +156,22 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
-## Homebrew
 
-- [x] Installation
+## GitHub CLI
+
+> GitHub CLI, or gh, is a command-line interface to GitHub for use in your terminal or your scripts.
+
+- [GitHub CLI](https://cli.github.com/)
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+brew install gh
 ```
 
 ```shell
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-brew doctor
+gh --version
+
+gh version 2.41.0 (2024-01-08)
+https://github.com/cli/cli/releases/tag/v2.41.0
 ```
 
 ## Fish
