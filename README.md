@@ -197,6 +197,12 @@ Define the PATH of `brew` on `fish`.
 echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.config/fish/config.fish
 ```
 
+Check `brew`.
+
+```shell
+brew doctor
+```
+
 ### Fisher
 A plugin manager for Fish (https://nicedoc.io/jorgebucaran/fisher)
 
