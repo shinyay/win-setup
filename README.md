@@ -521,3 +521,12 @@ Install Python latest version (as of Jan 9, 2024)
 ```shell
 pyenv install 3.12.1
 ```
+
+If you failed the build, you should run the following command.
+
+```shell
+brew unlink pkg-config
+# brew link pkg-config
+brew reinstall pkg-config
+```
+
