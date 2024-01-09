@@ -86,6 +86,10 @@ sudo apt-get install wslu
 - [GitHub: wslutilities/wslu](https://github.com/wslutilities/wslu)
 - [wslu Wiki](https://wslutiliti.es/wslu/)
 
+```shell
+dpkg -L wslu | grep bin/
+```
+
 ## Git
 
 - [x] Installation
