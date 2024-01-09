@@ -406,3 +406,13 @@ SDKMAN!
 script: 5.18.2
 native: 0.4.6
 ```
+
+### Fish Completion
+
+- [Fish Completion List](https://github.com/fish-shell/fish-shell/tree/master/share/completions)
+
+#### git
+
+```shell
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
+```
