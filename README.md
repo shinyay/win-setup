@@ -176,12 +176,22 @@ git config --global alias.plog "log --pretty='format:%C(yellow)%h %C(green)%cd %
 git config --global alias.glog "log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%c' --all --graph"
 ```
 
-#### commit count
+#### Commit Count
 
 - [x] Configuration
 
 ```shell
 git config --global alias.count 'shortlog -e -s -n'
+```
+
+### Fetch configuration
+
+- [x] Configuration
+
+Before fetching, remove any remote-tracking references that no longer exist on the remote.
+
+```shell
+git config --global fetch.prune true
 ```
 
 ## GitHub CLI
