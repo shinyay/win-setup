@@ -489,3 +489,5 @@ native: 0.4.6
 ```shell
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
 ```
+
+## Python
