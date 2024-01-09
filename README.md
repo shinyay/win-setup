@@ -491,3 +491,32 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 ```
 
 ## Python
+
+### pyenv
+
+Simple Python Version Management: pyenv
+
+> pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
+
+- pyenv
+  - <https://github.com/pyenv/pyenv>
+
+```shell
+brew install pyenv
+```
+
+### Python
+
+- [Release Info](https://www.python.org/downloads/)
+
+List all available versions.
+
+```shell
+pyenv install --list
+```
+
+Install Python latest version (as of Jan 9, 2024)
+
+```shell
+pyenv install 3.12.1
+```
