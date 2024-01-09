@@ -176,6 +176,14 @@ git config --global alias.plog "log --pretty='format:%C(yellow)%h %C(green)%cd %
 git config --global alias.glog "log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%c' --all --graph"
 ```
 
+#### commit count
+
+- [x] Configuration
+
+```shell
+git config --global alias.count 'shortlog -e -s -n'
+```
+
 ## GitHub CLI
 
 > GitHub CLI, or gh, is a command-line interface to GitHub for use in your terminal or your scripts.
