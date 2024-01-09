@@ -174,6 +174,18 @@ gh version 2.41.0 (2024-01-08)
 https://github.com/cli/cli/releases/tag/v2.41.0
 ```
 
+### GitHub Authentication
+
+```shell
+gh auth login
+
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations on this host? SSH
+? Upload your SSH public key to your GitHub account? $HOME/.ssh/id_ed25519.pub
+? Title for your SSH key: GitHub CLI
+? How would you like to authenticate GitHub CLI? Login with a web browser
+```
+
 ## Fish
 ### Fish Install
 
