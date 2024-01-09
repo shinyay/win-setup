@@ -73,7 +73,7 @@ sudo apt update && sudo apt upgrade
 ```
 
 ```shell
-sudo apt-get install unzip
+sudo apt-get install unzip zip
 sudo apt-get install fontconfig
 sudo apt-get install wget ca-certificates
 sudo apt-get install wslu
@@ -380,4 +380,29 @@ By bd, you can quickly go back to a parent directory in your current working dir
 
 ```shell
 fisher install 0rax/fish-bd
+```
+
+### SDKMAN! for fish
+
+- [x] Installation
+
+Makes command sdk from SDKMAN! usable from fish, including auto-completion. Also adds binaries from installed SDKs to the PATH.
+
+- [reitzig/sdkman-for-fish](https://github.com/reitzig/sdkman-for-fish)
+
+```shell
+fisher install reitzig/sdkman-for-fish@v2.0.0
+
+sdk
+You don't seem to have SDKMAN! installed. Install now? [y/N] y
+```
+
+And then open a new terminal/shell to load SDKMAN!.
+
+```shell
+sdk version
+
+SDKMAN!
+script: 5.18.2
+native: 0.4.6
 ```
