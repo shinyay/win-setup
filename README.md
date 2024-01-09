@@ -157,6 +157,16 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
 
+### Git Alias
+
+#### `git status`
+
+- [x] Configuration
+
+```shell
+git config --global alias.st status
+```
+
 ## GitHub CLI
 
 > GitHub CLI, or gh, is a command-line interface to GitHub for use in your terminal or your scripts.
