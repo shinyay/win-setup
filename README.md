@@ -186,6 +186,12 @@ gh auth login
 ? How would you like to authenticate GitHub CLI? Login with a web browser
 ```
 
+By the folloing command allows you to configures `git`` to use GitHub CLI as a credential helper
+
+```shell
+gh auth setup-git
+```
+
 ## Fish
 ### Fish Install
 
