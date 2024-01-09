@@ -77,6 +77,7 @@ sudo apt-get install unzip
 sudo apt-get install fontconfig
 sudo apt-get install wget ca-certificates
 sudo apt-get install wslu
+sudo apt-get install build-essential
 ```
 
 ### `wslu` - A collection of utilities for WSL
@@ -148,7 +149,11 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+```
 
+```shell
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.config/fish/config.fish
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
 ## Fish
