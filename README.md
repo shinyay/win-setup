@@ -546,3 +546,10 @@ pyenv init - | source
 ```shell
 source $HOME/.config/fish/config.fish
 ```
+
+```shell
+pyenv global 3.12.1
+python --version
+
+Python 3.12.1
+```
