@@ -6,7 +6,7 @@
 
 - [x] Installation
 
-```powershell
+```shell
 winget search vscode
 winget install Microsoft.VisualStudioCode
 ```
@@ -212,7 +212,7 @@ A plugin manager for Fish (https://nicedoc.io/jorgebucaran/fisher)
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
-```
+```shell
 fisher -v
 fisher, version 4.4.4
 ```
@@ -317,7 +317,7 @@ Interactice command search
 
 - [x] Installation fzf
 
-```
+```shell
 brew install fzf
 ```
 
@@ -326,7 +326,7 @@ brew install fzf
 - [bat](https://github.com/sharkdp/bat)
 cat clone with syntax highlight and Git integration
 
-```
+```shell
 brew install bat
 ```
 
@@ -334,7 +334,7 @@ brew install bat
 - [fd](https://github.com/sharkdp/fd)
 find entries in your filesystem
 
-```
+```shell
 brew install fd
 ```
 
@@ -342,7 +342,7 @@ brew install fd
 - [fzf](https://github.com/PatrickF1/fzf.fish)
 interactive find 
 
-```
+```shell
 fisher install PatrickF1/fzf.fish
 
 echo "### fzf.fish" | tee -a $HOME/.config/fish/config.fish
