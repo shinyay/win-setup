@@ -530,3 +530,19 @@ brew unlink pkg-config
 brew reinstall pkg-config
 ```
 
+Set up the fish shell for Python 
+
+```shell
+vim ~/.config/fish/config.fish
+```
+
+```shell
+### Python
+set -Ux PYENV_ROOT $HOME/.pyenv
+fish_add_path $PYENV_ROOT/bin
+pyenv init - | source
+```
+
+```shell
+source $HOME/.config/fish/config.fish
+```
