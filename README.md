@@ -509,6 +509,13 @@ native: 0.4.6
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
 ```
 
+## Docker
+
+```powershell
+winget search docker
+winget install Docker.DockerDesktop
+```
+
 ## Python
 
 ### pyenv
