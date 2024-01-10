@@ -505,16 +505,28 @@ native: 0.4.6
 
 #### git
 
+- [x] Installation
+
 ```shell
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
 ```
 
 ## Docker
 
+- [x] Installation
+
 ```powershell
 winget search docker
 winget install Docker.DockerDesktop
 ```
+
+### Docker for Visual Studio Code
+
+> 
+
+- [x] Installation
+
+- [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
 ## Python
 
