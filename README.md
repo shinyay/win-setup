@@ -98,6 +98,8 @@ dpkg -L wslu | grep bin/
 
 ## Homebrew
 
+> Homebrew is an open-source software package manager that makes it easier to install software on macOS (Apple's operating system) and Linux. Basically, a package manager's job is to find and install the right software packages that will allow you to compile and run various apps/software on your specific operating system.
+
 - [x] Installation
 
 ```shell
