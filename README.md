@@ -58,7 +58,7 @@ DXCore version: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
 Windows version: 10.0.22621.2861
 ```
 
-
+Install WSL.
 
 ```shell
 wsl --install
@@ -66,13 +66,15 @@ wsl --install
 
 ### WSL Setup
 
-Update and Upgrade packages
+Update and Upgrade packages.
 
 - [x] Configuration
 
 ```shell
 sudo apt update && sudo apt upgrade
 ```
+
+Install requred packages.
 
 ```shell
 sudo apt-get install unzip zip
