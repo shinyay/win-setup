@@ -239,6 +239,13 @@ gh auth setup-git
 ```
 
 ## Fish
+
+> Fish, or the "Friendly Interactive SHell", is a Unix shell designed with an emphasis on user-friendliness and interactive use. It was introduced in 2005 and has since gained a following due to its unique features, helpful defaults, and focus on a pleasant user experience.
+
+![image](https://github.com/shinyay/win-setup/assets/3072734/183c576c-1737-4f3b-bd3b-5d16b03d0575)
+
+- [Fish](https://fishshell.com/)
+
 ### Fish Install
 
 - [x] Installation
@@ -286,9 +293,12 @@ brew doctor
 ```
 
 ### Fisher
-A plugin manager for Fish (https://nicedoc.io/jorgebucaran/fisher)
+
+> Fisher is a plugin manager for the Fish shell. It lets you install, update, and remove plugins like a boss. You can take control of functions, completions, bindings, and snippets from the command line. Fisher's zero impact on shell startup keeps your shell zippy and responsive1. Fisher is 100% pure-Fish, making it easy to contribute or modify.
 
 - [x] Installation
+
+- [Fisher](https://nicedoc.io/jorgebucaran/fisher)
 
 ```shell
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
