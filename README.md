@@ -13,8 +13,19 @@ winget search vscode
 winget install Microsoft.VisualStudioCode
 ```
 
+### VSCode Extension
+
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+### Dev Container CLI
+
+- [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
+
+Install Dev Container CLI.
+
+1. Open VSCode
+2. Select the **Dev Containers: Install devcontainer CLI** command from the Command Palette (`F1`).
 
 ## WSL
 
