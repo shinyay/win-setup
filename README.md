@@ -151,14 +151,16 @@ git config pull.ff only
   - Permissions - Repository permissions - Contents: `Read and write`
 
 #### ssh-keygen
+
 - [x] Generate SSH Key pair
 
-```
+```shell
 ssh-keygen -t ed25519 -C 'mail address for github'
 cat $HOME/.ssh/id_ed25519.pub | clip.exe
 ```
 
 #### SSH Keys on GitHub
+
 - [x] Add a public key on the following site:
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
