@@ -603,3 +603,6 @@ python --version
 
 Python 3.12.1
 ```
+
+# 2. Windows Tools
+
