@@ -624,3 +624,7 @@ winget install slacktechnologies.slack
 > JDownloader is a free, open-source download management tool with a huge community that makes downloading as easy and fast as it should be.
 
 - [x] Installation
+
+```shell
+winget search jdownloader
+```
