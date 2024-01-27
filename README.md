@@ -616,3 +616,11 @@ Python 3.12.1
 winget search slack
 winget install slacktechnologies.slack
 ```
+
+## JDownloader 2
+
+- [JDownloader](https://jdownloader.org/home/index)
+
+> JDownloader is a free, open-source download management tool with a huge community that makes downloading as easy and fast as it should be.
+
+- [x] Installation
