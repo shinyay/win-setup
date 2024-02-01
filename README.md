@@ -633,3 +633,8 @@ winget install AppWork.JDownloader
 ## Google Chrome
 
 - [x] Installation
+
+```shell
+winget search chrome
+winget install Google.Chrome
+```
