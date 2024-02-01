@@ -627,4 +627,9 @@ winget install slacktechnologies.slack
 
 ```shell
 winget search jdownloader
+winget install AppWork.JDownloader
 ```
+
+## Google Chrome
+
+- [x] Installation
