@@ -630,6 +630,14 @@ winget search jdownloader
 winget install AppWork.JDownloader
 ```
 
+## Zoom
+
+```shell
+winget search zoom
+winget install Zoom.Zoom
+```
+
+
 ## Google Chrome
 
 - [x] Installation
