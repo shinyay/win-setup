@@ -649,6 +649,8 @@ winget install Google.Chrome
 
 ## QuickLook
 
+- [QL-Win/QuickLook](https://github.com/QL-Win/QuickLook)
+
 > One of the few features I missed from macOS is Quick Look. It allows users to peek into a file content in lightning speed by just pressing the Space key.
 
 - [x] Installation
