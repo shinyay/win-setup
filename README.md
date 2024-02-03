@@ -630,6 +630,14 @@ winget search jdownloader
 winget install AppWork.JDownloader
 ```
 
+## Zoom
+
+```shell
+winget search zoom
+winget install Zoom.Zoom
+```
+
+
 ## Google Chrome
 
 - [x] Installation
@@ -637,4 +645,14 @@ winget install AppWork.JDownloader
 ```shell
 winget search chrome
 winget install Google.Chrome
+```
+
+## QuickLook
+
+> One of the few features I missed from macOS is Quick Look. It allows users to peek into a file content in lightning speed by just pressing the Space key.
+
+- [x] Installation
+
+```shell
+winget install QuickLook
 ```
