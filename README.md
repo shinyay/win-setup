@@ -658,3 +658,15 @@ winget install Google.Chrome
 ```shell
 winget install QuickLook
 ```
+
+## Rufus
+
+- [Rufus](https://rufus.ie/en/)
+
+> Create bootable USB drives the easy way
+
+- [x] Installation
+
+```shell
+winget install Rufus.Rufus
+```
