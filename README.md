@@ -662,7 +662,8 @@ winget install Google.Chrome
 - [x] Installation
 
 ```shell
-winget install QuickLook
+winget search QuickLook
+winget install QL-Win.QuickLook
 ```
 
 ## Rufus
