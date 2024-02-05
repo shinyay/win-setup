@@ -606,6 +606,12 @@ Python 3.12.1
 
 # 2. Windows Tools
 
+## Google Japanese IME
+
+```shell
+winget install Google.JapaneseIME
+```
+
 ## Slack
 
 > Slack is a messaging app for businesses that connects people to the information they need. It allows people to work as one unified team, transforming the way organizations communicate.
