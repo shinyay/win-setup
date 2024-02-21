@@ -722,7 +722,7 @@ When Enabled, insert a final new line at the end of the file saving it.
 
 #### Trim Trailing Whitespace
 
-When enabled, will trim trailling whitespace when saving a file.
+When enabled, will trim trailing whitespace when saving a file.
 
 - [x] Enabled
 
