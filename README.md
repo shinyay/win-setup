@@ -695,3 +695,9 @@ When Enabled, insert a final new line at the end of the file saving it.
 When enabled, will trim trailling whitespace when saving a file.
 
 - [x] Enabled
+
+### `Text Editor` - `Cursor`
+
+#### Editor: Cursor Blinking
+
+- Control the cursor animation style: `expand`
