@@ -708,3 +708,7 @@ Control whether the sooth caret animation be enabled.
 
 - [x] Enabled
 
+#### Editor: Cursor Style
+
+- Control the cursor style: `block`
+
