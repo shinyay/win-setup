@@ -684,7 +684,13 @@ winget install Rufus.Rufus
 
 ### `Text Editor`
 
-#### Render Line Highligh
+#### Render Control Characters
+
+Controls whether the editor should render control characters.
+
+- [x] Enabled
+
+#### Render Line Highlight
 
 - Controls how the editor render the current line highlight: `all`
 
