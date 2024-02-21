@@ -680,5 +680,12 @@ winget install Rufus.Rufus
 
 # 3. Visual Studio Code
 
-## Everything starts from `Ctrl` + `,`
+## Settings - Everything starts from `Ctrl` + `,`
 
+### `Text Editor` - `Files`
+
+#### Trim Trailling Whitespace
+
+When enabled, will trim trailling whitespace when saving a file.
+
+- [x] Enabled
