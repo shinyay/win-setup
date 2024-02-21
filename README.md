@@ -761,3 +761,11 @@ Controls whether turning on Zen Mode also hides the editor line numbers.
 Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
 
 - [x] Disabled
+
+## Profile
+
+> VS Code profiles provide a way to organize and isolate customizations within the editor. A profile represents a specific set of configurations that can be easily activated or deactivated. With profiles, users can maintain separate configurations for different projects or teams, to help ensure a seamless transition between development environments.
+
+### Create Profile
+
+![create-profile](https://github.com/shinyay/win-setup/assets/3072734/430da389-8cb3-40b2-b82f-5f9932575398)
