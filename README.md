@@ -684,6 +684,16 @@ winget install Rufus.Rufus
 
 ### `Text Editor`
 
+#### Format On Paste
+
+Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+
+- [x] Enabled
+
+#### Format On Type
+
+- [x] Enabled
+
 #### Render Control Characters
 
 Controls whether the editor should render control characters.
