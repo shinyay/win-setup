@@ -677,3 +677,5 @@ winget install QL-Win.QuickLook
 ```shell
 winget install Rufus.Rufus
 ```
+
+# 3. Visual Studio Code
