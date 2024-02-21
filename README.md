@@ -682,6 +682,12 @@ winget install Rufus.Rufus
 
 ## Settings - Everything starts from `Ctrl` + `,`
 
+### `Text Editor`
+
+#### Render Line Highligh
+
+- Controls how the editor render the current line highlight: `all`
+
 ### `Text Editor` - `Files`
 
 #### Insert Final Newline
@@ -698,17 +704,17 @@ When enabled, will trim trailling whitespace when saving a file.
 
 ### `Text Editor` - `Cursor`
 
-#### Editor: Cursor Blinking
+#### Cursor Blinking
 
 - Control the cursor animation style: `expand`
 
-#### Editor: Cursor Smooth Caret Animation
+#### Cursor Smooth Caret Animation
 
 Control whether the sooth caret animation be enabled.
 
 - [x] Enabled
 
-#### Editor: Cursor Style
+#### Cursor Style
 
 - Control the cursor style: `block`
 
