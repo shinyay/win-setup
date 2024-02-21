@@ -692,6 +692,8 @@ Controls whether the editor should automatically format the pasted content. A fo
 
 #### Format On Type
 
+Controls whether the editor should automatically format the line after typing.
+
 - [x] Enabled
 
 #### Render Control Characters
