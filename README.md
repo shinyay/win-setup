@@ -679,3 +679,6 @@ winget install Rufus.Rufus
 ```
 
 # 3. Visual Studio Code
+
+## Everything starts from `Ctrl` + `,`
+
