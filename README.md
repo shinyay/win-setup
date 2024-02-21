@@ -752,6 +752,12 @@ Controls whether turning on Zen Mode also centers the layout.
 
 #### Hide Line Numbers
 
-Controls whether turning on Zen Mode also hides athe editor line numbers.
+Controls whether turning on Zen Mode also hides the editor line numbers.
+
+- [x] Disabled
+
+#### Hide Status Bar
+
+Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
 
 - [x] Disabled
