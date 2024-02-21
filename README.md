@@ -749,3 +749,9 @@ Control whether the sooth caret animation be enabled.
 Controls whether turning on Zen Mode also centers the layout.
 
 - [x] Disabled
+
+#### Hide Line Numbers
+
+Controls whether turning on Zen Mode also hides athe editor line numbers.
+
+- [x] Disabled
