@@ -701,3 +701,10 @@ When enabled, will trim trailling whitespace when saving a file.
 #### Editor: Cursor Blinking
 
 - Control the cursor animation style: `expand`
+
+#### Editor: Cursor Smooth Caret Animation
+
+Control whether the sooth caret animation be enabled.
+
+- [x] Enabled
+
