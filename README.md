@@ -742,7 +742,7 @@ Control whether the sooth caret animation be enabled.
 
 - Control the cursor style: `block`
 
-### `Workbench1 - `Zen Mode`
+### `Workbench` - `Zen Mode`
 
 #### Center Layout
 
