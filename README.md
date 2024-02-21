@@ -696,6 +696,12 @@ Controls whether the editor should automatically format the line after typing.
 
 - [x] Enabled
 
+#### Minimap: Enabled
+
+Controls whether the minimap is shown.
+
+- [x] Disabled
+
 #### Render Control Characters
 
 Controls whether the editor should render control characters.
