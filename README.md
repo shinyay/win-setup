@@ -17,7 +17,7 @@ winget install Microsoft.VisualStudioCode
 
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-- [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+<!-- - [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) -->
 - [Jupyter Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 
 ### Dev Container CLI
@@ -445,7 +445,7 @@ brew install fd
 
 - [x] Installation fzf
 - [fzf](https://github.com/PatrickF1/fzf.fish)
-interactive find 
+interactive find
 
 ```shell
 fisher install PatrickF1/fzf.fish
@@ -535,7 +535,7 @@ winget install Docker.DockerDesktop
 
 ### Docker for Visual Studio Code
 
-> 
+>
 
 - [x] Installation
 
@@ -580,7 +580,7 @@ brew unlink pkg-config
 brew reinstall pkg-config
 ```
 
-Set up the fish shell for Python 
+Set up the fish shell for Python
 
 ```shell
 vim ~/.config/fish/config.fish
