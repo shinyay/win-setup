@@ -18,7 +18,7 @@ winget install Microsoft.VisualStudioCode
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 <!-- - [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) -->
-- [Jupyter Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+<!-- - [Jupyter Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) -->
 
 ### Dev Container CLI
 
