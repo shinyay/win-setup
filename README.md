@@ -682,6 +682,10 @@ winget install Rufus.Rufus
 
 - [Multipass](https://multipass.run/)
 
+> Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
+
+- [x] Installation
+
 # 3. Visual Studio Code
 
 ## Settings - Everything starts from `Ctrl` + `,`
