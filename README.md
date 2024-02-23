@@ -686,6 +686,11 @@ winget install Rufus.Rufus
 
 - [x] Installation
 
+```shell
+winget search multipass
+winget install Canonical.Multipass
+```
+
 # 3. Visual Studio Code
 
 ## Settings - Everything starts from `Ctrl` + `,`
