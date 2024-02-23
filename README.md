@@ -678,6 +678,10 @@ winget install QL-Win.QuickLook
 winget install Rufus.Rufus
 ```
 
+## Multipass
+
+- [Multipass](https://multipass.run/)
+
 # 3. Visual Studio Code
 
 ## Settings - Everything starts from `Ctrl` + `,`
