@@ -445,7 +445,7 @@ brew install fd
 
 - [x] Installation fzf
 - [fzf](https://github.com/PatrickF1/fzf.fish)
-interactive find 
+interactive find
 
 ```shell
 fisher install PatrickF1/fzf.fish
@@ -535,7 +535,7 @@ winget install Docker.DockerDesktop
 
 ### Docker for Visual Studio Code
 
-> 
+>
 
 - [x] Installation
 
@@ -580,7 +580,7 @@ brew unlink pkg-config
 brew reinstall pkg-config
 ```
 
-Set up the fish shell for Python 
+Set up the fish shell for Python
 
 ```shell
 vim ~/.config/fish/config.fish
@@ -646,7 +646,7 @@ winget install Zoom.Zoom
 
 ## Google Chrome
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search chrome
