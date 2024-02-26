@@ -606,7 +606,17 @@ Python 3.12.1
 
 # 2. Windows Tools
 
+## Git for Windows
+
+- [x] Installation
+
+```shell
+winget install --id Git.Git -e --source winget
+```
+
 ## Google Japanese IME
+
+- [x] Installation
 
 ```shell
 winget install Google.JapaneseIME
