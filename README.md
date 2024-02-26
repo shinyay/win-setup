@@ -17,8 +17,8 @@ winget install Microsoft.VisualStudioCode
 
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-- [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Jupyter Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+<!-- - [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) -->
+<!-- - [Jupyter Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) -->
 
 ### Dev Container CLI
 
@@ -677,3 +677,108 @@ winget install QL-Win.QuickLook
 ```shell
 winget install Rufus.Rufus
 ```
+
+## Multipass
+
+- [Multipass](https://multipass.run/)
+
+> Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
+
+- [x] Installation
+
+```shell
+winget search multipass
+winget install Canonical.Multipass
+```
+
+# 3. Visual Studio Code
+
+## Settings - Everything starts from `Ctrl` + `,`
+
+### `Text Editor`
+
+#### Format On Paste
+
+Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+
+- [x] Enabled
+
+#### Format On Type
+
+Controls whether the editor should automatically format the line after typing.
+
+- [x] Enabled
+
+#### Minimap: Enabled
+
+Controls whether the minimap is shown.
+
+- [x] Disabled
+
+#### Render Control Characters
+
+Controls whether the editor should render control characters.
+
+- [x] Enabled
+
+#### Render Line Highlight
+
+- Controls how the editor render the current line highlight: `all`
+
+### `Text Editor` - `Files`
+
+#### Insert Final Newline
+
+When Enabled, insert a final new line at the end of the file saving it.
+
+- [x] Enabled
+
+#### Trim Trailing Whitespace
+
+When enabled, will trim trailing whitespace when saving a file.
+
+- [x] Enabled
+
+### `Text Editor` - `Cursor`
+
+#### Cursor Blinking
+
+- Control the cursor animation style: `expand`
+
+#### Cursor Smooth Caret Animation
+
+Control whether the sooth caret animation be enabled.
+
+- [x] Enabled
+
+#### Cursor Style
+
+- Control the cursor style: `block`
+
+### `Workbench` - `Zen Mode`
+
+#### Center Layout
+
+Controls whether turning on Zen Mode also centers the layout.
+
+- [x] Disabled
+
+#### Hide Line Numbers
+
+Controls whether turning on Zen Mode also hides the editor line numbers.
+
+- [x] Disabled
+
+#### Hide Status Bar
+
+Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
+
+- [x] Disabled
+
+## Profile
+
+> VS Code profiles provide a way to organize and isolate customizations within the editor. A profile represents a specific set of configurations that can be easily activated or deactivated. With profiles, users can maintain separate configurations for different projects or teams, to help ensure a seamless transition between development environments.
+
+### Create Profile
+
+![create-profile](https://github.com/shinyay/win-setup/assets/3072734/430da389-8cb3-40b2-b82f-5f9932575398)
