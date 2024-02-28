@@ -535,7 +535,7 @@ winget install Docker.DockerDesktop
 
 ### Docker for Visual Studio Code
 
->
+> The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
 
 - [x] Installation
 
