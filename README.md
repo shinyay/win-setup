@@ -721,6 +721,13 @@ winget search fastcopy
 winget install FastCopy.FastCopy
 ```
 
+## Anki
+
+```shell
+winget search anki
+winget install Anki.Anki
+```
+
 # 3. Visual Studio Code
 
 ## Settings - Everything starts from `Ctrl` + `,`
