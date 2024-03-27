@@ -727,6 +727,8 @@ winget install FastCopy.FastCopy
 
 - [Anki](https://apps.ankiweb.net/)
 
+> Anki is a program which makes remembering things easy.
+
 - [x] Installation
 
 ```shell
