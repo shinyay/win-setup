@@ -725,7 +725,7 @@ winget install FastCopy.FastCopy
 
 ## Anki
 
-- [AnkiWeb](https://ankiweb.net/)
+- [Anki](https://apps.ankiweb.net/)
 
 - [x] Installation
 
