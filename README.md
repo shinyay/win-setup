@@ -716,12 +716,18 @@ winget install Canonical.Multipass
 
 ## FastCopy
 
+- [x] Installation
+
 ```shell
 winget search fastcopy
 winget install FastCopy.FastCopy
 ```
 
 ## Anki
+
+- [AnkiWeb](https://ankiweb.net/)
+
+- [x] Installation
 
 ```shell
 winget search anki
