@@ -740,6 +740,8 @@ winget install Anki.Anki
 
 - [MOTIV Desktop App](https://www.shure.com/ja-JP/products/software/shure_plus_motiv_desktop)
 
+- [x] Installation
+
 # 3. Visual Studio Code
 
 ## Settings - Everything starts from `Ctrl` + `,`
