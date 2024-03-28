@@ -736,6 +736,8 @@ winget search anki
 winget install Anki.Anki
 ```
 
+## ShurePlus MOTIV
+
 # 3. Visual Studio Code
 
 ## Settings - Everything starts from `Ctrl` + `,`
