@@ -740,6 +740,8 @@ winget install Anki.Anki
 
 - [MOTIV Desktop App](https://www.shure.com/ja-JP/products/software/shure_plus_motiv_desktop)
 
+> Adjust mic gain, monitor mix, EQ, limiter, compressor and more. MV7 users have the additional option of enabling Auto Level Mode; a ‘set it and forget it’ application for consistent recordings every time.
+
 - [x] Installation
 
 # 3. Visual Studio Code
