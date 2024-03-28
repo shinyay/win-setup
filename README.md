@@ -619,6 +619,14 @@ Python 3.12.1
 
 # 2. Windows Tools
 
+## Steam
+
+- [x] Installation
+
+```shell
+winget install Valve.Steam
+```
+
 ## Git for Windows
 
 - [x] Installation
