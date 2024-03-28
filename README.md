@@ -744,6 +744,11 @@ winget install Anki.Anki
 
 - [x] Installation
 
+```shell
+winget search ankimotiv
+winget install Shure.ShurePlusMOTIV
+```
+
 # 3. Visual Studio Code
 
 ## Settings - Everything starts from `Ctrl` + `,`
