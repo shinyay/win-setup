@@ -619,6 +619,14 @@ Python 3.12.1
 
 # 2. Windows Tools
 
+## Steam
+
+- [x] Installation
+
+```shell
+winget install Valve.Steam
+```
+
 ## Git for Windows
 
 - [x] Installation
@@ -658,6 +666,14 @@ winget install slacktechnologies.slack
 winget search jdownloader
 winget install AppWork.JDownloader
 ```
+
+## Streamlabs Desktop
+
+- [Streamlabs Desktop](https://streamlabs.com/streamlabs-live-streaming-software)
+
+> Streamlabs Desktop has everything you need to stream and create a memorable brand.
+
+- [x] Installation
 
 ## Zoom
 
