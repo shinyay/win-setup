@@ -675,6 +675,11 @@ winget install AppWork.JDownloader
 
 - [x] Installation
 
+```shell
+winget search streamlabs
+winget install Streamlabs.Streamlabs
+```
+
 ## Zoom
 
 ```shell
