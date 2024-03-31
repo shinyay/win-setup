@@ -680,6 +680,8 @@ winget search streamlabs
 winget install Streamlabs.Streamlabs
 ```
 
+## Spotify
+
 ## Zoom
 
 ```shell
