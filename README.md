@@ -682,6 +682,11 @@ winget install Streamlabs.Streamlabs
 
 ## Spotify
 
+```shell
+winget search spotify
+winget install Spotify.Spotify
+```
+
 ## Zoom
 
 ```shell
