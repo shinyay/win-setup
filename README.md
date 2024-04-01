@@ -682,6 +682,8 @@ winget install Streamlabs.Streamlabs
 
 ## Spotify
 
+- [Spotify](https://www.spotify.com/download/windows/)
+
 ```shell
 winget search spotify
 winget install Spotify.Spotify
