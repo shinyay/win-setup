@@ -12,7 +12,7 @@ If `winget` does not work, you should upgrade `App Installer`
 
 > Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search vscode
@@ -39,7 +39,7 @@ Install Dev Container CLI.
 
 > WSL2 is a **Windows Subsystem for Linux** that allows access to Linux tools and applications directly from the Windows environment12. It offers the best of both worlds by allowing you to run Windows apps, like Visual Studio, alongside a Linux shell for easier command line access2. WSL2 uses a virtual machine, and uses a full Linux kernel built and shipped with Windows23. With WSL2, you can build docker images that paravirtualize your GPU4.
 
-- [x] Installation
+- [ ] Installation
 
 Enable **Windows Subsystem for Linux**
 
@@ -87,7 +87,7 @@ wsl --install
 
 Update and Upgrade packages.
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 sudo apt update && sudo apt upgrade
@@ -119,7 +119,7 @@ dpkg -L wslu | grep bin/
 
 > Homebrew is an open-source software package manager that makes it easier to install software on macOS (Apple's operating system) and Linux. Basically, a package manager's job is to find and install the right software packages that will allow you to compile and run various apps/software on your specific operating system.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -132,7 +132,7 @@ brew doctor
 
 ## Git
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 sudo add-apt-repository ppa:git-core/ppa
@@ -146,7 +146,7 @@ git version 2.43.0
 
 ### Git Global Configuration
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global user.name "shinyay" && \
@@ -165,13 +165,13 @@ git config pull.ff only
 
 #### Fine-grained personal access tokens
 
-- [x] [Generate new token](https://github.com/settings/tokens?type=beta)
+- [ ] [Generate new token](https://github.com/settings/tokens?type=beta)
   - Repository access: `All repositories`
   - Permissions - Repository permissions - Contents: `Read and write`
 
 #### ssh-keygen
 
-- [x] Generate SSH Key pair
+- [ ] Generate SSH Key pair
 
 ```shell
 ssh-keygen -t ed25519 -C 'mail address for github'
@@ -180,7 +180,7 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 #### SSH Keys on GitHub
 
-- [x] Add a public key on the following site:
+- [ ] Add a public key on the following site:
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
@@ -189,7 +189,7 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 #### `git status`
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global alias.st status
@@ -197,7 +197,7 @@ git config --global alias.st status
 
 #### `git log`
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global alias.plog "log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso"
@@ -206,7 +206,7 @@ git config --global alias.glog "log --pretty='format:%C(yellow)%h %C(green)%cd %
 
 #### Commit Count
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global alias.count 'shortlog -e -s -n'
@@ -214,7 +214,7 @@ git config --global alias.count 'shortlog -e -s -n'
 
 ### Fetch configuration
 
-- [x] Configuration
+- [ ] Configuration
 
 Before fetching, remove any remote-tracking references that no longer exist on the remote.
 
@@ -267,7 +267,7 @@ gh auth setup-git
 
 ### Fish Install
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 brew install fish
@@ -315,7 +315,7 @@ brew doctor
 
 > Fisher is a plugin manager for the Fish shell. It lets you install, update, and remove plugins like a boss. You can take control of functions, completions, bindings, and snippets from the command line. Fisher's zero impact on shell startup keeps your shell zippy and responsive1. Fisher is 100% pure-Fish, making it easy to contribute or modify.
 
-- [x] Installation
+- [ ] Installation
 
 - [Fisher](https://nicedoc.io/jorgebucaran/fisher)
 
@@ -330,7 +330,7 @@ fisher, version 4.4.4
 
 ### Fish Theme - bobthefish
 
-- [x] Installation
+- [ ] Installation
 
 - [oh-my-fish/theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
 
@@ -340,7 +340,7 @@ fisher install oh-my-fish/theme-bobthefish
 
 #### bobthefish Configuration
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 vim ~/.config/fish/config.fish
@@ -391,7 +391,7 @@ set -g theme_newline_prompt ''
 
 ### Cica font for bobthefish
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 curl -L -O https://github.com/miiton/Cica/releases/download/v5.0.3/Cica_v5.0.3.zip
@@ -408,7 +408,7 @@ Then install `*ttf`.
 ## Fish Plugin
 
 ### Peco
-- [x] Installation
+- [ ] Installation
 
 By pushing ctrl + r, you can search shell history
 
@@ -426,14 +426,14 @@ Interactice command search
 
 - [fzf.fish](https://github.com/PatrickF1/fzf.fish)
 
-- [x] Installation fzf
+- [ ] Installation fzf
 
 ```shell
 brew install fzf
 ```
 
 
-- [x] Installation bat
+- [ ] Installation bat
 - [bat](https://github.com/sharkdp/bat)
 cat clone with syntax highlight and Git integration
 
@@ -441,7 +441,7 @@ cat clone with syntax highlight and Git integration
 brew install bat
 ```
 
-- [x] Installation fd
+- [ ] Installation fd
 - [fd](https://github.com/sharkdp/fd)
 find entries in your filesystem
 
@@ -449,7 +449,7 @@ find entries in your filesystem
 brew install fd
 ```
 
-- [x] Installation fzf
+- [ ] Installation fzf
 - [fzf](https://github.com/PatrickF1/fzf.fish)
 interactive find
 
@@ -471,7 +471,7 @@ echo "" | tee -a $HOME/.config/fish/config.fish
 
 ### z
 
-- [x] Installation
+- [ ] Installation
 
 By z, it tracks the directory you have visited
 
@@ -483,7 +483,7 @@ fisher install jethrokuan/z
 
 ### fish-bd
 
-- [x] Installation
+- [ ] Installation
 
 By bd, you can quickly go back to a parent directory in your current working directory tree
 
@@ -495,7 +495,7 @@ fisher install 0rax/fish-bd
 
 ### SDKMAN! for fish
 
-- [x] Installation
+- [ ] Installation
 
 Makes command sdk from SDKMAN! usable from fish, including auto-completion. Also adds binaries from installed SDKs to the PATH.
 
@@ -524,7 +524,7 @@ native: 0.4.6
 
 #### git
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
@@ -532,7 +532,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ## Docker
 
-- [x] Installation
+- [ ] Installation
 
 ```powershell
 winget search docker
@@ -543,13 +543,13 @@ winget install Docker.DockerDesktop
 
 > The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
 
-- [x] Installation
+- [ ] Installation
 
 - [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
 ## Azure CLI
 
-- [x] Installation
+- [ ] Installation
 
 > The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.
 
@@ -627,7 +627,7 @@ Python 3.12.1
 
 ## Steam
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget install Valve.Steam
@@ -635,7 +635,7 @@ winget install Valve.Steam
 
 ## Git for Windows
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget install --id Git.Git -e --source winget
@@ -643,7 +643,7 @@ winget install --id Git.Git -e --source winget
 
 ## Google Japanese IME
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget install Google.JapaneseIME
@@ -653,7 +653,7 @@ winget install Google.JapaneseIME
 
 > Slack is a messaging app for businesses that connects people to the information they need. It allows people to work as one unified team, transforming the way organizations communicate.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search slack
@@ -666,7 +666,7 @@ winget install slacktechnologies.slack
 
 > JDownloader is a free, open-source download management tool with a huge community that makes downloading as easy and fast as it should be.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search jdownloader
@@ -679,7 +679,7 @@ winget install AppWork.JDownloader
 
 > Streamlabs Desktop has everything you need to stream and create a memorable brand.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search streamlabs
@@ -692,7 +692,7 @@ winget install Streamlabs.Streamlabs
 
 > Play your favorite songs, podcasts and albums free on Windows with Spotify.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search spotify
@@ -722,7 +722,7 @@ winget install Google.Chrome
 
 > One of the few features I missed from macOS is Quick Look. It allows users to peek into a file content in lightning speed by just pressing the Space key.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search QuickLook
@@ -735,7 +735,7 @@ winget install QL-Win.QuickLook
 
 > Create bootable USB drives the easy way
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget install Rufus.Rufus
@@ -747,7 +747,7 @@ winget install Rufus.Rufus
 
 > Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search multipass
@@ -756,7 +756,7 @@ winget install Canonical.Multipass
 
 ## FastCopy
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search fastcopy
@@ -769,7 +769,7 @@ winget install FastCopy.FastCopy
 
 > Anki is a program which makes remembering things easy.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search anki
@@ -782,7 +782,7 @@ winget install Anki.Anki
 
 > Adjust mic gain, monitor mix, EQ, limiter, compressor and more. MV7 users have the additional option of enabling Auto Level Mode; a ‘set it and forget it’ application for consistent recordings every time.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search ankimotiv
@@ -799,25 +799,25 @@ winget install Shure.ShurePlusMOTIV
 
 Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
 
-- [x] Enabled
+- [ ] Enabled
 
 #### Format On Type
 
 Controls whether the editor should automatically format the line after typing.
 
-- [x] Enabled
+- [ ] Enabled
 
 #### Minimap: Enabled
 
 Controls whether the minimap is shown.
 
-- [x] Disabled
+- [ ] Disabled
 
 #### Render Control Characters
 
 Controls whether the editor should render control characters.
 
-- [x] Enabled
+- [ ] Enabled
 
 #### Render Line Highlight
 
@@ -829,13 +829,13 @@ Controls whether the editor should render control characters.
 
 When Enabled, insert a final new line at the end of the file saving it.
 
-- [x] Enabled
+- [ ] Enabled
 
 #### Trim Trailing Whitespace
 
 When enabled, will trim trailing whitespace when saving a file.
 
-- [x] Enabled
+- [ ] Enabled
 
 ### `Text Editor` - `Cursor`
 
@@ -847,7 +847,7 @@ When enabled, will trim trailing whitespace when saving a file.
 
 Control whether the sooth caret animation be enabled.
 
-- [x] Enabled
+- [ ] Enabled
 
 #### Cursor Style
 
@@ -859,19 +859,19 @@ Control whether the sooth caret animation be enabled.
 
 Controls whether turning on Zen Mode also centers the layout.
 
-- [x] Disabled
+- [ ] Disabled
 
 #### Hide Line Numbers
 
 Controls whether turning on Zen Mode also hides the editor line numbers.
 
-- [x] Disabled
+- [ ] Disabled
 
 #### Hide Status Bar
 
 Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
 
-- [x] Disabled
+- [ ] Disabled
 
 ## Profile
 
