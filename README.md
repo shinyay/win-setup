@@ -16,6 +16,14 @@ If `winget` does not work, you should upgrade `App Installer`
 winget install Google.JapaneseIME
 ```
 
+### Keymap Configuration
+
+1. **Properties** > **Keymap Stype** > **Customize** > Convert `Hankaku/Zenkaku` to `Ctrl` + `Space`
+2. Remove the followings:
+  - **Composition** / **Insert half-width space**
+  - **Coversion** / **Insert half-width space**
+3. You can use new keymaps after opening a new application
+
 ## VSCode
 
 > Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
