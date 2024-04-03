@@ -26,46 +26,6 @@ winget install Google.JapaneseIME
   - **Coversion** / **Insert half-width space**
 3. You can use new keymaps after opening a new application
 
-## VSCode
-
-> Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
-
-- [x] Installation
-
-```shell
-winget search vscode
-winget install Microsoft.VisualStudioCode
-```
-
-### VSCode Extension
-
-- [x] Installation
-
-> The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set. Since this lets you set up a full-time development environment anywhere.
-
-- [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-
-The following extesions are also installed:
-
-- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-- [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-- [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit)
-- [Remote -Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)
-- [Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer)
-- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-
-
-### Dev Container CLI
-
-- [ ] Installation
-
-- [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
-
-Install Dev Container CLI.
-
-1. Open VSCode
-2. Select the **Dev Containers: Install devcontainer CLI** command from the Command Palette (`F1`).
-
 ## WSL
 
 > WSL2 is a **Windows Subsystem for Linux** that allows access to Linux tools and applications directly from the Windows environment12. It offers the best of both worlds by allowing you to run Windows apps, like Visual Studio, alongside a Linux shell for easier command line access2. WSL2 uses a virtual machine, and uses a full Linux kernel built and shipped with Windows23. With WSL2, you can build docker images that paravirtualize your GPU4.
@@ -222,7 +182,44 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
+## VSCode
+
+> Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
+
+- [x] Installation
+
+```shell
+winget search vscode
+winget install Microsoft.VisualStudioCode
+```
+
+### VSCode Extension
+
+- [x] Installation
+
+> The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set. Since this lets you set up a full-time development environment anywhere.
+
+
+```shell
+sudo apt-get install wget ca-certificates
+```
+
+- [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+The following extesions are also installed:
+
+- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+- [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit)
+- [Remote -Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)
+- [Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer)
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+
 # 2. WSL Customization
+
+## Terminal
+
+- [ ] Do something
 
 ## WSL
 
@@ -241,7 +238,6 @@ sudo apt-get install unzip zip
 sudo apt-get install fontconfig
 sudo apt-get install wget ca-certificates
 sudo apt-get install wslu
-sudo apt-get install build-essential
 sudo apt-get install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev libffi-dev liblzma-dev tk-dev uuid-dev xz-utils libxml2-dev libxmlsec1-dev libdb-dev libgdbm-dev
 ```
 
@@ -329,6 +325,18 @@ By the folloing command allows you to configures `git`` to use GitHub CLI as a c
 ```shell
 gh auth setup-git
 ```
+
+
+## Dev Container CLI
+
+- [ ] Installation
+
+- [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
+
+Install Dev Container CLI.
+
+1. Open VSCode
+2. Select the **Dev Containers: Install devcontainer CLI** command from the Command Palette (`F1`).
 
 ## Fish
 
