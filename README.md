@@ -12,7 +12,7 @@ If `winget` does not work, you should upgrade `App Installer`
 
 > Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
 
-- [ ] Installation
+- [x] Installation
 
 ```shell
 winget search vscode
