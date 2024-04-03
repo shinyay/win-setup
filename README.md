@@ -218,10 +218,6 @@ The following extesions are also installed:
 
 # 2. WSL Customization
 
-## Terminal
-
-- [ ] Do something
-
 ## WSL
 
 Update and Upgrade packages.
@@ -357,17 +353,6 @@ Text editor program to use for authoring text
 gh config set editor vim
 ```
 
-## Dev Container CLI
-
-- [ ] Installation
-
-- [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
-
-Install Dev Container CLI.
-
-1. Open VSCode
-2. Select the **Dev Containers: Install devcontainer CLI** command from the Command Palette (`F1`).
-
 ## Fish
 
 > Fish, or the "Friendly Interactive SHell", is a Unix shell designed with an emphasis on user-friendliness and interactive use. It was introduced in 2005 and has since gained a following due to its unique features, helpful defaults, and focus on a pleasant user experience.
@@ -500,7 +485,7 @@ set -g theme_newline_cursor yes
 set -g theme_newline_prompt ''
 ```
 
-### Moralerspace font
+### Moralerspace font for bobthefish
 
 <img width="271" alt="image" src="https://github.com/shinyay/win-setup/assets/3072734/9d6adc03-11ba-42be-99b3-14d99b7845dc">
 
@@ -548,19 +533,9 @@ rm -fr download
 
 ### Cica font for bobthefish
 
+- [Cica](https://github.com/miiton/Cica)
+
 - [ ] Installation
-
-```shell
-curl -L -O https://github.com/miiton/Cica/releases/download/v5.0.3/Cica_v5.0.3.zip
-unzip Cica_v5.0.3.zip -d temp
-sudo mkdir  /usr/share/fonts/truetype/cica
-sudo cp temp/*.ttf /usr/share/fonts/truetype/cica/
-sudo fc-cache -vf
-fc-list | grep -i cica
-explorer.exe ./temp/
-```
-
-Then install `*ttf`.
 
 ## Fish Plugin
 
@@ -704,6 +679,18 @@ winget install Docker.DockerDesktop
 
 - [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
+
+## Dev Container CLI
+
+- [ ] Installation
+
+- [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
+
+Install Dev Container CLI.
+
+1. Open VSCode
+2. Select the **Dev Containers: Install devcontainer CLI** command from the Command Palette (`F1`).
+
 ## Azure CLI
 
 - [ ] Installation
@@ -716,6 +703,11 @@ winget install Docker.DockerDesktop
 ```shell
 brew update && brew install azure-cli
 ```
+
+## Terminal
+
+- [ ] Do something
+
 
 ## Python
 
