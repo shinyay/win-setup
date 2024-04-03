@@ -428,7 +428,7 @@ brew doctor
 
 - [ ] Installation
 
-- [Fisher](https://nicedoc.io/jorgebucaran/fisher)
+- [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```shell
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
