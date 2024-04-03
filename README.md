@@ -112,6 +112,15 @@ Add the followings:
 [network]
 hostname=wsl
 ```
+
+Then you should shutdown WSL with PowerShell.
+
+```shell
+wsl --shutdown
+```
+
+Run your WSL again, now your configuration is enabled.
+
 #### Other WSL Settings
 
 |SECTION|ITEM|SETTING|NOTE|
