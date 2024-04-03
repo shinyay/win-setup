@@ -258,12 +258,7 @@ sudo apt-get install fontconfig
 sudo apt-get install wslu
 ```
 
-### `wslu` - A collection of utilities for WSL
-
-> This is a collection of utilities for the Linux Subsystem for Windows (WSL), such as converting Linux paths to Windows paths or creating Linux application shortcuts on the Windows Desktop.
-
-- [GitHub: wslutilities/wslu](https://github.com/wslutilities/wslu)
-- [wslu Wiki](https://wslutiliti.es/wslu/)
+Commands list:
 
 ```shell
 dpkg -L wslu | grep bin/
