@@ -537,6 +537,13 @@ Then install `*ttf`.
 3. Select **Aditional settings** > **Appearance**
 4. Choose **Moralerspace Radon NF** from **Font face**
 
+Then delete downloaded fonts.
+
+```shell
+cd ..
+rm -fr download
+```
+
 ### Cica font for bobthefish
 
 - [ ] Installation
