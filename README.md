@@ -98,6 +98,21 @@ Terminal settings:
 
 ## WSL Setup
 
+### Hostname
+
+- [x] Configuration
+
+```shell
+sudo vim /etc/wsl.conf
+```
+
+Add the followings:
+
+```shell
+[network]
+hostname=wsl
+```
+
 Update and Upgrade packages.
 
 - [ ] Configuration
