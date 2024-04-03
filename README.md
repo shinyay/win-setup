@@ -87,7 +87,16 @@ Restart-Computer -Force
 wsl --install
 ```
 
-### WSL Setup
+## Terminal
+
+Terminal settings:
+
+### Startup
+
+- **Default Profile**: `Ubuntu`
+- **Default Terminal Application**: `Terminal`
+
+## WSL Setup
 
 Update and Upgrade packages.
 
