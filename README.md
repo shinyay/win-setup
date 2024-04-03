@@ -136,6 +136,28 @@ Run your WSL again, now your configuration is enabled.
 |`interop`|`appendWindowsPath`|`false` / `true`|Apped your Windows PATH or not|
 |`user`|`default`|`<YOUR_USERNAME>`|WSL Login Username|
 
+## Homebrew
+
+> Homebrew is an open-source software package manager that makes it easier to install software on macOS (Apple's operating system) and Linux. Basically, a package manager's job is to find and install the right software packages that will allow you to compile and run various apps/software on your specific operating system.
+
+- [x] Installation
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+```
+
+```shell
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/shinyay/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+sudo apt-get install build-essential
+brew install gcc
+brew doctor
+```
+
+
+
+
+
 ###
 Update and Upgrade packages.
 
@@ -167,23 +189,7 @@ sudo apt-get install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3
 dpkg -L wslu | grep bin/
 ```
 
-## Homebrew
 
-> Homebrew is an open-source software package manager that makes it easier to install software on macOS (Apple's operating system) and Linux. Basically, a package manager's job is to find and install the right software packages that will allow you to compile and run various apps/software on your specific operating system.
-
-- [ ] Installation
-
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-```
-
-```shell
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/shinyay/.bashrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-sudo apt-get install build-essential
-brew install gcc
-brew doctor
-```
 
 ## Git
 
