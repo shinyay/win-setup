@@ -378,7 +378,7 @@ Install Dev Container CLI.
 
 ### Fish Install
 
-- [ ] Installation
+- [x] Installation
 
 ```shell
 brew install fish
@@ -413,10 +413,10 @@ echo $SHELL
 Define the PATH of `brew` on `fish`.
 
 ```shell
-echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.config/fish/config.fish
+echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> $HOME/.config/fish/config.fish
 ```
 
-Check `brew`.
+Check `brew doctor`.
 
 ```shell
 brew doctor
