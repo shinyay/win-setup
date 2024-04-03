@@ -61,39 +61,27 @@ Enable **Windows Subsystem for Linux**
 
 <img width="348" alt="Screenshot 2024-01-08 144911" src="https://github.com/shinyay/win-setup/assets/3072734/821dcbc2-0c8d-412d-8414-c26e63d74fdc">
 
-WSL version might not be the latest.
+### Prepare for installation
+
+`Run as Administrator` **PowerShell** and enable the following features:
+
+- VirtualMachinePlatform 
+- Microsoft-Windows-Subsystem-Linux
+- HypervisorPlatform
 
 ```shell
-wsl --verion
-
-WSL version: 2.0.9.0
-Kernel version: 5.15.133.1-1
-WSLg version: 1.0.59
-MSRDC version: 1.2.4677
-Direct3D version: 1.611.1-81528511
-DXCore version: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
-Windows version: 10.0.22621.2861
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:HypervisorPlatform /all /norestart
 ```
 
-Update WSL.
+And restart
 
 ```shell
-wsl --update
+Restart-Computer -Force
 ```
 
-```shell
-wsl --version
-
-WSL version: 2.0.14.0
-Kernel version: 5.15.133.1-1
-WSLg version: 1.0.59
-MSRDC version: 1.2.4677
-Direct3D version: 1.611.1-81528511
-DXCore version: 10.0.25131.1002-220531-1700.rs-onecore-base2-hyp
-Windows version: 10.0.22621.2861
-```
-
-Install WSL.
+### WSL Installation
 
 ```shell
 wsl --install
