@@ -351,12 +351,11 @@ gh auth login
 ? How would you like to authenticate GitHub CLI? Login with a web browser
 ```
 
-By the folloing command allows you to configures `git`` to use GitHub CLI as a credential helper
+Text editor program to use for authoring text
 
 ```shell
-gh auth setup-git
+gh config set editor vim
 ```
-
 
 ## Dev Container CLI
 
