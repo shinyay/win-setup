@@ -271,7 +271,13 @@ dpkg -L wslu | grep bin/
 List aliases:
 
 ```shell
-git config --get-regexp ^alias
+git config --get-regexp ^alias\.
+```
+
+Alias
+
+```shell
+git config --global alias.alias 'config --get-regexp ^alias\.'
 ```
 
 #### `git status`
@@ -279,7 +285,7 @@ git config --get-regexp ^alias
 - [x] Configuration
 
 ```shell
-git config --global alias.st "status --short"
+git config --global alias.st 'status --short
 ```
 
 #### `git log`
