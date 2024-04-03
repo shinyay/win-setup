@@ -274,7 +274,9 @@ List aliases:
 git config --get-regexp ^alias\.
 ```
 
-Alias
+Alias for Alias list
+
+- [x] Configuration
 
 ```shell
 git config --global alias.alias 'config --get-regexp ^alias\.'
