@@ -156,6 +156,7 @@ git config --global core.editor 'vim -c "set fenc=utf-8"' && \
 git config --global color.diff auto && \
 git config --global color.status auto && \
 git config --global color.branch auto && \
+git config --global fetch.prune true && \
 git config pull.ff only
 ```
 
@@ -305,16 +306,6 @@ git config --global alias.glog "log --pretty='format:%C(yellow)%h %C(green)%cd %
 
 ```shell
 git config --global alias.count 'shortlog -e -s -n'
-```
-
-### Fetch configuration
-
-- [ ] Configuration
-
-Before fetching, remove any remote-tracking references that no longer exist on the remote.
-
-```shell
-git config --global fetch.prune true
 ```
 
 ## GitHub CLI
