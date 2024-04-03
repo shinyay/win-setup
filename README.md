@@ -451,10 +451,10 @@ fisher install oh-my-fish/theme-bobthefish
 
 #### bobthefish Configuration
 
-- [ ] Configuration
+- [x] Configuration
 
 ```shell
-vim ~/.config/fish/config.fish
+vim $HOME/.config/fish/config.fish
 
 set -g theme_display_git_master_branch yes
 set -g theme_display_git yes
