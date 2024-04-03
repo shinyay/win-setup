@@ -112,7 +112,16 @@ Add the followings:
 [network]
 hostname=wsl
 ```
+#### Other WSL Settings
 
+|SECTION|ITEM|SETTING|NOTE|
+|-------|----|-------|----|
+|`boot`|`systemd`|`true`|Enable **systemd** support|
+|`network`|`hostname`|`<YOUR_HOSTNAME>`|Hostname for your WSL Instance|
+|`interop`|`appendWindowsPath`|`false` / `true`|Apped your Windows PATH or not|
+|`user`|`default`|`<YOUR_USERNAME>`|WSL Login Username|
+
+###
 Update and Upgrade packages.
 
 - [ ] Configuration
