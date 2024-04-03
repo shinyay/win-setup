@@ -500,6 +500,43 @@ set -g theme_newline_cursor yes
 set -g theme_newline_prompt ''
 ```
 
+### Moralerspace font
+
+- [Moralerspace](https://github.com/yuru7/moralerspace)
+
+```shell
+mkdir download && cd download
+curl -L -O https://github.com/yuru7/moralerspace/releases/download/v1.0.0/MoralerspaceHWJPDOC_v1.0.0.zip
+curl -L -O https://github.com/yuru7/moralerspace/releases/download/v1.0.0/MoralerspaceHWNF_v1.0.0.zip
+curl -L -O https://github.com/yuru7/moralerspace/releases/download/v1.0.0/MoralerspaceHW_v1.0.0.zip
+curl -L -O https://github.com/yuru7/moralerspace/releases/download/v1.0.0/MoralerspaceJPDOC_v1.0.0.zip
+curl -L -O https://github.com/yuru7/moralerspace/releases/download/v1.0.0/MoralerspaceNF_v1.0.0.zip
+curl -L -O https://github.com/yuru7/moralerspace/releases/download/v1.0.0/Moralerspace_v1.0.0.zip
+unzip MoralerspaceHWJPDOC_v1.0.0.zip
+unzip MoralerspaceHWNF_v1.0.0.zip
+unzip MoralerspaceHW_v1.0.0.zip
+unzip MoralerspaceJPDOC_v1.0.0.zip
+unzip MoralerspaceNF_v1.0.0.zip
+unzip Moralerspace_v1.0.0.zip
+sudo mkdir  /usr/share/fonts/truetype/moralerspace
+sudo cp MoralerspaceHWJPDOC_v1.0.0/*.ttf /usr/share/fonts/truetype/moralerspace/
+sudo cp MoralerspaceHWNF_v1.0.0/*.ttf /usr/share/fonts/truetype/moralerspace/
+sudo cp MoralerspaceHW_v1.0.0/*.ttf /usr/share/fonts/truetype/moralerspace/
+sudo cp MoralerspaceJPDOC_v1.0.0/*.ttf /usr/share/fonts/truetype/moralerspace/
+sudo cp MoralerspaceNF_v1.0.0/*.ttf /usr/share/fonts/truetype/moralerspace/
+sudo cp Moralerspace_v1.0.0/*.ttf /usr/share/fonts/truetype/moralerspace/
+sudo fc-cache -vf
+fc-list | grep -i moralerspace
+explorer.exe .
+```
+
+Then install `*ttf`.
+
+1. Open settings: `ctrl` + `,`
+2. Select **Ubuntu**
+3. Select **Aditional settings** > **Appearance**
+4. Choose **Moralerspace Radon NF** from **Font face**
+
 ### Cica font for bobthefish
 
 - [ ] Installation
