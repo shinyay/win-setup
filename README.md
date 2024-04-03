@@ -679,7 +679,7 @@ winget install AppWork.JDownloader
 
 > Streamlabs Desktop has everything you need to stream and create a memorable brand.
 
-- [ ] Installation
+- [x] Installation
 
 ```shell
 winget search streamlabs
