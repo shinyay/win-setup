@@ -235,6 +235,10 @@ brew update && brew upgrade
 
 ### Requred Packages Installation
 
+#### Basic Packages
+
+- [x] Installation
+
 - zip
 - unzip
 
@@ -242,18 +246,26 @@ brew update && brew upgrade
 brew install zip unzip
 ```
 
-- [fontconfig](https://en.wikipedia.org/wiki/Fontconfig)
+#### Fontconfig
+
+- [x] Installation
 
 > Fontconfig is a library designed to provide system-wide font configuration, customization and application access. 
+
+- [fontconfig](https://en.wikipedia.org/wiki/Fontconfig)
 
 ```shell
 sudo apt-get install fontconfig
 ```
 
-- [wslu](https://github.com/wslutilities/wslu)
-  - [Guide](https://wslutiliti.es/wslu/)
+#### wslu
+
+- [x] Installation
 
 > This is a collection of utilities for the Windows Subsystem for Linux (WSL), such as converting Linux paths to Windows paths or creating Linux application shortcuts on the Windows Desktop.
+
+- [wslu](https://github.com/wslutilities/wslu)
+  - [Guide](https://wslutiliti.es/wslu/)
 
 ```shell
 sudo apt-get install wslu
@@ -310,6 +322,8 @@ git config --global alias.count 'shortlog -e -s -n'
 
 ## GitHub CLI
 
+- [x] Installation
+
 > GitHub CLI, or gh, is a command-line interface to GitHub for use in your terminal or your scripts.
 
 - [GitHub CLI](https://cli.github.com/)
@@ -321,8 +335,8 @@ brew install gh
 ```shell
 gh --version
 
-gh version 2.41.0 (2024-01-08)
-https://github.com/cli/cli/releases/tag/v2.41.0
+gh version 2.46.0 (2024-03-20)
+https://github.com/cli/cli/releases/tag/v2.46.0
 ```
 
 ### GitHub Authentication
