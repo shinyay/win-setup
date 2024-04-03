@@ -247,8 +247,13 @@ brew install zip unzip
 
 ```shell
 sudo apt-get install fontconfig
+
+- [wslu](https://github.com/wslutilities/wslu)
+
+> This is a collection of utilities for the Windows Subsystem for Linux (WSL), such as converting Linux paths to Windows paths or creating Linux application shortcuts on the Windows Desktop.
+
+```shell
 sudo apt-get install wslu
-sudo apt-get install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev libffi-dev liblzma-dev tk-dev uuid-dev xz-utils libxml2-dev libxmlsec1-dev libdb-dev libgdbm-dev
 ```
 
 ### `wslu` - A collection of utilities for WSL
