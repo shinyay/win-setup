@@ -39,12 +39,21 @@ winget install Microsoft.VisualStudioCode
 
 ### VSCode Extension
 
-- [ ] Configuration
+- [x] Installation
 
-- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+> The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set. Since this lets you set up a full-time development environment anywhere.
+
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-<!-- - [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) -->
-<!-- - [Jupyter Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) -->
+
+The following extesions are also installed:
+
+- [Dev Containers]()
+- []()
+- []()
+- []()
+- []()
+- []()
+
 
 ### Dev Container CLI
 
