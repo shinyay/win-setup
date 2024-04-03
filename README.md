@@ -6,6 +6,8 @@
 
 If `winget` does not work, you should upgrade `App Installer`
 
+- [x] Installation
+
 - [App Installer](https://apps.microsoft.com/detail/9nblggh4nns1)
 
 ## Google Japanese IME
@@ -37,12 +39,16 @@ winget install Microsoft.VisualStudioCode
 
 ### VSCode Extension
 
+- [ ] Configuration
+
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 <!-- - [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) -->
 <!-- - [Jupyter Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) -->
 
 ### Dev Container CLI
+
+- [ ] Installation
 
 - [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
 
@@ -56,8 +62,6 @@ Install Dev Container CLI.
 > WSL2 is a **Windows Subsystem for Linux** that allows access to Linux tools and applications directly from the Windows environment12. It offers the best of both worlds by allowing you to run Windows apps, like Visual Studio, alongside a Linux shell for easier command line access2. WSL2 uses a virtual machine, and uses a full Linux kernel built and shipped with Windows23. With WSL2, you can build docker images that paravirtualize your GPU4.
 
 - [x] Installation
-
-Enable **Windows Subsystem for Linux**
 
 <img width="348" alt="Screenshot 2024-01-08 144911" src="https://github.com/shinyay/win-setup/assets/3072734/821dcbc2-0c8d-412d-8414-c26e63d74fdc">
 
@@ -93,18 +97,9 @@ Upgrade packages
 sudo apt update && sudo apt upgrade
 ```
 
-## Terminal
+### WSL Setup
 
-Terminal settings:
-
-### Startup
-
-- **Default Profile**: `Ubuntu`
-- **Default Terminal Application**: `Terminal`
-
-## WSL Setup
-
-### Hostname
+#### Hostname
 
 - [x] Configuration
 
@@ -136,6 +131,17 @@ Run your WSL again, now your configuration is enabled.
 |`interop`|`appendWindowsPath`|`false` / `true`|Apped your Windows PATH or not|
 |`user`|`default`|`<YOUR_USERNAME>`|WSL Login Username|
 
+## Terminal
+
+Terminal settings:
+
+### Startup
+
+- [x] Configuration
+
+- **Default Profile**: `Ubuntu`
+- **Default Terminal Application**: `Terminal`
+
 ## Homebrew
 
 > Homebrew is an open-source software package manager that makes it easier to install software on macOS (Apple's operating system) and Linux. Basically, a package manager's job is to find and install the right software packages that will allow you to compile and run various apps/software on your specific operating system.
@@ -154,11 +160,64 @@ brew install gcc
 brew doctor
 ```
 
+## Git
+
+- [x] Installation
+
+```shell
+brew install git
+```
+
+```shell
+git --version
+git version 2.44.0
+```
+
+### Git Global Configuration
+
+- [x] Configuration
+
+```shell
+git config --global user.name "shinyay" && \
+git config --global user.email "<YOUR_MAILADDRESS>" && \
+git config --global core.quotepath false && \
+git config --global core.safecrlf true && \
+git config --global core.autocrlf false && \
+git config --global core.editor 'vim -c "set fenc=utf-8"' && \
+git config --global color.diff auto && \
+git config --global color.status auto && \
+git config --global color.branch auto && \
+git config pull.ff only
+```
+
+### SSH Key for GitHub
+
+#### Fine-grained personal access tokens
+
+- [ ] [Generate new token](https://github.com/settings/tokens?type=beta)
+  - Repository access: `All repositories`
+  - Permissions - Repository permissions - Contents: `Read and write`
+
+#### ssh-keygen
+
+- [x] Generate SSH Key pair
+
+```shell
+ssh-keygen -t ed25519 -C 'mail address for github'
+cat $HOME/.ssh/id_ed25519.pub | clip.exe
+```
+
+#### SSH Keys on GitHub
+
+- [x] Add a public key on the following site:
+
+- [https://github.com/settings/keys](https://github.com/settings/keys)
 
 
+# 2. WSL Customization
 
+## WSL
 
-###
 Update and Upgrade packages.
 
 - [ ] Configuration
@@ -189,62 +248,7 @@ sudo apt-get install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3
 dpkg -L wslu | grep bin/
 ```
 
-
-
 ## Git
-
-- [ ] Installation
-
-```shell
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update && sudo apt upgrade
-```
-
-```shell
-git --version
-git version 2.43.0
-```
-
-### Git Global Configuration
-
-- [ ] Configuration
-
-```shell
-git config --global user.name "shinyay" && \
-git config --global user.email "" && \
-git config --global core.quotepath false && \
-git config --global core.safecrlf true && \
-git config --global core.autocrlf false && \
-git config --global core.editor 'vim -c "set fenc=utf-8"' && \
-git config --global color.diff auto && \
-git config --global color.status auto && \
-git config --global color.branch auto && \
-git config pull.ff only
-```
-
-### SSH Key for GitHub
-
-#### Fine-grained personal access tokens
-
-- [ ] [Generate new token](https://github.com/settings/tokens?type=beta)
-  - Repository access: `All repositories`
-  - Permissions - Repository permissions - Contents: `Read and write`
-
-#### ssh-keygen
-
-- [ ] Generate SSH Key pair
-
-```shell
-ssh-keygen -t ed25519 -C 'mail address for github'
-cat $HOME/.ssh/id_ed25519.pub | clip.exe
-```
-
-#### SSH Keys on GitHub
-
-- [ ] Add a public key on the following site:
-
-- [https://github.com/settings/keys](https://github.com/settings/keys)
-
 
 ### Git Alias
 
