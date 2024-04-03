@@ -229,14 +229,24 @@ Update and Upgrade packages.
 
 ```shell
 sudo apt update && sudo apt upgrade
+brew update && brew upgrade
 ```
 
-Install requred packages.
+### Requred Packages Installation
+
+- zip
+- unzip
 
 ```shell
-sudo apt-get install unzip zip
+brew install zip unzip
+```
+
+- [fontconfig](https://en.wikipedia.org/wiki/Fontconfig)
+
+> Fontconfig is a library designed to provide system-wide font configuration, customization and application access. 
+
+```shell
 sudo apt-get install fontconfig
-sudo apt-get install wget ca-certificates
 sudo apt-get install wslu
 sudo apt-get install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev libffi-dev liblzma-dev tk-dev uuid-dev xz-utils libxml2-dev libxmlsec1-dev libdb-dev libgdbm-dev
 ```
