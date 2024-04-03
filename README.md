@@ -213,7 +213,6 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
-
 # 2. WSL Customization
 
 ## WSL
