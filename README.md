@@ -87,6 +87,12 @@ Restart-Computer -Force
 wsl --install
 ```
 
+Upgrade packages
+
+```shell
+sudo apt update && sudo apt upgrade
+```
+
 ## Terminal
 
 Terminal settings:
@@ -172,8 +178,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 ```
 
 ```shell
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/shinyay/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-brew doctor
+sudo apt-get install build-essential
+brew install gcc
 ```
 
 ## Git
