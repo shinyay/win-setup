@@ -441,7 +441,7 @@ fisher, version 4.4.4
 
 ### Fish Theme - bobthefish
 
-- [ ] Installation
+- [x] Installation
 
 - [oh-my-fish/theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
 
