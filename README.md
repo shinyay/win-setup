@@ -502,6 +502,8 @@ set -g theme_newline_prompt ''
 
 ### Moralerspace font
 
+<img width="271" alt="image" src="https://github.com/shinyay/win-setup/assets/3072734/9d6adc03-11ba-42be-99b3-14d99b7845dc">
+
 - [Moralerspace](https://github.com/yuru7/moralerspace)
 
 ```shell
