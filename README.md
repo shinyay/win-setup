@@ -674,10 +674,20 @@ native: 0.4.6
 
 - [x] Installation
 
-> abbr - manage fish abbreviations
+> `abbr` - manage fish abbreviations
 
 ```shell
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/abbr.fish > $HOME/.config/fish/completions/abbr.fish
+```
+
+### apt-get
+
+- [x] Installation
+
+> `apt-get` - APT package handling utility -- command-line interface
+
+```shell
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/apt-get.fish > $HOME/.config/fish/completions/apt-get.fish
 ```
 
 ### git
