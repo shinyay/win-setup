@@ -426,6 +426,8 @@ fisher, version 4.4.4
 
 ### Fish Prompt - Tide
 
+![tide](https://github.com/IlanCosman/tide/raw/assets/images/logo.svg)
+
 - [x] Installation
 
 > The ultimate Fish prompt.
