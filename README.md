@@ -710,6 +710,16 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/code.fish > $HOME/.config/fish/completions/code.fish
 ```
 
+### curl
+
+- [x] Installation
+
+> `curl` - transfer a URL
+
+```shell
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/curl.fish > $HOME/.config/fish/completions/curl.fish
+```
+
 ### git
 
 - [ ] Installation
