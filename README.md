@@ -439,7 +439,9 @@ tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='
 
 ### Fish Theme - bobthefish
 
-- [x] Installation
+If you install `tide`, you can't install bobthefish
+
+- [ ] Installation
 
 - [oh-my-fish/theme-bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
 
@@ -449,7 +451,7 @@ fisher install oh-my-fish/theme-bobthefish
 
 #### bobthefish Configuration
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 vim $HOME/.config/fish/config.fish
