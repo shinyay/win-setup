@@ -816,6 +816,18 @@ You can see like the below:
   :
 ```
 
+#### Shutdown Docker Service
+
+```shell
+sudo systemctl stop docker
+```
+
+#### Start Docker Service
+
+```shell
+sudo systemctl start docker
+```
+
 ### Docker for Visual Studio Code
 
 > The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
