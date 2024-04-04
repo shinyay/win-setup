@@ -655,6 +655,18 @@ fisher install 0rax/fish-bd
 fisher install laughedelic/fish_logo
 ```
 
+```shell
+vim $HOME/.config/fish/functions/fish_greeting.fish
+```
+
+Add the followings:
+
+```shell
+    # fish_logo
+    echo "Hello Fish!"
+    fish_logo
+```
+
 ### SDKMAN! for fish
 
 - [ ] Installation
