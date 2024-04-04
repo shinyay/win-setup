@@ -767,6 +767,21 @@ echo "deb [arch=$arch signed-by=/etc/apt/keyrings/docker.asc] https://download.d
 sudo apt-get update
 ```
 
+#### Install the Docker packages
+
+```shell
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+#### Manage Docker as a non-root user
+
+> The Docker daemon binds to a Unix socket, not a TCP port. By default it's the root user that owns the Unix socket, and other users can only access it using sudo. The Docker daemon always runs as the root user.
+> If you don't want to preface the docker command with sudo, create a Unix group called docker and add users to it. When the Docker daemon starts, it creates a Unix socket accessible by members of the docker group.
+
+```shell
+sudo usermod -aG docker $USER
+```
+
 ### Docker for Visual Studio Code
 
 > The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
