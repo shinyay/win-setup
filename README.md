@@ -794,6 +794,22 @@ Activate the changes to groups
 newgrp docker
 ```
 
+#### Check Docker Service running by Systemd
+
+```shell
+systemctl list-units --type=service --all
+```
+
+You can see like the below:
+
+```shell
+  :
+  dmesg.service                                          loaded    inactive dead    Save initial kernel messages af>
+  docker.service                                         loaded    active   running Docker Application Container En>
+  dpkg-db-backup.service                                 loaded    inactive dead    Daily dpkg database backup serv>
+  :
+```
+
 ### Docker for Visual Studio Code
 
 > The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
