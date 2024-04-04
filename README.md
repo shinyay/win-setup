@@ -732,11 +732,21 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ## Docker
 
+### Docker Desktop for Windows
+
 - [ ] Installation
 
 ```powershell
 winget search docker
 winget install Docker.DockerDesktop
+```
+
+### Docker Engine for Ubuntu
+
+#### Uninstall old versions
+
+```shell
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; sudo apt-get remove $pkg; end
 ```
 
 ### Docker for Visual Studio Code
