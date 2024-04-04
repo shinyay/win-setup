@@ -426,6 +426,10 @@ fisher, version 4.4.4
 
 ### Fish Prompt - Tide
 
+- [x] Installation
+
+> The ultimate Fish prompt.
+
 - [IlanCosman/tide](https://github.com/IlanCosman/tide)
 - [tide - Configuration Wiki](https://github.com/IlanCosman/tide/wiki/Configuration)
 
