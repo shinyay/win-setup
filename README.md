@@ -551,7 +551,7 @@ By pushing `ctrl` + `r`, you can search shell history
 ```shell
 brew install peco
 fisher install oh-my-fish/plugin-peco
-abbr -
+abbr -a history peco_select_history
 ```
 
 ### fzf
