@@ -641,6 +641,20 @@ By bd, you can quickly go back to a parent directory in your current working dir
 fisher install 0rax/fish-bd
 ```
 
+### fish_logo
+
+- [x] Installation
+
+> This plugin adds a function to print out the fish-shell ASCII-art logo.
+
+- [laughedelic/fish_logo](https://github.com/laughedelic/fish_logo)
+
+![fishlogo](https://gist.githubusercontent.com/laughedelic/b7d5e572b0a35afd51fd40a2d9eef66b/raw/blue-base16-solarized.dark.png)
+
+```shell
+fisher install laughedelic/fish_logo
+```
+
 ### SDKMAN! for fish
 
 - [ ] Installation
