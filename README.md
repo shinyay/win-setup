@@ -800,6 +800,12 @@ newgrp docker
 systemctl list-units --type=service --all
 ```
 
+or
+
+```shell
+systemctl list-units --type=service --state=active 
+```
+
 You can see like the below:
 
 ```shell
