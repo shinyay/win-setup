@@ -619,7 +619,7 @@ echo "" | tee -a $HOME/.config/fish/config.fish
 
 ### z
 
-- [ ] Installation
+- [x] Installation
 
 By z, it tracks the directory you have visited
 
