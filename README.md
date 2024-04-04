@@ -700,6 +700,16 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/bd.fish > $HOME/.config/fish/completions/bd.fish
 ```
 
+### code
+
+- [x] Installation
+
+> `code` - Visual Studio Code
+
+```shell
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/code.fish > $HOME/.config/fish/completions/code.fish
+```
+
 ### git
 
 - [ ] Installation
