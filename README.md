@@ -666,11 +666,21 @@ script: 5.18.2
 native: 0.4.6
 ```
 
-### Fish Completion
+## Fish Completion
 
 - [Fish Completion List](https://github.com/fish-shell/fish-shell/tree/master/share/completions)
 
-#### git
+### abbr
+
+- [x] Installation
+
+> abbr - manage fish abbreviations
+
+```shell
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/abbr.fish > $HOME/.config/fish/completions/abbr.fish
+```
+
+### git
 
 - [ ] Installation
 
