@@ -722,7 +722,9 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### git
 
-- [ ] Installation
+- [x] Installation
+
+> `git` - the stupid content tracker
 
 ```shell
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
