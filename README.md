@@ -556,6 +556,8 @@ abbr -a history peco_select_history
 
 ### fzf
 
+#### fzf
+
 - [x] Installation `fzf`
 
 > Augment your Fish command line with mnemonic key bindings to efficiently find what you need using fzf.
@@ -568,10 +570,13 @@ Interactice command search
 brew install fzf
 ```
 
+#### bat
 
-- [ ] Installation bat
+- [x] Installation bat
+
+> A cat(1) clone with syntax highlighting and Git integration.
+
 - [bat](https://github.com/sharkdp/bat)
-cat clone with syntax highlight and Git integration
 
 ```shell
 brew install bat
