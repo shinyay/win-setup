@@ -612,7 +612,7 @@ echo "" | tee -a $HOME/.config/fish/config.fish
 |Key bind|Description|
 |--------|-----------|
 |`Ctrl`+`r`|Command history|
-|`Ctrl`+`v`|Environment variables|
+|`Ctrl`+`Alt`+`v`|Environment variables|
 |`Ctrl`+`Alt`+`f`|Recursive listing|
 |`Ctrl`+`Alt`+`s`|`git status`|
 |`Ctrl`+`Alt`+`l`|`git log`|
