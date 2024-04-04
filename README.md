@@ -655,6 +655,8 @@ fisher install 0rax/fish-bd
 fisher install laughedelic/fish_logo
 ```
 
+The description in `fish_greeting.fish` is executed when you log in to fish.
+
 ```shell
 vim $HOME/.config/fish/functions/fish_greeting.fish
 ```
