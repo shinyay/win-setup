@@ -582,13 +582,20 @@ brew install fzf
 brew install bat
 ```
 
-- [ ] Installation fd
+#### fd
+
+- [x] Installation fd
+
+> `fd` is a program to find entries in your filesystem. It is a simple, fast and user-friendly alternative to `find`.
+
 - [fd](https://github.com/sharkdp/fd)
 find entries in your filesystem
 
 ```shell
 brew install fd
 ```
+
+#### fzf for Fish
 
 - [ ] Installation fzf
 - [fzf](https://github.com/PatrickF1/fzf.fish)
