@@ -540,7 +540,7 @@ rm -fr download
 ## Fish Plugin
 
 ### Peco
-- [ ] Installation
+- [x] Installation
 
 By pushing ctrl + r, you can search shell history
 
