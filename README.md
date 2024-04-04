@@ -631,7 +631,7 @@ fisher install jethrokuan/z
 
 ### fish-bd
 
-- [ ] Installation
+- [x] Installation
 
 By bd, you can quickly go back to a parent directory in your current working directory tree
 
