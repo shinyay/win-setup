@@ -556,11 +556,13 @@ abbr -a history peco_select_history
 
 ### fzf
 
+- [x] Installation `fzf`
+
+> Augment your Fish command line with mnemonic key bindings to efficiently find what you need using fzf.
+
 Interactice command search
 
 - [fzf.fish](https://github.com/PatrickF1/fzf.fish)
-
-- [ ] Installation fzf
 
 ```shell
 brew install fzf
