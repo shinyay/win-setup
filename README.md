@@ -664,7 +664,7 @@ Add the followings:
 ```shell
     # fish_logo
     echo "Hello Fish!"
-    fish_logo
+    fish_logo blue cyan green
 ```
 
 ### SDKMAN! for fish
