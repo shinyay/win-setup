@@ -782,6 +782,18 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -aG docker $USER
 ```
 
+Reboot your WSL.
+
+```shell
+wsl --shutdown
+```
+
+Activate the changes to groups
+
+```shell
+newgrp docker
+```
+
 ### Docker for Visual Studio Code
 
 > The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
