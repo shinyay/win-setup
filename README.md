@@ -748,6 +748,16 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/curl.fish > $HOME/.config/fish/completions/curl.fish
 ```
 
+### docker
+
+- [x] Installation
+
+After Docker installation, you can do the following:
+
+```shell
+docker completion fish > $HOME/.config/fish/completions/docker.fish
+```
+
 ### git
 
 - [x] Installation
