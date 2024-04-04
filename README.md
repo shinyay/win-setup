@@ -500,7 +500,7 @@ set -g theme_newline_cursor yes
 set -g theme_newline_prompt ''
 ```
 
-### Moralerspace font for bobthefish
+### Moralerspace font
 
 <img width="271" alt="image" src="https://github.com/shinyay/win-setup/assets/3072734/9d6adc03-11ba-42be-99b3-14d99b7845dc">
 
@@ -546,7 +546,7 @@ cd ..
 rm -fr download
 ```
 
-### Cica font for bobthefish
+### Cica font
 
 - [Cica](https://github.com/miiton/Cica)
 
