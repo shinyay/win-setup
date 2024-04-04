@@ -542,7 +542,9 @@ rm -fr download
 ### Peco
 - [x] Installation
 
-By pushing ctrl + r, you can search shell history
+> Simplistic interactive filtering tool
+
+By pushing `ctrl` + `r`, you can search shell history
 
 - [oh-my-fish/plugin-peco](https://github.com/oh-my-fish/plugin-peco)
 
