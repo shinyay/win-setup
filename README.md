@@ -918,7 +918,7 @@ Install Dev Container CLI.
 brew update && brew install azure-cli
 ```
 
-# 3. Terminal
+# 3. Terminal Customization
 
 ## Startup
 
@@ -943,7 +943,99 @@ brew update && brew install azure-cli
 - **Window - Scrollbar Visibility**: `Hidden`
 
 
-# Do Something
+# 3. Visual Studio Code
+
+## Settings - Everything starts from `Ctrl` + `,`
+
+### `Text Editor`
+
+#### Format On Paste
+
+Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+
+- [ ] Enabled
+
+#### Format On Type
+
+Controls whether the editor should automatically format the line after typing.
+
+- [ ] Enabled
+
+#### Minimap: Enabled
+
+Controls whether the minimap is shown.
+
+- [ ] Disabled
+
+#### Render Control Characters
+
+Controls whether the editor should render control characters.
+
+- [ ] Enabled
+
+#### Render Line Highlight
+
+- Controls how the editor render the current line highlight: `all`
+
+### `Text Editor` - `Files`
+
+#### Insert Final Newline
+
+When Enabled, insert a final new line at the end of the file saving it.
+
+- [ ] Enabled
+
+#### Trim Trailing Whitespace
+
+When enabled, will trim trailing whitespace when saving a file.
+
+- [ ] Enabled
+
+### `Text Editor` - `Cursor`
+
+#### Cursor Blinking
+
+- Control the cursor animation style: `expand`
+
+#### Cursor Smooth Caret Animation
+
+Control whether the sooth caret animation be enabled.
+
+- [ ] Enabled
+
+#### Cursor Style
+
+- Control the cursor style: `block`
+
+### `Workbench` - `Zen Mode`
+
+#### Center Layout
+
+Controls whether turning on Zen Mode also centers the layout.
+
+- [ ] Disabled
+
+#### Hide Line Numbers
+
+Controls whether turning on Zen Mode also hides the editor line numbers.
+
+- [ ] Disabled
+
+#### Hide Status Bar
+
+Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
+
+- [ ] Disabled
+
+## Profile
+
+> VS Code profiles provide a way to organize and isolate customizations within the editor. A profile represents a specific set of configurations that can be easily activated or deactivated. With profiles, users can maintain separate configurations for different projects or teams, to help ensure a seamless transition between development environments.
+
+### Create Profile
+
+![create-profile](https://github.com/shinyay/win-setup/assets/3072734/430da389-8cb3-40b2-b82f-5f9932575398)
+
+# etc
 
 ## Python
 
@@ -1165,95 +1257,3 @@ winget install Anki.Anki
 winget search ankimotiv
 winget install Shure.ShurePlusMOTIV
 ```
-
-# 3. Visual Studio Code
-
-## Settings - Everything starts from `Ctrl` + `,`
-
-### `Text Editor`
-
-#### Format On Paste
-
-Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
-
-- [ ] Enabled
-
-#### Format On Type
-
-Controls whether the editor should automatically format the line after typing.
-
-- [ ] Enabled
-
-#### Minimap: Enabled
-
-Controls whether the minimap is shown.
-
-- [ ] Disabled
-
-#### Render Control Characters
-
-Controls whether the editor should render control characters.
-
-- [ ] Enabled
-
-#### Render Line Highlight
-
-- Controls how the editor render the current line highlight: `all`
-
-### `Text Editor` - `Files`
-
-#### Insert Final Newline
-
-When Enabled, insert a final new line at the end of the file saving it.
-
-- [ ] Enabled
-
-#### Trim Trailing Whitespace
-
-When enabled, will trim trailing whitespace when saving a file.
-
-- [ ] Enabled
-
-### `Text Editor` - `Cursor`
-
-#### Cursor Blinking
-
-- Control the cursor animation style: `expand`
-
-#### Cursor Smooth Caret Animation
-
-Control whether the sooth caret animation be enabled.
-
-- [ ] Enabled
-
-#### Cursor Style
-
-- Control the cursor style: `block`
-
-### `Workbench` - `Zen Mode`
-
-#### Center Layout
-
-Controls whether turning on Zen Mode also centers the layout.
-
-- [ ] Disabled
-
-#### Hide Line Numbers
-
-Controls whether turning on Zen Mode also hides the editor line numbers.
-
-- [ ] Disabled
-
-#### Hide Status Bar
-
-Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
-
-- [ ] Disabled
-
-## Profile
-
-> VS Code profiles provide a way to organize and isolate customizations within the editor. A profile represents a specific set of configurations that can be easily activated or deactivated. With profiles, users can maintain separate configurations for different projects or teams, to help ensure a seamless transition between development environments.
-
-### Create Profile
-
-![create-profile](https://github.com/shinyay/win-setup/assets/3072734/430da389-8cb3-40b2-b82f-5f9932575398)
