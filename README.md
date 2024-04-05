@@ -1029,7 +1029,7 @@ Controls whether turning on Zen Mode also hides the editor line numbers.
 
 Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
 
-- [ ] Disabled
+- [x] Disabled
 
 ## Profile
 
