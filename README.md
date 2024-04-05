@@ -1001,11 +1001,11 @@ When enabled, will trim trailing whitespace when saving a file.
 
 - Control the cursor animation style: `expand`
 
-#### Cursor Smooth Caret Animation
+### Cursor Smooth Caret Animation
 
 Control whether the sooth caret animation be enabled.
 
-- [ ] Enabled
+- [x] Enabled
 
 #### Cursor Style
 
