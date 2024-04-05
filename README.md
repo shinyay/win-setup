@@ -912,6 +912,8 @@ sudo systemctl start docker
 
 # 4. Visual Studio Code
 
+! [vscode](https://code.visualstudio.com/assets/images/code-stable.png)
+
 **Settings** - Everything starts from `Ctrl` + `,`
 
 ## `Text Editor`
