@@ -943,17 +943,17 @@ brew update && brew install azure-cli
 - **Window - Scrollbar Visibility**: `Hidden`
 
 
-# 3. Visual Studio Code
+# 4. Visual Studio Code
 
-## Settings - Everything starts from `Ctrl` + `,`
+**Settings** - Everything starts from `Ctrl` + `,`
 
-### `Text Editor`
+## `Text Editor` - `Formatting`
 
-#### Format On Paste
+### Format On Paste
 
 Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
 
-- [ ] Enabled
+- [x] Enabled
 
 #### Format On Type
 
