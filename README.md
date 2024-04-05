@@ -981,13 +981,13 @@ Controls whether the minimap is shown.
 
 - [x] Disabled
 
-### `Text Editor` - `Files`
+## `Text Editor` - `Files`
 
-#### Insert Final Newline
+### Insert Final Newline
 
 When Enabled, insert a final new line at the end of the file saving it.
 
-- [ ] Enabled
+- [x] Enabled
 
 #### Trim Trailing Whitespace
 
