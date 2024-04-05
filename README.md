@@ -1025,7 +1025,7 @@ Controls whether turning on Zen Mode also hides the editor line numbers.
 
 - [x] Disabled
 
-#### Hide Status Bar
+### Hide Status Bar
 
 Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
 
