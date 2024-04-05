@@ -38,7 +38,7 @@ winget install Google.JapaneseIME
 
 `Run as Administrator` **PowerShell** and enable the following features:
 
-- VirtualMachinePlatform 
+- VirtualMachinePlatform
 - Microsoft-Windows-Subsystem-Linux
 - HypervisorPlatform
 
@@ -246,7 +246,7 @@ brew install zip unzip
 
 - [x] Installation
 
-> Fontconfig is a library designed to provide system-wide font configuration, customization and application access. 
+> Fontconfig is a library designed to provide system-wide font configuration, customization and application access.
 
 - [fontconfig](https://en.wikipedia.org/wiki/Fontconfig)
 
@@ -860,7 +860,7 @@ systemctl list-units --type=service --all
 or
 
 ```shell
-systemctl list-units --type=service --state=active 
+systemctl list-units --type=service --state=active
 ```
 
 You can see like the below:
@@ -989,11 +989,11 @@ When Enabled, insert a final new line at the end of the file saving it.
 
 - [x] Enabled
 
-#### Trim Trailing Whitespace
+### Trim Trailing Whitespace
 
 When enabled, will trim trailing whitespace when saving a file.
 
-- [ ] Enabled
+- [x] Enabled
 
 ### `Text Editor` - `Cursor`
 
