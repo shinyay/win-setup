@@ -995,9 +995,9 @@ When enabled, will trim trailing whitespace when saving a file.
 
 - [x] Enabled
 
-### `Text Editor` - `Cursor`
+## `Text Editor` - `Cursor`
 
-#### Cursor Blinking
+### Cursor Blinking
 
 - Control the cursor animation style: `expand`
 
