@@ -961,11 +961,13 @@ Controls whether the editor should automatically format the line after typing.
 
 - [x] Enabled
 
-#### Minimap: Enabled
+## `Text Editor` - `Minimap`
+
+### Enabled
 
 Controls whether the minimap is shown.
 
-- [ ] Disabled
+- [x] Disabled
 
 #### Render Control Characters
 
