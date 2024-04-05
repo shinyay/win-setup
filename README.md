@@ -959,6 +959,22 @@ Controls whether the editor should render control characters.
 
 - Controls how the editor render the current line highlight: `all`
 
+## `Text Editor` - `Cursor`
+
+### Cursor Blinking
+
+- Control the cursor animation style: `expand`
+
+### Cursor Smooth Caret Animation
+
+Control whether the sooth caret animation be enabled.
+
+- [x] Enabled
+
+### Cursor Style
+
+- Control the cursor style: `block`
+
 ## `Text Editor` - `Formatting`
 
 ### Format On Paste
@@ -994,22 +1010,6 @@ When Enabled, insert a final new line at the end of the file saving it.
 When enabled, will trim trailing whitespace when saving a file.
 
 - [x] Enabled
-
-## `Text Editor` - `Cursor`
-
-### Cursor Blinking
-
-- Control the cursor animation style: `expand`
-
-### Cursor Smooth Caret Animation
-
-Control whether the sooth caret animation be enabled.
-
-- [x] Enabled
-
-### Cursor Style
-
-- Control the cursor style: `block`
 
 ### `Workbench` - `Zen Mode`
 
