@@ -1011,6 +1011,12 @@ When enabled, will trim trailing whitespace when saving a file.
 
 - [x] Enabled
 
+## `Workbench` - `Appearance`
+
+### Color Theme
+
+- `Tomorrow Night Blue`
+
 ## `Workbench` - `Zen Mode`
 
 ### Center Layout
