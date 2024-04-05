@@ -918,10 +918,17 @@ Install Dev Container CLI.
 brew update && brew install azure-cli
 ```
 
-## Terminal
+# 3. Terminal
 
-- [ ] Do something
+## Startup
 
+- **Default Profile**: `Ubuntu`
+- **Default Terminal Application**: `Windows Terminal`
+- **Launch Size**:
+  - **Columns**: `110`
+  - **Rows**: `20`
+
+# Do Something
 
 ## Python
 
