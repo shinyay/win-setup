@@ -928,6 +928,13 @@ brew update && brew install azure-cli
   - **Columns**: `110`
   - **Rows**: `20`
 
+## Interaction
+
+- Remove trailing white-space in recangular selection: On
+  - > You can select in rectangular with `Alt` + Mouse select
+
+
+
 # Do Something
 
 ## Python
