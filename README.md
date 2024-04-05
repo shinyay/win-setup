@@ -1019,11 +1019,11 @@ Controls whether turning on Zen Mode also centers the layout.
 
 - [x] Disabled
 
-#### Hide Line Numbers
+### Hide Line Numbers
 
 Controls whether turning on Zen Mode also hides the editor line numbers.
 
-- [ ] Disabled
+- [x] Disabled
 
 #### Hide Status Bar
 
