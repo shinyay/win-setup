@@ -947,6 +947,18 @@ brew update && brew install azure-cli
 
 **Settings** - Everything starts from `Ctrl` + `,`
 
+## `Text Editor`
+
+### Render Control Characters
+
+Controls whether the editor should render control characters.
+
+- [x] Enabled
+
+### Render Line Highlight
+
+- Controls how the editor render the current line highlight: `all`
+
 ## `Text Editor` - `Formatting`
 
 ### Format On Paste
@@ -968,16 +980,6 @@ Controls whether the editor should automatically format the line after typing.
 Controls whether the minimap is shown.
 
 - [x] Disabled
-
-#### Render Control Characters
-
-Controls whether the editor should render control characters.
-
-- [ ] Enabled
-
-#### Render Line Highlight
-
-- Controls how the editor render the current line highlight: `all`
 
 ### `Text Editor` - `Files`
 
