@@ -935,7 +935,7 @@ brew update && brew install azure-cli
 
 ## Appearance
 
--**Show acrylic tab ros**: `On`
+- **Show acrylic tab row**: `On`
 
 ## Ubuntu - Appearance
 
