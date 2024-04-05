@@ -955,11 +955,11 @@ Controls whether the editor should automatically format the pasted content. A fo
 
 - [x] Enabled
 
-#### Format On Type
+### Format On Type
 
 Controls whether the editor should automatically format the line after typing.
 
-- [ ] Enabled
+- [x] Enabled
 
 #### Minimap: Enabled
 
