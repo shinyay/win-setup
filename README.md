@@ -885,39 +885,6 @@ sudo systemctl stop docker
 sudo systemctl start docker
 ```
 
-### Docker for Visual Studio Code
-
-> The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
-
-- [ ] Installation
-
-- [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-
-
-## Dev Container CLI
-
-- [ ] Installation
-
-- [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
-
-Install Dev Container CLI.
-
-1. Open VSCode
-2. Select the **Dev Containers: Install devcontainer CLI** command from the Command Palette (`F1`).
-
-## Azure CLI
-
-- [ ] Installation
-
-> The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.
-
-- [Azure Command-Line Interface (CLI) documentation](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
-- [How to install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
-
-```shell
-brew update && brew install azure-cli
-```
-
 # 3. Terminal Customization
 
 ## Startup
@@ -1051,6 +1018,40 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 ## Rust
 ## TypeScript
 ## Python
+
+## Dev Container CLI
+
+- [ ] Installation
+
+- [Dev Container CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)
+  - [devcontainers/cli](https://github.com/devcontainers/cli)
+
+Install Dev Container CLI.
+
+1. Open VSCode
+2. Select the **Dev Containers: Install devcontainer CLI** command from the Command Palette (`F1`).
+
+## Docker for Visual Studio Code
+
+> The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
+
+- [ ] Installation
+
+- [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+
+## Azure CLI
+
+- [ ] Installation
+
+> The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.
+
+- [Azure Command-Line Interface (CLI) documentation](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
+- [How to install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+
+```shell
+brew update && brew install azure-cli
+```
+
 
 # etc
 
