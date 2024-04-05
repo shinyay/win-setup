@@ -935,6 +935,10 @@ brew update && brew install azure-cli
 
 ## Appearance
 
+-**Show acrylic tab ros**: `On`
+
+## Ubuntu - Appearance
+
 - **Transparency - Background opacity**: `90%`
 - **Window - Scrollbar Visibility**: `Hidden`
 
