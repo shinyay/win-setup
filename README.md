@@ -1045,6 +1045,13 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 ![create-profile](https://github.com/shinyay/win-setup/assets/3072734/430da389-8cb3-40b2-b82f-5f9932575398)
 
+# 5. Development Environment on Dev containers
+
+## Java (Kotlin)
+## Rust
+## TypeScript
+## Python
+
 # etc
 
 ## Python
