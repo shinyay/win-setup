@@ -933,6 +933,10 @@ brew update && brew install azure-cli
 - Remove trailing white-space in recangular selection: On
   - > You can select in rectangular with `Alt` + Mouse select
 
+## Appearance
+
+- **Transparency - Background opacity**: `90%`
+- **Window - Scrollbar Visibility**: `Hidden`
 
 
 # Do Something
