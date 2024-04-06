@@ -1260,6 +1260,8 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 - [Test Runner for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
 ![vscjava.vscode-maven](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-maven/0.44.2024013105/1706679025282/Microsoft.VisualStudio.Services.Icons.Default)
 - [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
+![SonarSource.sonarlint-vscode](https://sonarsource.gallerycdn.vsassets.io/extensions/sonarsource/sonarlint-vscode/4.4.2/1712239357006/Microsoft.VisualStudio.Services.Icons.Default)
+- [SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode)
 
 ## Kotlin
 ## Rust
