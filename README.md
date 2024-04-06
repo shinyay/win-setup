@@ -1266,6 +1266,8 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 - [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)
 ![MicroProfile-Community.vscode-microprofile-pack](https://microprofile-community.gallerycdn.vsassets.io/extensions/microprofile-community/vscode-microprofile-pack/0.1.3/1641330099100/Microsoft.VisualStudio.Services.Icons.Default)
 - [Extension Pack for MicroProfile](https://marketplace.visualstudio.com/items?itemName=MicroProfile-Community.vscode-microprofile-pack)
+![redhat.vscode-quarkus](https://redhat.gallerycdn.vsassets.io/extensions/redhat/vscode-quarkus/1.18.2024040604/1712391376590/Microsoft.VisualStudio.Services.Icons.Default)
+- [Quarkus](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus)
 
 ## Kotlin
 ## Rust
