@@ -1041,7 +1041,9 @@ If you want a base image which Microsoft pre-built, you can find it at the follo
 - [Available Dev Container Templates](https://containers.dev/templates)
 
 
-### Dockerfile
+### compose.yaml
+
+>  Docker Compose is a tool for defining and running multi-container Docker applications. The `compose.yaml` file defines services, networks, and volumes for your application's containers. While not strictly required for every Dev Container setup, it can be useful for defining more complex development environments with multiple services or containers that need to interact with each other.
 
 ###
 
