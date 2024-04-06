@@ -1094,6 +1094,12 @@ services:
 
 - `restart: always`: This instructs Docker to always restart the container if it stops for any reason.
 
+```yaml
+    working_dir: '/workspace'
+```
+
+- `working_dir: '/workspace'`: This sets the working directory inside the container to `/workspace`. When the container starts, commands executed within the container will run relative to this directory.
+
 
 ###
 
