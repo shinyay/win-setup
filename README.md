@@ -1026,6 +1026,17 @@ This Dev Container consists of the following three files:
 - compose.yaml
 - devcontainer.json
 
+### Dockerfile
+
+> This file is used to build the container image that will contain your development environment. It specifies the base image, installs necessary dependencies, sets up the environment, and copies any project-specific files into the container. The Dockerfile is essential for defining the environment's infrastructure and dependencies.
+
+```dockerfile
+
+```
+
+
+### Dockerfile
+
 ###
 
 ## Kotlin
