@@ -1122,7 +1122,45 @@ services:
 
 > The `devcontainer.json` file configures how VS Code connects to and interacts with the Dev Container, including settings for extensions, environment variables, mount points, and more.
 
+```json
+{
+	"name": "Playground - Java",
+  "dockerComposeFile": "compose.yaml",
+	"service": "playground-java",
+	"workspaceFolder": "/workspace",
+	"remoteUser": "vscode",
 
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "false",
+			"installGradle": "true"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"workbench.colorCustomizations": {
+					"titleBar.activeBackground": "#19549C",
+					"titleBar.activeForeground": "#ffffff",
+					"activityBar.background": "#02A7E3",
+					"activityBar.foreground": "#ffffff"
+				}
+			}
+		}
+	}
+
+	// "forwardPorts": [],
+
+	// "postCreateCommand": "java -version",
+
+	// "customizations": {},
+}
+```
 
 ## Kotlin
 ## Rust
