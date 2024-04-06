@@ -1258,6 +1258,8 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 - [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
 ![vscjava.vscode-java-test](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-test/0.41.0/1712283540135/Microsoft.VisualStudio.Services.Icons.Default)
 - [Test Runner for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
+![vscjava.vscode-maven](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-maven/0.44.2024013105/1706679025282/Microsoft.VisualStudio.Services.Icons.Default)
+- [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
 
 ## Kotlin
 ## Rust
