@@ -1179,6 +1179,18 @@ services:
 - `workspaceFolder`: This specifies the workspace folder within the Dev Container. It's set to `/workspace`.
 - `remoteUser`: This specifies the user to use within the Dev Container. Here, it's set to `vscode`, which is a common choice for development within containers.
 
+```json
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "false",
+			"installGradle": "true"
+		}
+	},
+```
+
+- `features`: This section allows you to specify additional features or tools to include in the Dev Container. In this case, it's specifying a Java feature from a predefined set of Dev Container features. It specifies that Maven should not be installed (`installMaven: "false"`) but Gradle should be installed (`installGradle: "true"`).
+
 ## Kotlin
 ## Rust
 ## TypeScript
