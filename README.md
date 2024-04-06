@@ -1036,6 +1036,10 @@ USER vscode
 WORKDIR /workspace
 ```
 
+- **USER**: Non-root user.
+  - In `mcr.microsoft.com/devcontainers/java`, the `vscode` user is already defined and can be used by simply specifying it
+- **WORKDIR**: To separate the workspace from the location of the dev container definition files
+
 If you want a base image which Microsoft pre-built, you can find it at the following:
 
 - [Available Dev Container Templates](https://containers.dev/templates)
