@@ -1078,6 +1078,16 @@ services:
 - `services`: This is the top-level key in a Docker Compose file, and it defines the services that make up your application.
 - `playground-java`: This is the name of the service, which in this case is named `playground-java`.
 
+```yaml
+    build:
+      context: .
+      dockerfile: Dockerfile
+```
+
+- `build`: This specifies how to build the Docker image for the service.
+- `context: .`: This specifies the build context, which is the directory where the Dockerfile and any other files needed for building the image are located. In this case, it's set to the current directory (`.`).
+- `dockerfile: Dockerfile`: This specifies the name of the Dockerfile to use for building the image. In this case, it's named `Dockerfile`.
+
 
 ###
 
