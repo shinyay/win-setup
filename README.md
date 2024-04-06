@@ -1224,7 +1224,27 @@ This example would forward ports 3000 and 8080 from the Dev Container to the loc
 
 You would typically set the `forwardPorts` setting when you're developing applications or services that need to be accessible from your local environment but are running inside a container. It's especially useful for web development, where you might have a web server running inside the container serving your application, and you want to test it locally in your browser.
 
+##### postCreateCommand
 
+The `postCreateCommand` setting in the `devcontainer.json` file is used to specify a command that should be executed after the Dev Container is created. This command runs once, immediately after the container is created but before it is started.
+
+You might use the `postCreateCommand` setting for various purposes, such as:
+
+1. **Setting up the development environment**: You could use this command to perform additional setup steps required for your development environment after the container is created. For example, you might install additional tools or dependencies, initialize databases, or set up configuration files.
+
+2. **Running initialization scripts**: If your project requires specific initialization scripts to be executed before development can begin, you can specify these scripts as the `postCreateCommand`. This could include running database migrations, setting up test data, or performing any other necessary setup tasks.
+
+3. **Customizing the container environment**: You could use the `postCreateCommand` to customize the container environment based on specific project requirements. This might involve configuring system settings, setting environment variables, or performing any other customizations needed for your project.
+
+Here's an example of how you might set the `postCreateCommand` in the `devcontainer.json` file:
+
+```json
+"postCreateCommand": "git fetch origin && git diff origin/main"
+```
+
+In this example, this command sequence would execute git fetch origin to fetch the latest changes from the remote repository and then run git diff origin/main to compare the local branch with the main branch on the remote repository.
+
+Overall, the `postCreateCommand` setting allows you to automate additional setup steps or customization tasks that need to be performed after the Dev Container is created, helping to streamline the development environment setup process for your project.
 
 ## Kotlin
 ## Rust
