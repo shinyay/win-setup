@@ -1049,6 +1049,23 @@ If you want a base image which Microsoft pre-built, you can find it at the follo
 
 >  Docker Compose is a tool for defining and running multi-container Docker applications. The `compose.yaml` file defines services, networks, and volumes for your application's containers. While not strictly required for every Dev Container setup, it can be useful for defining more complex development environments with multiple services or containers that need to interact with each other.
 
+```yaml
+services:
+  playground-java:
+    container_name: 'playground'
+    hostname: 'java'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    working_dir: '/workspace'
+    tty: true
+    volumes:
+      - type: bind
+        source: ../workspace
+        target: /workspace
+```
+
 ###
 
 ## Kotlin
