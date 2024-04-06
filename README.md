@@ -1246,6 +1246,14 @@ In this example, this command sequence would execute git fetch origin to fetch t
 
 Overall, the `postCreateCommand` setting allows you to automate additional setup steps or customization tasks that need to be performed after the Dev Container is created, helping to streamline the development environment setup process for your project.
 
+#### Recommended VS Code Extensions
+
+I recommend the following Visual Studio Code Extensions for Java Development:
+
+![redhat.java](https://redhat.gallerycdn.vsassets.io/extensions/redhat/java/1.30.2024040408/1712218493729/Microsoft.VisualStudio.Services.Icons.Default)
+- [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+
+
 ## Kotlin
 ## Rust
 ## TypeScript
