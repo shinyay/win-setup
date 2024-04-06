@@ -1014,7 +1014,13 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 # 5. Development Environment on Dev containers
 
-## Java (Kotlin)
+![devcontainers](https://user-images.githubusercontent.com/10041279/93239062-e1b9a480-f747-11ea-94fb-3d50b14fd9b1.png)
+
+## Java
+
+###
+
+## Kotlin
 ## Rust
 ## TypeScript
 ## Python
