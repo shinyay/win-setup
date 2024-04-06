@@ -1191,6 +1191,28 @@ services:
 
 - `features`: This section allows you to specify additional features or tools to include in the Dev Container. In this case, it's specifying a Java feature from a predefined set of Dev Container features. It specifies that Maven should not be installed (`installMaven: "false"`) but Gradle should be installed (`installGradle: "true"`).
 
+```json
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"workbench.colorCustomizations": {
+					"titleBar.activeBackground": "#19549C",
+					"titleBar.activeForeground": "#ffffff",
+					"activityBar.background": "#02A7E3",
+					"activityBar.foreground": "#ffffff"
+				}
+			}
+		}
+	}
+```
+
+- `customizations`: This section allows you to customize the VS Code environment within the Dev Container. It specifies extensions to install (`ms-azuretools.vscode-docker`) and VS Code settings to apply. In this case, it enables automatic formatting on save (`"editor.formatOnSave": true`) and customizes the colors of the title bar and activity bar.
+
+
 ## Kotlin
 ## Rust
 ## TypeScript
