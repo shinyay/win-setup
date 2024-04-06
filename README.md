@@ -1118,7 +1118,11 @@ services:
 - `source: ../workspace`: This specifies the source directory on the host machine to bind mount into the container. It's relative to the location of the `compose.yaml` file and points to a directory named `workspace` in the parent directory (`..`).
 - `target: /workspace`: This specifies the target directory inside the container where the source directory will be mounted.
 
-###
+### devcontainer.json
+
+> The `devcontainer.json` file configures how VS Code connects to and interacts with the Dev Container, including settings for extensions, environment variables, mount points, and more.
+
+
 
 ## Kotlin
 ## Rust
