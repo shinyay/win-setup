@@ -1251,6 +1251,7 @@ Overall, the `postCreateCommand` setting allows you to automate additional setup
 I recommend the following Visual Studio Code Extensions for Java Development:
 
 - [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+
 [![redhat.java](https://redhat.gallerycdn.vsassets.io/extensions/redhat/java/1.30.2024040408/1712218493729/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=redhat.java)
 
 ![vscjava.vscode-java-debug](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-debug/0.57.0/1711429312949/Microsoft.VisualStudio.Services.Icons.Default)
