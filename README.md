@@ -1156,9 +1156,7 @@ services:
 
 	// "forwardPorts": [],
 
-	// "postCreateCommand": "java -version",
-
-	// "customizations": {},
+	// "postCreateCommand": "java -version"
 }
 ```
 
@@ -1212,6 +1210,7 @@ services:
 
 - `customizations`: This section allows you to customize the VS Code environment within the Dev Container. It specifies extensions to install (`ms-azuretools.vscode-docker`) and VS Code settings to apply. In this case, it enables automatic formatting on save (`"editor.formatOnSave": true`) and customizes the colors of the title bar and activity bar.
 
+The commented-out sections (`forwardPorts` and `postCreateCommand`) allow you to specify additional settings like port forwarding or commands to run after the Dev Container is created.
 
 ## Kotlin
 ## Rust
