@@ -1088,6 +1088,12 @@ services:
 - `context: .`: This specifies the build context, which is the directory where the Dockerfile and any other files needed for building the image are located. In this case, it's set to the current directory (`.`).
 - `dockerfile: Dockerfile`: This specifies the name of the Dockerfile to use for building the image. In this case, it's named `Dockerfile`.
 
+```yaml
+    restart: always
+```
+
+- `restart: always`: This instructs Docker to always restart the container if it stops for any reason.
+
 
 ###
 
