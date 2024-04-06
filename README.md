@@ -1031,8 +1031,14 @@ This Dev Container consists of the following three files:
 > This file is used to build the container image that will contain your development environment. It specifies the base image, installs necessary dependencies, sets up the environment, and copies any project-specific files into the container. The Dockerfile is essential for defining the environment's infrastructure and dependencies.
 
 ```dockerfile
-
+FROM mcr.microsoft.com/devcontainers/java:1-21-bullseye
+USER vscode
+WORKDIR /workspace
 ```
+
+If you want a base image which Microsoft pre-built, you can find it at the following:
+
+- [Available Dev Container Templates](https://containers.dev/templates)
 
 
 ### Dockerfile
