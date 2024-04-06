@@ -1254,7 +1254,8 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 - [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
 ![vscjava.vscode-java-debug](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-debug/0.57.0/1711429312949/Microsoft.VisualStudio.Services.Icons.Default)
 - [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
-
+![vscjava.vscode-java-dependency](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-dependency/0.23.2024032505/1711346978256/Microsoft.VisualStudio.Services.Icons.Default)
+- [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
 
 ## Kotlin
 ## Rust
