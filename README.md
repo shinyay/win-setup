@@ -1066,6 +1066,19 @@ services:
         target: /workspace
 ```
 
+#### Explanation
+
+```yaml
+services:
+  playground-java:
+    container_name: 'playground'
+    hostname: 'java'
+```
+
+- `services`: This is the top-level key in a Docker Compose file, and it defines the services that make up your application.
+- `playground-java`: This is the name of the service, which in this case is named `playground-java`.
+
+
 ###
 
 ## Kotlin
