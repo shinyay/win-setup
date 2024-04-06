@@ -1106,6 +1106,17 @@ services:
 
 - `tty: true`: This allocates a pseudo-TTY for the service container, which enables interactive shell sessions.
 
+```yaml
+    volumes:
+      - type: bind
+        source: ../workspace
+        target: /workspace
+```
+
+- `volumes`: This specifies any volumes to mount into the container.
+- `- type: bind`: This indicates that you're using a bind mount, which mounts a directory from the host machine into the container.
+- `source: ../workspace`: This specifies the source directory on the host machine to bind mount into the container. It's relative to the location of the `compose.yaml` file and points to a directory named `workspace` in the parent directory (`..`).
+- `target: /workspace`: This specifies the target directory inside the container where the source directory will be mounted.
 
 ###
 
