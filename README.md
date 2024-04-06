@@ -1254,29 +1254,37 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 
 [![redhat.java](https://redhat.gallerycdn.vsassets.io/extensions/redhat/java/1.30.2024040408/1712218493729/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=redhat.java)
 
-![vscjava.vscode-java-debug](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-debug/0.57.0/1711429312949/Microsoft.VisualStudio.Services.Icons.Default)
 - [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
 
-![vscjava.vscode-java-dependency](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-dependency/0.23.2024032505/1711346978256/Microsoft.VisualStudio.Services.Icons.Default)
+[![vscjava.vscode-java-debug](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-debug/0.57.0/1711429312949/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
+
 - [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
 
-![vscjava.vscode-java-test](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-test/0.41.0/1712283540135/Microsoft.VisualStudio.Services.Icons.Default)
+[![vscjava.vscode-java-dependency](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-dependency/0.23.2024032505/1711346978256/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
+
 - [Test Runner for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
 
-![vscjava.vscode-maven](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-maven/0.44.2024013105/1706679025282/Microsoft.VisualStudio.Services.Icons.Default)
+[![vscjava.vscode-java-test](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-test/0.41.0/1712283540135/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
+
 - [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
 
-![SonarSource.sonarlint-vscode](https://sonarsource.gallerycdn.vsassets.io/extensions/sonarsource/sonarlint-vscode/4.4.2/1712239357006/Microsoft.VisualStudio.Services.Icons.Default)
+[![vscjava.vscode-maven](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-maven/0.44.2024013105/1706679025282/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
+
 - [SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode)
 
-![vmware.vscode-boot-dev-pack](https://vmware.gallerycdn.vsassets.io/extensions/vmware/vscode-boot-dev-pack/0.2.1/1675235820676/Microsoft.VisualStudio.Services.Icons.Default)
+[![SonarSource.sonarlint-vscode](https://sonarsource.gallerycdn.vsassets.io/extensions/sonarsource/sonarlint-vscode/4.4.2/1712239357006/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode)
+
 - [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)
 
-![MicroProfile-Community.vscode-microprofile-pack](https://microprofile-community.gallerycdn.vsassets.io/extensions/microprofile-community/vscode-microprofile-pack/0.1.3/1641330099100/Microsoft.VisualStudio.Services.Icons.Default)
+[![vmware.vscode-boot-dev-pack](https://vmware.gallerycdn.vsassets.io/extensions/vmware/vscode-boot-dev-pack/0.2.1/1675235820676/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)
+
 - [Extension Pack for MicroProfile](https://marketplace.visualstudio.com/items?itemName=MicroProfile-Community.vscode-microprofile-pack)
 
-![redhat.vscode-quarkus](https://redhat.gallerycdn.vsassets.io/extensions/redhat/vscode-quarkus/1.18.2024040604/1712391376590/Microsoft.VisualStudio.Services.Icons.Default)
+[![MicroProfile-Community.vscode-microprofile-pack](https://microprofile-community.gallerycdn.vsassets.io/extensions/microprofile-community/vscode-microprofile-pack/0.1.3/1641330099100/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=MicroProfile-Community.vscode-microprofile-pack)
+
 - [Quarkus](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus)
+
+[![redhat.vscode-quarkus](https://redhat.gallerycdn.vsassets.io/extensions/redhat/vscode-quarkus/1.18.2024040604/1712391376590/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus)
 
 ## Kotlin
 ## Rust
