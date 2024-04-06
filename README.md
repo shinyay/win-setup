@@ -1162,6 +1162,23 @@ services:
 }
 ```
 
+#### Explanation
+
+```json
+{
+	"name": "Playground - Java",
+  "dockerComposeFile": "compose.yaml",
+	"service": "playground-java",
+	"workspaceFolder": "/workspace",
+	"remoteUser": "vscode",
+```
+
+- `name`: This is the name of the Dev Container configuration, which appears in the VS Code UI.
+- `dockerComposeFile`: This specifies the Docker Compose file to use for creating the Dev Container. In this case, it's set to `compose.yaml`.
+- `service`: This specifies the service within the Docker Compose file that represents the Dev Container. Here, it's set to `playground-java`.
+- `workspaceFolder`: This specifies the workspace folder within the Dev Container. It's set to `/workspace`.
+- `remoteUser`: This specifies the user to use within the Dev Container. Here, it's set to `vscode`, which is a common choice for development within containers.
+
 ## Kotlin
 ## Rust
 ## TypeScript
