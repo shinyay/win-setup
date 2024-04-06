@@ -1252,6 +1252,8 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 
 ![redhat.java](https://redhat.gallerycdn.vsassets.io/extensions/redhat/java/1.30.2024040408/1712218493729/Microsoft.VisualStudio.Services.Icons.Default)
 - [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+![vscjava.vscode-java-debug](https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-java-debug/0.57.0/1711429312949/Microsoft.VisualStudio.Services.Icons.Default)
+- [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
 
 
 ## Kotlin
