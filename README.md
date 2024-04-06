@@ -1264,6 +1264,8 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 - [SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode)
 ![vmware.vscode-boot-dev-pack](https://vmware.gallerycdn.vsassets.io/extensions/vmware/vscode-boot-dev-pack/0.2.1/1675235820676/Microsoft.VisualStudio.Services.Icons.Default)
 - [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack)
+![MicroProfile-Community.vscode-microprofile-pack](https://microprofile-community.gallerycdn.vsassets.io/extensions/microprofile-community/vscode-microprofile-pack/0.1.3/1641330099100/Microsoft.VisualStudio.Services.Icons.Default)
+- [Extension Pack for MicroProfile](https://marketplace.visualstudio.com/items?itemName=MicroProfile-Community.vscode-microprofile-pack)
 
 ## Kotlin
 ## Rust
