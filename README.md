@@ -1100,6 +1100,12 @@ services:
 
 - `working_dir: '/workspace'`: This sets the working directory inside the container to `/workspace`. When the container starts, commands executed within the container will run relative to this directory.
 
+```yaml
+    tty: true
+```
+
+- `tty: true`: This allocates a pseudo-TTY for the service container, which enables interactive shell sessions.
+
 
 ###
 
