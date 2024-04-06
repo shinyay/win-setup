@@ -1020,6 +1020,12 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 ## Java
 
+This Dev Container consists of the following three files:
+
+- Dockerfile
+- compose.yaml
+- devcontainer.json
+
 ###
 
 ## Kotlin
