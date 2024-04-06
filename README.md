@@ -1210,7 +1210,21 @@ services:
 
 - `customizations`: This section allows you to customize the VS Code environment within the Dev Container. It specifies extensions to install (`ms-azuretools.vscode-docker`) and VS Code settings to apply. In this case, it enables automatic formatting on save (`"editor.formatOnSave": true`) and customizes the colors of the title bar and activity bar.
 
-The commented-out sections (`forwardPorts` and `postCreateCommand`) allow you to specify additional settings like port forwarding or commands to run after the Dev Container is created.
+##### forwardPorts
+
+The `forwardPorts` setting in the `devcontainer.json` file is used to specify port forwarding rules from the Dev Container to the local machine, allowing you to access services running inside the container from your local environment. This can be useful when you're running services or applications inside the Dev Container that need to be accessed from outside the container, such as web servers, APIs, or databases.
+
+Here's example of the `forwardPorts` setting:
+
+```json
+"forwardPorts": [3000, 8080]
+```
+
+This example would forward ports 3000 and 8080 from the Dev Container to the local machine. So if there's a web server running inside the Dev Container on port 3000, you could access it from your local browser at `http://localhost:3000`.
+
+You would typically set the `forwardPorts` setting when you're developing applications or services that need to be accessible from your local environment but are running inside a container. It's especially useful for web development, where you might have a web server running inside the container serving your application, and you want to test it locally in your browser.
+
+
 
 ## Kotlin
 ## Rust
