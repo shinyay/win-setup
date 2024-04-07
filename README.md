@@ -1324,26 +1324,6 @@ Install Dev Container CLI.
 brew update && brew install azure-cli
 ```
 
-# 6. Virtual Machine Environment with Multipass
-
-## Multipass
-
-- [x] Installation
-
-> Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
-
-- [Multipass](https://multipass.run/)
-
-```shell
-winget search multipass
-winget install Canonical.Multipass
-```
-
-```shell
-> multipass --version
-multipass   1.13.1+win
-multipassd  1.13.1+win
-```
 
 # etc
 
@@ -1409,6 +1389,29 @@ python --version
 
 Python 3.12.1
 ```
+
+# X. Virtual Machine Environment with Multipass
+
+## Multipass
+
+- [x] Installation
+
+> Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
+
+- [Multipass](https://multipass.run/)
+
+```shell
+winget search multipass
+winget install Canonical.Multipass
+```
+
+```shell
+> multipass --version
+multipass   1.13.1+win
+multipassd  1.13.1+win
+```
+
+## VM for MicroK8s
 
 # 2. Windows Tools
 
