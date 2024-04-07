@@ -1324,6 +1324,21 @@ Install Dev Container CLI.
 brew update && brew install azure-cli
 ```
 
+# 6. Virtual Machine Environment with Multipass
+
+## Multipass
+
+- [x] Installation
+
+> Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
+
+- [Multipass](https://multipass.run/)
+
+```shell
+winget search multipass
+winget install Canonical.Multipass
+```
+
 
 # etc
 
@@ -1498,19 +1513,6 @@ winget install QL-Win.QuickLook
 
 ```shell
 winget install Rufus.Rufus
-```
-
-## Multipass
-
-- [Multipass](https://multipass.run/)
-
-> Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
-
-- [ ] Installation
-
-```shell
-winget search multipass
-winget install Canonical.Multipass
 ```
 
 ## FastCopy
