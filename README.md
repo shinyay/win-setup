@@ -1415,6 +1415,17 @@ multipassd  1.13.1+win
 
 # 2. Windows Tools
 
+## Obsidian
+
+- [x] Installation
+
+> It's a note-taking and knowledge base app that uses a local folder of plain text files to store notes and allows users to easily link notes together and build a network of knowledge.
+
+```shell
+winget search obsidian
+winget install Obsidian.Obsidian
+```
+
 ## Steam
 
 - [ ] Installation
