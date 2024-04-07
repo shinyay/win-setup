@@ -1339,6 +1339,11 @@ winget search multipass
 winget install Canonical.Multipass
 ```
 
+```shell
+> multipass --version
+multipass   1.13.1+win
+multipassd  1.13.1+win
+```
 
 # etc
 
