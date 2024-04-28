@@ -410,39 +410,6 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
-## VSCode
-
-> Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
-
-- [ ] Installation
-
-```shell
-winget search vscode
-winget install Microsoft.VisualStudioCode
-```
-
-### VSCode Extension
-
-- [ ] Installation
-
-> The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set. Since this lets you set up a full-time development environment anywhere.
-
-
-```shell
-sudo apt-get install wget ca-certificates
-```
-
-- [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-
-The following extesions are also installed:
-
-- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-- [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-- [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit)
-- [Remote -Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)
-- [Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer)
-- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-
 # 2. WSL Customization
 
 ## WSL
@@ -1141,9 +1108,40 @@ sudo systemctl start docker
 
 ! [vscode](https://code.visualstudio.com/assets/images/code-stable.png)
 
-**Settings** - Everything starts from `Ctrl` + `,`
+> Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
+
+- [ ] Installation
+
+```shell
+winget search vscode
+winget install Microsoft.VisualStudioCode
+```
+
+## VSCode Extension
+
+- [ ] Installation
+
+> The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set. Since this lets you set up a full-time development environment anywhere.
+
+
+```shell
+sudo apt-get install wget ca-certificates
+```
+
+- [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+The following extesions are also installed:
+
+- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+- [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit)
+- [Remote -Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)
+- [Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer)
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 
 ## `Text Editor`
+
+**Settings** - Everything starts from `Ctrl` + `,`
 
 ### Render Control Characters
 
