@@ -334,20 +334,43 @@ brew doctor
 
 ## Git
 
+Update the latest Git from the pre-installed Git.
+
 - [ ] Installation
+
+Check pre-installed Git
+
+```shell
+which git
+
+/usr/bin/git
+```
+
+```shell
+git -v
+
+git version 2.43.0
+```
 
 ```shell
 brew install git
 ```
 
 ```shell
+which git
+
+/home/linuxbrew/.linuxbrew/bin/git
+```
+
+```shell
 git --version
+
 git version 2.44.0
 ```
 
 ### Git Global Configuration
 
-- [ ] Configuration
+- [x] Configuration
 
 ```shell
 git config --global user.name "shinyay" && \
@@ -360,6 +383,7 @@ git config --global color.diff auto && \
 git config --global color.status auto && \
 git config --global color.branch auto && \
 git config --global fetch.prune true && \
+git config --global init.defaultBranch main && \
 git config pull.ff only
 ```
 
