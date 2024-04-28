@@ -6,7 +6,7 @@
 
 If `winget` does not work, you should upgrade `App Installer`
 
-- [x] Installation
+- [ ] Installation
 
 - [App Installer](https://apps.microsoft.com/detail/9nblggh4nns1)
 
@@ -46,7 +46,7 @@ winget install Microsoft.WindowsTerminal.Preview
 
 ## Google Japanese IME
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget install Google.JapaneseIME
@@ -64,7 +64,7 @@ winget install Google.JapaneseIME
 
 > WSL2 is a **Windows Subsystem for Linux** that allows access to Linux tools and applications directly from the Windows environment12. It offers the best of both worlds by allowing you to run Windows apps, like Visual Studio, alongside a Linux shell for easier command line access2. WSL2 uses a virtual machine, and uses a full Linux kernel built and shipped with Windows23. With WSL2, you can build docker images that paravirtualize your GPU4.
 
-- [x] Installation
+- [ ] Installation
 
 <img width="348" alt="Screenshot 2024-01-08 144911" src="https://github.com/shinyay/win-setup/assets/3072734/821dcbc2-0c8d-412d-8414-c26e63d74fdc">
 
@@ -104,7 +104,7 @@ sudo apt update && sudo apt upgrade
 
 #### Hostname
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 sudo vim /etc/wsl.conf
@@ -140,7 +140,7 @@ Terminal settings:
 
 ### Startup
 
-- [x] Configuration
+- [ ] Configuration
 
 - **Default Profile**: `Ubuntu`
 - **Default Terminal Application**: `Terminal`
@@ -149,7 +149,7 @@ Terminal settings:
 
 > Homebrew is an open-source software package manager that makes it easier to install software on macOS (Apple's operating system) and Linux. Basically, a package manager's job is to find and install the right software packages that will allow you to compile and run various apps/software on your specific operating system.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -165,7 +165,7 @@ brew doctor
 
 ## Git
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 brew install git
@@ -178,7 +178,7 @@ git version 2.44.0
 
 ### Git Global Configuration
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global user.name "shinyay" && \
@@ -204,7 +204,7 @@ git config pull.ff only
 
 #### ssh-keygen
 
-- [x] Generate SSH Key pair
+- [ ] Generate SSH Key pair
 
 ```shell
 ssh-keygen -t ed25519 -C 'mail address for github'
@@ -213,7 +213,7 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 #### SSH Keys on GitHub
 
-- [x] Add a public key on the following site:
+- [ ] Add a public key on the following site:
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
@@ -221,7 +221,7 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 > Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search vscode
@@ -230,7 +230,7 @@ winget install Microsoft.VisualStudioCode
 
 ### VSCode Extension
 
-- [x] Installation
+- [ ] Installation
 
 > The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set. Since this lets you set up a full-time development environment anywhere.
 
@@ -267,7 +267,7 @@ brew update && brew upgrade
 
 #### Basic Packages
 
-- [x] Installation
+- [ ] Installation
 
 - zip
 - unzip
@@ -278,7 +278,7 @@ brew install zip unzip
 
 #### Fontconfig
 
-- [x] Installation
+- [ ] Installation
 
 > Fontconfig is a library designed to provide system-wide font configuration, customization and application access.
 
@@ -290,7 +290,7 @@ sudo apt-get install fontconfig
 
 #### wslu
 
-- [x] Installation
+- [ ] Installation
 
 > This is a collection of utilities for the Windows Subsystem for Linux (WSL), such as converting Linux paths to Windows paths or creating Linux application shortcuts on the Windows Desktop.
 
@@ -319,7 +319,7 @@ git config --get-regexp ^alias\.
 
 Alias for Alias list
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global alias.alias 'config --get-regexp ^alias\.'
@@ -327,7 +327,7 @@ git config --global alias.alias 'config --get-regexp ^alias\.'
 
 #### `git status`
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global alias.st 'status --short
@@ -335,7 +335,7 @@ git config --global alias.st 'status --short
 
 #### `git log`
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global alias.plog "log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso"
@@ -344,7 +344,7 @@ git config --global alias.glog "log --pretty='format:%C(yellow)%h %C(green)%cd %
 
 #### Commit Count
 
-- [x] Configuration
+- [ ] Configuration
 
 ```shell
 git config --global alias.count 'shortlog -e -s -n'
@@ -352,7 +352,7 @@ git config --global alias.count 'shortlog -e -s -n'
 
 ## GitHub CLI
 
-- [x] Installation
+- [ ] Installation
 
 > GitHub CLI, or gh, is a command-line interface to GitHub for use in your terminal or your scripts.
 
@@ -397,7 +397,7 @@ gh config set editor vim
 
 ### Fish Install
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 brew install fish
@@ -445,7 +445,7 @@ brew doctor
 
 > Fisher is a plugin manager for the Fish shell. It lets you install, update, and remove plugins like a boss. You can take control of functions, completions, bindings, and snippets from the command line. Fisher's zero impact on shell startup keeps your shell zippy and responsive1. Fisher is 100% pure-Fish, making it easy to contribute or modify.
 
-- [x] Installation
+- [ ] Installation
 
 - [Fisher](https://github.com/jorgebucaran/fisher)
 
@@ -462,7 +462,7 @@ fisher, version 4.4.4
 
 ![tide](https://github.com/IlanCosman/tide/raw/assets/images/logo.svg)
 
-- [x] Installation
+- [ ] Installation
 
 > The ultimate Fish prompt.
 
@@ -591,7 +591,7 @@ rm -fr download
 ## Fish Plugin
 
 ### Peco
-- [x] Installation
+- [ ] Installation
 
 > Simplistic interactive filtering tool
 
@@ -609,7 +609,7 @@ abbr -a history peco_select_history
 
 #### fzf
 
-- [x] Installation `fzf`
+- [ ] Installation `fzf`
 
 > `fzf` is a general-purpose command-line fuzzy finder.
 
@@ -621,7 +621,7 @@ brew install fzf
 
 #### bat
 
-- [x] Installation bat
+- [ ] Installation bat
 
 > A cat(1) clone with syntax highlighting and Git integration.
 
@@ -633,7 +633,7 @@ brew install bat
 
 #### fd
 
-- [x] Installation fd
+- [ ] Installation fd
 
 > `fd` is a program to find entries in your filesystem. It is a simple, fast and user-friendly alternative to `find`.
 
@@ -645,7 +645,7 @@ brew install fd
 
 #### fzf for Fish
 
-- [x] Installation fzf
+- [ ] Installation fzf
 
 > Augment your Fish command line with mnemonic key bindings to efficiently find what you need using fzf.
 > Use fzf.fish to interactively find and insert file paths, git commit hashes, and other entities into your command line. Tab to select multiple entries. If you trigger a search while your cursor is on a word, that word will be used to seed the fzf query and will be replaced by your selection. All searches include a preview of the entity hovered over to help you find what you're looking for.
@@ -670,7 +670,7 @@ echo "" | tee -a $HOME/.config/fish/config.fish
 
 ### z
 
-- [x] Installation
+- [ ] Installation
 
 By z, it tracks the directory you have visited
 
@@ -682,7 +682,7 @@ fisher install jethrokuan/z
 
 ### fish-bd
 
-- [x] Installation
+- [ ] Installation
 
 By bd, you can quickly go back to a parent directory in your current working directory tree
 
@@ -694,7 +694,7 @@ fisher install 0rax/fish-bd
 
 ### fish_logo
 
-- [x] Installation
+- [ ] Installation
 
 > This plugin adds a function to print out the fish-shell ASCII-art logo.
 
@@ -751,7 +751,7 @@ native: 0.4.6
 
 ### abbr
 
-- [x] Installation
+- [ ] Installation
 
 > `abbr` - manage fish abbreviations
 
@@ -761,7 +761,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### apt-get
 
-- [x] Installation
+- [ ] Installation
 
 > `apt-get` - APT package handling utility -- command-line interface
 
@@ -771,7 +771,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### bd
 
-- [x] Installation
+- [ ] Installation
 
 > `bd` - Quickly go back to a parent directory up in your current working directory tree
 
@@ -781,7 +781,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### code
 
-- [x] Installation
+- [ ] Installation
 
 > `code` - Visual Studio Code
 
@@ -791,7 +791,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### curl
 
-- [x] Installation
+- [ ] Installation
 
 > `curl` - transfer a URL
 
@@ -801,7 +801,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### docker
 
-- [x] Installation
+- [ ] Installation
 
 After Docker installation, you can do the following:
 
@@ -811,7 +811,7 @@ docker completion fish > $HOME/.config/fish/completions/docker.fish
 
 ### git
 
-- [x] Installation
+- [ ] Installation
 
 > `git` - the stupid content tracker
 
@@ -832,7 +832,7 @@ winget install Docker.DockerDesktop
 
 ### Docker Engine for Ubuntu
 
-- [x] Installation
+- [ ] Installation
 
 #### Uninstall old versions
 
@@ -956,7 +956,7 @@ sudo systemctl start docker
 
 Controls whether the editor should render control characters.
 
-- [x] Enabled
+- [ ] Enabled
 
 ### Render Line Highlight
 
@@ -972,7 +972,7 @@ Controls whether the editor should render control characters.
 
 Control whether the sooth caret animation be enabled.
 
-- [x] Enabled
+- [ ] Enabled
 
 ### Cursor Style
 
@@ -984,13 +984,13 @@ Control whether the sooth caret animation be enabled.
 
 Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
 
-- [x] Enabled
+- [ ] Enabled
 
 ### Format On Type
 
 Controls whether the editor should automatically format the line after typing.
 
-- [x] Enabled
+- [ ] Enabled
 
 ## `Text Editor` - `Minimap`
 
@@ -998,7 +998,7 @@ Controls whether the editor should automatically format the line after typing.
 
 Controls whether the minimap is shown.
 
-- [x] Disabled
+- [ ] Disabled
 
 ## `Text Editor` - `Files`
 
@@ -1006,13 +1006,13 @@ Controls whether the minimap is shown.
 
 When Enabled, insert a final new line at the end of the file saving it.
 
-- [x] Enabled
+- [ ] Enabled
 
 ### Trim Trailing Whitespace
 
 When enabled, will trim trailing whitespace when saving a file.
 
-- [x] Enabled
+- [ ] Enabled
 
 ## `Workbench` - `Appearance`
 
@@ -1026,19 +1026,19 @@ When enabled, will trim trailing whitespace when saving a file.
 
 Controls whether turning on Zen Mode also centers the layout.
 
-- [x] Disabled
+- [ ] Disabled
 
 ### Hide Line Numbers
 
 Controls whether turning on Zen Mode also hides the editor line numbers.
 
-- [x] Disabled
+- [ ] Disabled
 
 ### Hide Status Bar
 
 Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.
 
-- [x] Disabled
+- [ ] Disabled
 
 ## Profile
 
@@ -1428,7 +1428,7 @@ Python 3.12.1
 
 ## Multipass
 
-- [x] Installation
+- [ ] Installation
 
 > Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud.
 
@@ -1451,7 +1451,7 @@ multipassd  1.13.1+win
 
 ## Obsidian
 
-- [x] Installation
+- [ ] Installation
 
 > It's a note-taking and knowledge base app that uses a local folder of plain text files to store notes and allows users to easily link notes together and build a network of knowledge.
 
@@ -1506,7 +1506,7 @@ winget install AppWork.JDownloader
 
 > Streamlabs Desktop has everything you need to stream and create a memorable brand.
 
-- [x] Installation
+- [ ] Installation
 
 ```shell
 winget search streamlabs
