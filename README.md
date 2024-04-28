@@ -37,6 +37,12 @@ winget  https://winget.azureedge.net/cache            false
 msstore https://storeedgefd.dsx.mp.microsoft.com/v9.0 false
 ```
 
+## Winget Terminal Preview
+
+```shell
+winget search 'Windows Terminal'
+winget install Microsoft.WindowsTerminal.Preview
+```
 
 ## Google Japanese IME
 
