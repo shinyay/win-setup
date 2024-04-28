@@ -87,7 +87,7 @@ winget install Google.JapaneseIME
 
 ## PowerShell
 
-- [ ] Installation
+- [x] Installation
 
 Check your PowerShell Version
 
