@@ -397,7 +397,7 @@ git config pull.ff only
 
 #### ssh-keygen
 
-- [ ] Generate SSH Key pair
+- [x] Generate SSH Key pair
 
 ```shell
 ssh-keygen -t ed25519 -C 'mail address for github'
