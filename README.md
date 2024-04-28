@@ -6,11 +6,13 @@
 
 If `winget` does not work, you should upgrade `App Installer`
 
-- [ ] Installation
+- [x] Installation
 
 - [App Installer](https://apps.microsoft.com/detail/9nblggh4nns1)
 
 ### `winget source`
+
+- [x] Installation
 
 If you cannot search the target item with `winget search`, confirm `winget source list`
 
