@@ -194,6 +194,39 @@ Install the latest Ubuntu.
 wsl --install Ubuntu-24.04
 ```
 
+```shell
+Installing: Ubuntu 24.04 LTS
+Ubuntu 24.04 LTS has been installed.
+Launching Ubuntu 24.04 LTS...
+Installing, this may take a few minutes...
+Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username: shinyay
+New password:
+Retype new password:
+passwd: password updated successfully
+Installation successful!
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 5.15.146.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sun Apr 28 13:57:02 JST 2024
+
+  System load:  0.66                Processes:             28
+  Usage of /:   0.1% of 1006.85GB   Users logged in:       0
+  Memory usage: 2%                  IPv4 address for eth0: 172.18.224.114
+  Swap usage:   0%
+
+
+This message is shown once a day. To disable it please create the
+/home/shinyay/.hushlogin file.
+```
+
 Upgrade packages
 
 ```shell
