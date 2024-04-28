@@ -50,9 +50,15 @@ winget install Microsoft.WindowsTerminal.Preview
 
 ## ULE4JIS / alt-ime-ahk
 
+If your keyaboard layout is **Japanese**, you can try the following tools when you use the US Keyboad layout.
+
+- [x] Installation
+
 - [ULE4JIS](https://www.vector.co.jp/soft/dl/winnt/util/se476294.html)
   - [ULE4JIS-GitHub](https://github.com/dezz/ULE4JIS/tree/master/publish)
 - [alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)
+
+
 
 ## Google Japanese IME
 
