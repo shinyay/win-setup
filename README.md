@@ -52,7 +52,7 @@ winget install Microsoft.WindowsTerminal.Preview
 
 - [ULE4JIS](https://www.vector.co.jp/soft/dl/winnt/util/se476294.html)
   - [ULE4JIS-GitHub](https://github.com/dezz/ULE4JIS/tree/master/publish)
-- [alt-ime-ahk]()
+- [alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)
 
 ## Google Japanese IME
 
