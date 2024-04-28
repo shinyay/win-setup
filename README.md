@@ -165,6 +165,12 @@ Restart-Computer -Force
 
 - [x] Installation
 
+Update WSL
+
+```shell
+wsl --update
+```
+
 Check the available distributions
 
 ```shell
