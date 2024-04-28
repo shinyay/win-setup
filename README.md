@@ -139,6 +139,10 @@ winget install --id Microsoft.Powershell.Preview
 
 ### Prepare for installation
 
+It is also possible to activate WSL from the command line below without activating it from the GUI.
+
+- [ ] Installation
+
 `Run as Administrator` **PowerShell** and enable the following features:
 
 - VirtualMachinePlatform
@@ -159,8 +163,33 @@ Restart-Computer -Force
 
 ### WSL Installation
 
+Check the available distributions
+
 ```shell
-wsl --install
+wsl --list --online
+```
+
+```shell
+NAME                                   FRIENDLY NAME
+Ubuntu                                 Ubuntu
+Debian                                 Debian GNU/Linux
+kali-linux                             Kali Linux Rolling
+Ubuntu-18.04                           Ubuntu 18.04 LTS
+Ubuntu-20.04                           Ubuntu 20.04 LTS
+Ubuntu-22.04                           Ubuntu 22.04 LTS
+Ubuntu-24.04                           Ubuntu 24.04 LTS
+OracleLinux_7_9                        Oracle Linux 7.9
+OracleLinux_8_7                        Oracle Linux 8.7
+OracleLinux_9_1                        Oracle Linux 9.1
+openSUSE-Leap-15.5                     openSUSE Leap 15.5
+SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
+SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 
+```
+
+Install the latest Ubuntu.
+
+```shell
+wsl --install Ubuntu-24.04
 ```
 
 Upgrade packages
