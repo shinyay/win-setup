@@ -58,7 +58,11 @@ If your keyaboard layout is **Japanese**, you can try the following tools when y
   - [ULE4JIS-GitHub](https://github.com/dezz/ULE4JIS/tree/master/publish)
 - [alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)
 
+It is useful that you create shortcuts and deploy the `Startup` folder.
 
+```shell
+shell:startup
+```
 
 ## Google Japanese IME
 
