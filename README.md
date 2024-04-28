@@ -17,7 +17,7 @@ If `winget` does not work, you should upgrade `App Installer`
 If you cannot search the target item with `winget search`, confirm `winget source list`
 
 ```shell
->winget source list
+winget source list
 Name    Argument                                      Explicit
 --------------------------------------------------------------
 msstore https://storeedgefd.dsx.mp.microsoft.com/v9.0 false
@@ -280,6 +280,8 @@ Terminal settings:
 ### Startup
 
 - [x] Configuration
+
+![image](https://github.com/shinyay/win-setup/assets/3072734/7a2890f2-f610-442d-9081-94bdbadb0dc4)
 
 - **Default Profile**: `Ubuntu24.04 LTS`
 - **Default Terminal Application**: `Windows Terminal Preview`
