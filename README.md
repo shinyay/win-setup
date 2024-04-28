@@ -21,6 +21,22 @@ Name    Argument                                      Explicit
 msstore https://storeedgefd.dsx.mp.microsoft.com/v9.0 false
 ```
 
+If you cannot find the source target, `winget`, then you should add it.
+
+Run Terminal as Administrator and add the target to source:
+
+```shell
+winget source add -n winget -a https://winget.azureedge.net/cache
+```
+
+```shell
+> winget source list
+Name    Argument                                      Explicit
+--------------------------------------------------------------
+winget  https://winget.azureedge.net/cache            false
+msstore https://storeedgefd.dsx.mp.microsoft.com/v9.0 false
+```
+
 
 ## Google Japanese IME
 
