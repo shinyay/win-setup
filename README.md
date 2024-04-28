@@ -288,6 +288,8 @@ Terminal settings:
 
 ## Homebrew
 
+![image](https://github.com/shinyay/win-setup/assets/3072734/8c7641e7-26b5-4d09-91c0-9324f0f9c558)
+
 > Homebrew is an open-source software package manager that makes it easier to install software on macOS (Apple's operating system) and Linux. Basically, a package manager's job is to find and install the right software packages that will allow you to compile and run various apps/software on your specific operating system.
 
 - [x] Installation
