@@ -279,10 +279,10 @@ Terminal settings:
 
 ### Startup
 
-- [ ] Configuration
+- [x] Configuration
 
-- **Default Profile**: `Ubuntu`
-- **Default Terminal Application**: `Terminal`
+- **Default Profile**: `Ubuntu24.04 LTS`
+- **Default Terminal Application**: `Windows Terminal Preview`
 
 ## Homebrew
 
