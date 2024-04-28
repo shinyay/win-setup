@@ -243,7 +243,7 @@ sudo apt update && sudo apt upgrade
 
 #### Hostname
 
-- [ ] Configuration
+- [x] Configuration
 
 ```shell
 sudo vim /etc/wsl.conf
