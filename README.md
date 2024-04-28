@@ -32,7 +32,10 @@ winget source add -n winget -a https://winget.azureedge.net/cache
 ```
 
 ```shell
-> winget source list
+winget source list
+```
+
+```shell
 Name    Argument                                      Explicit
 --------------------------------------------------------------
 winget  https://winget.azureedge.net/cache            false
@@ -105,8 +108,23 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 ```
 
+If your PowerShell version is not latest, you should upgrade
+
 ```shell
 winget search Microsoft.PowerShell
+```
+
+```shell
+winget search Microsoft.PowerShell
+Name               Id                           Version Source
+---------------------------------------------------------------
+PowerShell         Microsoft.PowerShell         7.4.2.0 winget
+PowerShell Preview Microsoft.PowerShell.Preview 7.5.0.2 winget
+```
+
+```shell
+winget install --id Microsoft.Powershell
+winget install --id Microsoft.Powershell.Preview
 ```
 
 ## WSL
