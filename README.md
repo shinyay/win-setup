@@ -82,6 +82,33 @@ winget install Google.JapaneseIME
   - **Coversion** / **Insert half-width space**
 3. You can use new keymaps after opening a new application
 
+## PowerShell
+
+- [ ] Installation
+
+Check your PowerShell Version
+
+```shell
+$PSVersionTable
+```
+
+```shell
+Name                           Value
+----                           -----
+PSVersion                      5.1.22621.2506
+PSEdition                      Desktop
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
+BuildVersion                   10.0.22621.2506
+CLRVersion                     4.0.30319.42000
+WSManStackVersion              3.0
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+```
+
+```shell
+winget search Microsoft.PowerShell
+```
+
 ## WSL
 
 > WSL2 is a **Windows Subsystem for Linux** that allows access to Linux tools and applications directly from the Windows environment12. It offers the best of both worlds by allowing you to run Windows apps, like Visual Studio, alongside a Linux shell for easier command line access2. WSL2 uses a virtual machine, and uses a full Linux kernel built and shipped with Windows23. With WSL2, you can build docker images that paravirtualize your GPU4.
