@@ -334,9 +334,7 @@ brew doctor
 
 ## Git
 
-![image](https://github.com/shinyay/win-setup/assets/3072734/571c6128-4430-480d-aeab-808fb6251748)
-
-Update the latest Git from the pre-installed Git.
+![image](https://github.com/shinyay/win-setup/assets/3072734/936457fa-c308-420f-a0cc-46aae10aeef9)
 
 - [x] Installation
 
