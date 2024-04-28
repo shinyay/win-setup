@@ -10,6 +10,18 @@ If `winget` does not work, you should upgrade `App Installer`
 
 - [App Installer](https://apps.microsoft.com/detail/9nblggh4nns1)
 
+### `winget source`
+
+If you cannot search the target item with `winget search`, confirm `winget source list`
+
+```shell
+>winget source list
+Name    Argument                                      Explicit
+--------------------------------------------------------------
+msstore https://storeedgefd.dsx.mp.microsoft.com/v9.0 false
+```
+
+
 ## Google Japanese IME
 
 - [x] Installation
