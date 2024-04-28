@@ -86,9 +86,11 @@ winget install Google.JapaneseIME
 
 > WSL2 is a **Windows Subsystem for Linux** that allows access to Linux tools and applications directly from the Windows environment12. It offers the best of both worlds by allowing you to run Windows apps, like Visual Studio, alongside a Linux shell for easier command line access2. WSL2 uses a virtual machine, and uses a full Linux kernel built and shipped with Windows23. With WSL2, you can build docker images that paravirtualize your GPU4.
 
-- [ ] Installation
+- [x] Installation
 
-<img width="348" alt="Screenshot 2024-01-08 144911" src="https://github.com/shinyay/win-setup/assets/3072734/821dcbc2-0c8d-412d-8414-c26e63d74fdc">
+<img width="348" alt="Turn Windows features on or off" src="https://github.com/shinyay/win-setup/assets/3072734/f419e143-f766-4e5d-9763-a53ea07c4a73">
+
+<img width="348" alt="Turn Windows features on or off" src="https://github.com/shinyay/win-setup/assets/3072734/820ae88d-62c7-4405-bfb6-17510e1a44d7">
 
 ### Prepare for installation
 
