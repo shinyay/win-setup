@@ -1,4 +1,4 @@
-# Windows 11 Pro - 23H2 (UM790Pro)
+# Windows 11 Pro - 23H2 (T14s)
 
 ---
 # 1. Initial Setup
