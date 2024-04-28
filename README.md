@@ -48,7 +48,7 @@ winget search 'Windows Terminal'
 winget install Microsoft.WindowsTerminal.Preview
 ```
 
-## ULE4JIS / 
+## ULE4JIS / alt-ime-ahk
 
 ## Google Japanese IME
 
