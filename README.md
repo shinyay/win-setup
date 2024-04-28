@@ -163,6 +163,8 @@ Restart-Computer -Force
 
 ### WSL Installation
 
+- [x] Installation
+
 Check the available distributions
 
 ```shell
