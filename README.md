@@ -565,6 +565,8 @@ Install the Copilot in the CLI extension
 gh extension install github/gh-copilot
 ```
 
+Update Copilot in the CLI
+
 ```shell
 gh extension upgrade gh-copilot
 ```
