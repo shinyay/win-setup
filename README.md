@@ -638,7 +638,7 @@ Suggestion:
 
 ### Fish Install
 
-- [ ] Installation
+- [x] Installation
 
 ```shell
 brew install fish
