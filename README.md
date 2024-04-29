@@ -450,7 +450,7 @@ sudo apt-get install fontconfig
 
 #### wslu
 
-- [ ] Installation
+- [x] Installation
 
 > This is a collection of utilities for the Windows Subsystem for Linux (WSL), such as converting Linux paths to Windows paths or creating Linux application shortcuts on the Windows Desktop.
 
