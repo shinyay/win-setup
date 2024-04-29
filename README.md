@@ -694,7 +694,7 @@ brew doctor
 
 > Fisher is a plugin manager for the Fish shell. It lets you install, update, and remove plugins like a boss. You can take control of functions, completions, bindings, and snippets from the command line. Fisher's zero impact on shell startup keeps your shell zippy and responsive1. Fisher is 100% pure-Fish, making it easy to contribute or modify.
 
-- [ ] Installation
+- [x] Installation
 
 - [Fisher](https://github.com/jorgebucaran/fisher)
 
