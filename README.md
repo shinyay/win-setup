@@ -834,6 +834,8 @@ rm -fr download
 
 #### Setting font for Terminal
 
+- [x] Configuration
+
 1. Open settings: `ctrl` + `,`
 2. Select **Ubuntu 24.04 LTS**
 3. Select **Aditional settings** > **Appearance**
