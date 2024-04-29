@@ -525,11 +525,13 @@ brew install gh
 ```shell
 gh --version
 
-gh version 2.46.0 (2024-03-20)
-https://github.com/cli/cli/releases/tag/v2.46.0
+gh version 2.48.0 (2024-04-17)
+https://github.com/cli/cli/releases/tag/v2.48.0
 ```
 
 ### GitHub Authentication
+
+- [x] Configuration
 
 ```shell
 gh auth login
