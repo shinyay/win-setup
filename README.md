@@ -559,6 +559,8 @@ If you are have not authenticated with your GitHub account, login.
 gh auth login
 ```
 
+Install the Copilot in the CLI extension
+
 ```shell
 gh extension install github/gh-copilot
 ```
