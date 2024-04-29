@@ -487,10 +487,10 @@ git config --global alias.alias 'config --get-regexp ^alias\.'
 
 #### `git status`
 
-- [ ] Configuration
+- [x] Configuration
 
 ```shell
-git config --global alias.st 'status --short
+git config --global alias.st 'status --short'
 ```
 
 #### `git log`
