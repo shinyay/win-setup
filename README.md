@@ -571,6 +571,34 @@ Update Copilot in the CLI
 gh extension upgrade gh-copilot
 ```
 
+#### Explain a command
+
+```shell
+gh copilot explain
+
+? Which command would you like to explain?
+> apt-get
+
+Explanation:
+
+  • apt-get is the package management command-line tool for Debian-based systems.
+    • It is used to install, upgrade, and remove software packages.
+    • Commonly used flags include:
+      • install is used to install packages.
+      • remove is used to remove packages.
+      • update is used to update package lists from repositories.
+      • upgrade is used to upgrade installed packages to their latest versions.
+      • search is used to search for packages based on keywords.
+      • show is used to display detailed information about a specific package.
+      • upgrade is used to upgrade installed packages to their latest versions.
+      • dist-upgrade is used to perform a distribution upgrade, including installing and removing packages as
+      necessary.
+      • autoremove is used to remove automatically installed packages that are no longer needed.
+      • clean is used to remove downloaded package files from the package cache.
+      • purge is used to remove packages and their configuration files.
+    • For more information and usage examples, refer to the apt-get manual page by running man apt-get.
+```
+
 ## Fish
 
 > Fish, or the "Friendly Interactive SHell", is a Unix shell designed with an emphasis on user-friendliness and interactive use. It was introduced in 2005 and has since gained a following due to its unique features, helpful defaults, and focus on a pleasant user experience.
