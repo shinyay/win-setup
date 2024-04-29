@@ -553,6 +553,9 @@ gh config set editor vim
 
 - [x] Installation
 
+> GitHub Copilot in the CLI is an extension for GitHub CLI which provides a chat-like interface in the terminal that allows you to ask questions about commands you run from the command line.
+
+
 If you are have not authenticated with your GitHub account, login.
 
 ```shell
