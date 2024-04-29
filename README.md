@@ -416,7 +416,7 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 Update and Upgrade packages.
 
-- [ ] Configuration
+- [x] Configuration
 
 ```shell
 sudo apt update && sudo apt upgrade
