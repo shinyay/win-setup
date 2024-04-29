@@ -561,6 +561,10 @@ gh auth login
 gh extension install github/gh-copilot
 ```
 
+```shell
+gh extension upgrade gh-copilot
+```
+
 ## Fish
 
 > Fish, or the "Friendly Interactive SHell", is a Unix shell designed with an emphasis on user-friendliness and interactive use. It was introduced in 2005 and has since gained a following due to its unique features, helpful defaults, and focus on a pleasant user experience.
