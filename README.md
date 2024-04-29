@@ -605,6 +605,12 @@ Alternatively, you can add the command you want explained directly to the prompt
 gh copilot explain 'apt-get'
 ```
 
+#### Suggest a command
+
+```shell
+gh copilot suggest
+```
+
 ## Fish
 
 > Fish, or the "Friendly Interactive SHell", is a Unix shell designed with an emphasis on user-friendliness and interactive use. It was introduced in 2005 and has since gained a following due to its unique features, helpful defaults, and focus on a pleasant user experience.
