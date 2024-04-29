@@ -823,17 +823,19 @@ explorer.exe .
 
 Then install `*ttf`.
 
-1. Open settings: `ctrl` + `,`
-2. Select **Ubuntu**
-3. Select **Aditional settings** > **Appearance**
-4. Choose **Moralerspace Radon NF** from **Font face**
-
 Then delete downloaded fonts.
 
 ```shell
 cd ..
 rm -fr download
 ```
+
+#### Setting font for Terminal
+
+1. Open settings: `ctrl` + `,`
+2. Select **Ubuntu 24.04 LTS**
+3. Select **Aditional settings** > **Appearance**
+4. Choose **Moralerspace Radon NF** from **Font face**
 
 ### Cica font
 
