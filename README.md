@@ -599,7 +599,7 @@ Explanation:
     • For more information and usage examples, refer to the apt-get manual page by running man apt-get.
 ```
 
-Or, you can just run the following command
+Alternatively, you can add the command you want explained directly to the prompt:
 
 ```shell
 gh copilot explain 'apt-get'
