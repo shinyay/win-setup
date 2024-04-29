@@ -406,7 +406,7 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 #### SSH Keys on GitHub
 
-- [c] Add a public key on the following site:
+- [x] Add a public key on the following site:
 
 - [https://github.com/settings/keys](https://github.com/settings/keys)
 
