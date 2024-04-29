@@ -608,7 +608,24 @@ gh copilot explain 'apt-get'
 #### Suggest a command
 
 ```shell
-gh copilot suggest
+gh copilot suggest "Upgrade apt-get itself"
+```
+
+```shell
+? What kind of command can I help you with?
+> generic shell command
+
+Suggestion:
+
+  sudo apt-get update && sudo apt-get upgrade -y
+
+? Select an option  [Use arrows to move, type to filter]
+> Copy command to clipboard
+  Explain command
+  Execute command
+  Revise command
+  Rate response
+  Exit
 ```
 
 ## Fish
