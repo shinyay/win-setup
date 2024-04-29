@@ -850,7 +850,7 @@ rm -fr download
 ## Fish Plugin
 
 ### Peco
-- [ ] Installation
+- [x] Installation
 
 > Simplistic interactive filtering tool
 
