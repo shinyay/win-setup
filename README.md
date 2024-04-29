@@ -427,7 +427,7 @@ brew update && brew upgrade
 
 #### Basic Packages
 
-- [ ] Installation
+- [x] Installation
 
 - zip
 - unzip
