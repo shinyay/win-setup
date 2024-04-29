@@ -676,6 +676,8 @@ Define the PATH of `brew` on `fish`.
 echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> $HOME/.config/fish/config.fish
 ```
 
+Restart **Terminal**
+
 Check `brew doctor`.
 
 ```shell
