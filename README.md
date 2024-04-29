@@ -711,7 +711,7 @@ fisher, version 4.4.4
 
 ![tide](https://github.com/IlanCosman/tide/raw/assets/images/logo.svg)
 
-- [ ] Installation
+- [x] Installation
 
 > The ultimate Fish prompt.
 
