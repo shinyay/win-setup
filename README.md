@@ -599,6 +599,8 @@ Explanation:
     • For more information and usage examples, refer to the apt-get manual page by running man apt-get.
 ```
 
+Or, you can just run the following command
+
 ```shell
 gh copilot explain 'apt-get'
 ```
