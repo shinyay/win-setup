@@ -553,6 +553,8 @@ gh config set editor vim
 
 - [x] Installation
 
+If you are have not authenticated with your GitHub account, login.
+
 ```shell
 gh auth login
 ```
