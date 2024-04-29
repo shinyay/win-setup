@@ -576,6 +576,8 @@ gh extension upgrade gh-copilot
 
 #### Explain a command
 
+> You can ask Copilot in the CLI to explain a command
+
 ```shell
 gh copilot explain
 
