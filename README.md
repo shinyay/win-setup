@@ -479,7 +479,7 @@ git config --get-regexp ^alias\.
 
 Alias for Alias list
 
-- [ ] Configuration
+- [x] Configuration
 
 ```shell
 git config --global alias.alias 'config --get-regexp ^alias\.'
