@@ -599,6 +599,10 @@ Explanation:
     • For more information and usage examples, refer to the apt-get manual page by running man apt-get.
 ```
 
+```shell
+gh copilot explain 'apt-get'
+```
+
 ## Fish
 
 > Fish, or the "Friendly Interactive SHell", is a Unix shell designed with an emphasis on user-friendliness and interactive use. It was introduced in 2005 and has since gained a following due to its unique features, helpful defaults, and focus on a pleasant user experience.
