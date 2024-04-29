@@ -644,6 +644,12 @@ Suggestion:
 brew install fish
 ```
 
+```shell
+fish --version
+
+fish, version 3.7.1
+```
+
 Check the PATH for `fish`.
 
 ```shell
