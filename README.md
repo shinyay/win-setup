@@ -1249,7 +1249,9 @@ winget install Microsoft.VisualStudioCode.Insiders
 
 ## VSCode Extension
 
-- [ ] Installation
+### Remote Development
+
+- [x] Installation
 
 > The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set. Since this lets you set up a full-time development environment anywhere.
 
@@ -1268,6 +1270,8 @@ The following extesions are also installed:
   - [Remote -Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)
   - [Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer)
   - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+
+  ![image](https://github.com/shinyay/win-setup/assets/3072734/d2a8dec6-3a3f-4893-8a4f-4b7ebaa8fedb)
 
 ## `Text Editor`
 
