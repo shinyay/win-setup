@@ -1298,7 +1298,7 @@ The following extesions are also installed:
 
 > Zoom the font of the editor when using mouse wheel and holding `Ctrl`
 
-- [ ] Enabled
+- [x] Enabled
 
 ### Render Control Characters
 
