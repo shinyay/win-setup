@@ -1209,8 +1209,8 @@ sudo systemctl start docker
 
 - [x] Configuration
 
-- **Default Profile**: `Ubuntu`
-- **Default Terminal Application**: `Windows Terminal`
+- **Default Profile**: `Ubuntu 24.04 LTS`
+- **Default Terminal Application**: `Windows Terminal Preview`
 - **Launch Size**:
   - **Columns**: `110`
   - **Rows**: `22`
