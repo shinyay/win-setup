@@ -1222,6 +1222,8 @@ sudo systemctl start docker
 
 ## Appearance
 
+- [x] Configuration
+
 - **Show acrylic tab row**: `On`
 
 ## Ubuntu - Appearance
