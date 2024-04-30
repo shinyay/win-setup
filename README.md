@@ -946,7 +946,7 @@ fisher install jethrokuan/z
 
 ### fish-bd
 
-- [ ] Installation
+- [x] Installation
 
 By bd, you can quickly go back to a parent directory in your current working directory tree
 
@@ -958,7 +958,7 @@ fisher install 0rax/fish-bd
 
 ### fish_logo
 
-- [ ] Installation
+- [x] Installation
 
 > This plugin adds a function to print out the fish-shell ASCII-art logo.
 
