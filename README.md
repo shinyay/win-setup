@@ -1249,6 +1249,21 @@ winget search VisualStudioCode
 winget install Microsoft.VisualStudioCode.Insiders 
 ```
 
+## Visual Studioc Code on Ubuntu with Windows Subsystem for Linux (WSL)
+
+- [x] Installation
+
+```shell
+snap find vscode
+sudo snap install code-insiders --classic
+```
+
+Abbreviate `code-insiders`
+
+```shell
+abbr --add code 'code-insiders'
+```
+
 ## VSCode Extension
 
 ### Remote Development
