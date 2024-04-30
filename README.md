@@ -1065,16 +1065,6 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/curl.fish > $HOME/.config/fish/completions/curl.fish
 ```
 
-### docker
-
-- [ ] Installation
-
-After Docker installation, you can do the following:
-
-```shell
-docker completion fish > $HOME/.config/fish/completions/docker.fish
-```
-
 ### git
 
 - [x] Installation
@@ -1083,6 +1073,16 @@ docker completion fish > $HOME/.config/fish/completions/docker.fish
 
 ```shell
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
+```
+
+### docker
+
+- [ ] Installation
+
+After Docker installation, you can do the following:
+
+```shell
+docker completion fish > $HOME/.config/fish/completions/docker.fish
 ```
 
 ## Docker
@@ -1101,6 +1101,8 @@ winget install Docker.DockerDesktop
 - [ ] Installation
 
 #### Uninstall old versions
+
+- [x] Uninstallation
 
 ```shell
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; sudo apt-get remove $pkg; end
