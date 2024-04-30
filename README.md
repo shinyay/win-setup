@@ -1047,7 +1047,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### code
 
-- [ ] Installation
+- [x] Installation
 
 > `code` - Visual Studio Code
 
