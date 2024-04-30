@@ -1077,7 +1077,7 @@ docker completion fish > $HOME/.config/fish/completions/docker.fish
 
 ### git
 
-- [ ] Installation
+- [x] Installation
 
 > `git` - the stupid content tracker
 
