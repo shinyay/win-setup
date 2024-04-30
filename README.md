@@ -1243,8 +1243,8 @@ sudo systemctl start docker
 - [ ] Installation
 
 ```shell
-winget search vscode
-winget install Microsoft.VisualStudioCode
+winget search VisualStudioCode
+winget install Microsoft.VisualStudioCode.Insiders 
 ```
 
 ## VSCode Extension
