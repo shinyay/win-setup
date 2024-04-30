@@ -1017,7 +1017,7 @@ native: 0.4.6
 
 ### abbr
 
-- [ ] Installation
+- [x] Installation
 
 > `abbr` - manage fish abbreviations
 
