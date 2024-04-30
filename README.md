@@ -873,7 +873,7 @@ abbr -a history peco_select_history
 
 #### fzf
 
-- [ ] Installation `fzf`
+- [x] Installation `fzf`
 
 > `fzf` is a general-purpose command-line fuzzy finder.
 
