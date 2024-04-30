@@ -1211,7 +1211,7 @@ sudo systemctl start docker
 - **Default Terminal Application**: `Windows Terminal`
 - **Launch Size**:
   - **Columns**: `110`
-  - **Rows**: `20`
+  - **Rows**: `22`
 
 ## Interaction
 
