@@ -885,7 +885,7 @@ brew install fzf
 
 #### bat
 
-- [ ] Installation bat
+- [x] Installation bat
 
 > A cat(1) clone with syntax highlighting and Git integration.
 
