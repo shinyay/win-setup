@@ -1300,6 +1300,10 @@ The following extesions are also installed:
 
 - [x] Enabled
 
+#### Reset Editor Font Size
+
+`Ctrl` + `Shift` + `p` and choose **Reset Editor Font Size**
+
 ### Render Control Characters
 
 Controls whether the editor should render control characters.
