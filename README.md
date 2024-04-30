@@ -909,7 +909,7 @@ brew install fd
 
 #### fzf for Fish
 
-- [ ] Installation fzf
+- [x] Installation fzf
 
 > Augment your Fish command line with mnemonic key bindings to efficiently find what you need using fzf.
 > Use fzf.fish to interactively find and insert file paths, git commit hashes, and other entities into your command line. Tab to select multiple entries. If you trigger a search while your cursor is on a word, that word will be used to seed the fzf query and will be replaced by your selection. All searches include a preview of the entity hovered over to help you find what you're looking for.
