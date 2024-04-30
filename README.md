@@ -897,7 +897,7 @@ brew install bat
 
 #### fd
 
-- [ ] Installation fd
+- [x] Installation fd
 
 > `fd` is a program to find entries in your filesystem. It is a simple, fast and user-friendly alternative to `find`.
 
