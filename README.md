@@ -1228,6 +1228,8 @@ sudo systemctl start docker
 
 ## Ubuntu - Appearance
 
+- [x] Configuration
+
 - **Transparency - Background opacity**: `90%`
 - **Window - Scrollbar Visibility**: `Hidden`
 
