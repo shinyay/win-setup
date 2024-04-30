@@ -1089,7 +1089,7 @@ docker completion fish > $HOME/.config/fish/completions/docker.fish
 
 ### Docker Desktop for Windows
 
-- [ ] Installation
+- [x] Installation
 
 ```powershell
 winget search docker
