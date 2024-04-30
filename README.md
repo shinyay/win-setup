@@ -1075,6 +1075,16 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
 ```
 
+### gh
+
+- [x] Installation
+
+> `gh` - gh - GitHub CLI
+
+```shell
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/gh.fish > $HOME/.config/fish/completions/gh.fish
+```
+
 ### docker
 
 - [x] Installation
