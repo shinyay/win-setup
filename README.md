@@ -1077,7 +1077,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### docker
 
-- [ ] Installation
+- [x] Installation
 
 After Docker installation, you can do the following:
 
