@@ -1027,7 +1027,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### apt-get
 
-- [ ] Installation
+- [x] Installation
 
 > `apt-get` - APT package handling utility -- command-line interface
 
