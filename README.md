@@ -979,9 +979,11 @@ vim $HOME/.config/fish/functions/fish_greeting.fish
 Add the followings:
 
 ```shell
-    # fish_logo
-    echo "Hello Fish!"
-    fish_logo blue cyan green
+# fish_logo
+echo "Hello $(whoami) at $(date)"
+fish -v
+fisher -v
+fish_logo blue cyan green
 ```
 
 ### SDKMAN! for fish
