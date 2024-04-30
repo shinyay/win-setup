@@ -1057,7 +1057,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### curl
 
-- [ ] Installation
+- [x] Installation
 
 > `curl` - transfer a URL
 
