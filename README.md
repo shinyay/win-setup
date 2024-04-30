@@ -1294,6 +1294,12 @@ The following extesions are also installed:
 
 **Settings** - Everything starts from `Ctrl` + `,`
 
+### Mouse Wheel Zoom
+
+> Zoom the font of the editor when using mouse wheel and holding `Ctrl`
+
+- [ ] Enabled
+
 ### Render Control Characters
 
 Controls whether the editor should render control characters.
