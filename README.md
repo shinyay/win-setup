@@ -1098,7 +1098,7 @@ winget install Docker.DockerDesktop
 
 ### Docker Engine for Ubuntu
 
-- [ ] Installation
+- [x] Installation
 
 #### Uninstall old versions
 
