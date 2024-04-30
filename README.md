@@ -1037,7 +1037,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### bd
 
-- [ ] Installation
+- [x] Installation
 
 > `bd` - Quickly go back to a parent directory up in your current working directory tree
 
