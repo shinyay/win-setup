@@ -1207,6 +1207,8 @@ sudo systemctl start docker
 
 ## Startup
 
+- [x] Configuration
+
 - **Default Profile**: `Ubuntu`
 - **Default Terminal Application**: `Windows Terminal`
 - **Launch Size**:
