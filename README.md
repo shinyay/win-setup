@@ -1376,7 +1376,9 @@ When enabled, will trim trailing whitespace when saving a file.
 
 ### Color Theme
 
-- `Tomorrow Night Blue`
+> Specifies the color theme used in the workbench when Window
+
+- [x] `Tomorrow Night Blue`
 
 ## `Workbench` - `Zen Mode`
 
