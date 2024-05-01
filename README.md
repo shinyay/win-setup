@@ -1348,7 +1348,7 @@ Control whether the sooth caret animation be enabled.
 
 Controls whether the editor should automatically format the line after typing.
 
-- [ ] Enabled
+- [x] Enabled
 
 ## `Text Editor` - `Minimap`
 
