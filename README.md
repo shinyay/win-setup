@@ -1340,7 +1340,7 @@ Control whether the sooth caret animation be enabled.
 
 ### Format On Paste
 
-Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+> Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
 
 - [ ] Enabled
 
