@@ -191,7 +191,7 @@ OracleLinux_8_7                        Oracle Linux 8.7
 OracleLinux_9_1                        Oracle Linux 9.1
 openSUSE-Leap-15.5                     openSUSE Leap 15.5
 SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
-SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 
+SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise
 ```
 
 Install the latest Ubuntu.
@@ -1246,7 +1246,7 @@ sudo systemctl start docker
 
 ```shell
 winget search VisualStudioCode
-winget install Microsoft.VisualStudioCode.Insiders 
+winget install Microsoft.VisualStudioCode.Insiders
 ```
 
 ## Visual Studioc Code on Ubuntu with Windows Subsystem for Linux (WSL)
@@ -1370,7 +1370,7 @@ When Enabled, insert a final new line at the end of the file saving it.
 
 When enabled, will trim trailing whitespace when saving a file.
 
-- [ ] Enabled
+- [x] Enabled
 
 ## `Workbench` - `Appearance`
 
