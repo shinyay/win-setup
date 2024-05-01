@@ -1392,7 +1392,7 @@ Controls whether turning on Zen Mode also centers the layout.
 
 Controls whether turning on Zen Mode also hides the editor line numbers.
 
-- [ ] Disabled
+- [x] Disabled
 
 ### Hide Status Bar
 
