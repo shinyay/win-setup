@@ -1364,7 +1364,7 @@ Controls whether the minimap is shown.
 
 When Enabled, insert a final new line at the end of the file saving it.
 
-- [ ] Enabled
+- [x] Enabled
 
 ### Trim Trailing Whitespace
 
