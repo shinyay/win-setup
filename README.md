@@ -1312,7 +1312,7 @@ Controls whether the editor should render control characters.
 
 ### Render Line Highlight
 
-> Controls how the editor render the current line highlight:
+> Controls how the editor render the current line highlight
 
 - [x] `all`
 
@@ -1320,7 +1320,9 @@ Controls whether the editor should render control characters.
 
 ### Cursor Blinking
 
-- Control the cursor animation style: `expand`
+> Control the cursor animation style
+
+- [x] `expand`
 
 ### Cursor Smooth Caret Animation
 
