@@ -1386,7 +1386,7 @@ When enabled, will trim trailing whitespace when saving a file.
 
 Controls whether turning on Zen Mode also centers the layout.
 
-- [ ] Disabled
+- [x] Disabled
 
 ### Hide Line Numbers
 
