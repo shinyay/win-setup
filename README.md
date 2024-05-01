@@ -1328,7 +1328,7 @@ Controls whether the editor should render control characters.
 
 Control whether the sooth caret animation be enabled.
 
-- [ ] Enabled
+- [x] Enabled
 
 ### Cursor Style
 
