@@ -1332,7 +1332,9 @@ Control whether the sooth caret animation be enabled.
 
 ### Cursor Style
 
-- Control the cursor style: `block`
+> Control the cursor style
+
+- [x] `block`
 
 ## `Text Editor` - `Formatting`
 
