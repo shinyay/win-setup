@@ -1308,7 +1308,7 @@ The following extesions are also installed:
 
 Controls whether the editor should render control characters.
 
-- [ ] Enabled
+- [x] Enabled
 
 ### Render Line Highlight
 
