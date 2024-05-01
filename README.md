@@ -1312,7 +1312,9 @@ Controls whether the editor should render control characters.
 
 ### Render Line Highlight
 
-- Controls how the editor render the current line highlight: `all`
+> Controls how the editor render the current line highlight:
+
+- [x] `all`
 
 ## `Text Editor` - `Cursor`
 
