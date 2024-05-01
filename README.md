@@ -1356,7 +1356,7 @@ Controls whether the editor should automatically format the line after typing.
 
 Controls whether the minimap is shown.
 
-- [ ] Disabled
+- [x] Disabled
 
 ## `Text Editor` - `Files`
 
