@@ -4,6 +4,8 @@
 # 1. Initial Setup
 ## App Installer
 
+![image](https://github.com/shinyay/win-setup/assets/3072734/4b96ae8b-761c-4e38-9bb8-9b72b6ceb25b)
+
 If `winget` does not work, you should upgrade `App Installer`
 
 - [x] Installation
