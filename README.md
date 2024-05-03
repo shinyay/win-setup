@@ -474,6 +474,11 @@ gpg --export --armor shinya.com@gmail.com | clip.exe
 
 ![GPG Key on GitHub](https://github.com/shinyay/win-setup/assets/3072734/f3f7da6a-4689-47bf-8e83-9f0bc3d1c020)
 
+#### Commit with GPG Signature
+
+```shell
+git commit -S -m 'YOUR_COMMIT_MESSAGE'
+```
 
 # 2. WSL Customization
 
