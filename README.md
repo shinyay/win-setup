@@ -1518,7 +1518,9 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 ![create-profile](https://github.com/shinyay/win-setup/assets/3072734/430da389-8cb3-40b2-b82f-5f9932575398)
 
-# 5. Development Environment on Dev containers
+# 5. Microsoft Azure
+
+# 6. Development Environment on Dev containers
 
 ![devcontainers](https://user-images.githubusercontent.com/10041279/93239062-e1b9a480-f747-11ea-94fb-3d50b14fd9b1.png)
 
