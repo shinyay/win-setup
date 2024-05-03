@@ -1572,6 +1572,9 @@ az login
 az -h
 ```
 
+<details>
+  <summary>Azure CLI Help</summary>
+
 ```shell
 Group
     az
@@ -1699,6 +1702,8 @@ Commands:
 
 To search AI knowledge base for examples, use: az find "az "
 ```
+
+</details>
 
 # 6. Development Environment on Dev containers
 
