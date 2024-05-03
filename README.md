@@ -454,6 +454,14 @@ ssb   rsa4096 2022-03-21 [E] [expires: 2024-03-20]
 
 `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` is your GPG Key
 
+#### Configure GPG Key to Git
+
+```shell
+git config --global gpg.program gpg
+git config --global user.signingkey <GPG Key>
+git config --global commit.gpgsign true
+```
+
 # 2. WSL Customization
 
 ## WSL
