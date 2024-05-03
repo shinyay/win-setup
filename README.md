@@ -1534,6 +1534,16 @@ You can install Azure CLI by **Homebrew**.
 brew update && brew install azure-cli
 ```
 
+```shell
+az version
+{
+  "azure-cli": "2.60.0",
+  "azure-cli-core": "2.60.0",
+  "azure-cli-telemetry": "1.1.0",
+  "extensions": {}
+}
+```
+
 ### Install on Windows
 
 You can install Azure CLI by `winget` on PowerShell.
