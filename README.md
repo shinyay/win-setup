@@ -1558,6 +1558,14 @@ az version
 az login
 ```
 
+### Install on Windows
+
+You can install Azure CLI by `winget` on PowerShell.
+
+```shell
+winget install -e --id Microsoft.AzureCLI
+```
+
 ### Azure CLI Help
 
 ```shell
@@ -1690,15 +1698,6 @@ Commands:
                             default or format configured by --output.
 
 To search AI knowledge base for examples, use: az find "az "
-```
-
-
-### Install on Windows
-
-You can install Azure CLI by `winget` on PowerShell.
-
-```shell
-winget install -e --id Microsoft.AzureCLI
 ```
 
 # 6. Development Environment on Dev containers
