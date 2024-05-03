@@ -1217,7 +1217,7 @@ abbr --list
 abbr --query NAME ...
 ```
 
-### Add abbreviated command
+### Add abbreviated commands
 
 ```shell
 vim $HOME/.config/fish/config.fish
