@@ -1552,18 +1552,18 @@ az version
 }
 ```
 
-### Sign in interactively
-
-```shell
-az login
-```
-
 ### Install on Windows
 
 You can install Azure CLI by `winget` on PowerShell.
 
 ```shell
 winget install -e --id Microsoft.AzureCLI
+```
+
+### Sign in interactively
+
+```shell
+az login
 ```
 
 ### Azure CLI Help
