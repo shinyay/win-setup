@@ -1526,7 +1526,15 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 - [What is the Azure CLI?](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 
-### Install
+### Install on Linux(WSL2)
+
+You can install Azure CLI by **Homebrew**.
+
+```shell
+brew update && brew install azure-cli
+```
+
+### Install on Windows
 
 You can install Azure CLI by `winget` on PowerShell.
 
