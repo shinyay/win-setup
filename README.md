@@ -1064,6 +1064,8 @@ fish_logo blue cyan green
 
 ### SDKMAN! for fish
 
+![sdkman](https://github.com/shinyay/win-setup/assets/3072734/a133c080-33d9-410a-b78f-99c4c37e1809)
+
 - [ ] Installation
 
 Makes command sdk from SDKMAN! usable from fish, including auto-completion. Also adds binaries from installed SDKs to the PATH.
