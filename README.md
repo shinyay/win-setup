@@ -414,6 +414,29 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 
 ### GPG Key for GitHub
 
+#### Generate GPG Key
+
+```shell
+gpg --gen-key
+```
+
+```shell
+gpg (GnuPG) 2.4.4; Copyright (C) 2024 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: <GITHUB_USER_NAME>
+Email address: <GITHUB_EMAIL_ADDRESS>
+You selected this USER-ID:
+    "YOUR_NAME <YOUR_EMAIL_ADDRESS>"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
+```
+
 # 2. WSL Customization
 
 ## WSL
