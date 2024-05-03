@@ -1217,6 +1217,23 @@ abbr --list
 abbr --query NAME ...
 ```
 
+### Add abbreviated command
+
+```shell
+vim $HOME/.config/fish/config.fish
+```
+
+```shell
+function set_abbr
+        abbr --add code 'code-insiders'
+end
+
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    set_abbr
+end
+```
+
 # 3. Terminal Customization
 
 ## Startup
