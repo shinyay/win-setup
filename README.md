@@ -1520,6 +1520,10 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 # 5. Microsoft Azure
 
+## Azure CLI
+
+
+
 # 6. Development Environment on Dev containers
 
 ![devcontainers](https://user-images.githubusercontent.com/10041279/93239062-e1b9a480-f747-11ea-94fb-3d50b14fd9b1.png)
