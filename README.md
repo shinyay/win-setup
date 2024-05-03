@@ -469,7 +469,7 @@ git config --global commit.gpgsign true
 ![Add new GPG Key](https://github.com/shinyay/win-setup/assets/3072734/8b25238a-27bf-4218-8e90-4d29b85cd5ae)
 
 ```shell
-gpg --export --armor shinya.com@gmail.com | clip.exe
+gpg --export --armor <YOUR_EMAI_ADDRESS_FOR_GPGKEY> | clip.exe
 ```
 
 ![GPG Key on GitHub](https://github.com/shinyay/win-setup/assets/3072734/f3f7da6a-4689-47bf-8e83-9f0bc3d1c020)
