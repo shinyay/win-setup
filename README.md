@@ -480,6 +480,12 @@ gpg --export --armor <YOUR_EMAI_ADDRESS_FOR_GPGKEY> | clip.exe
 git commit -S -m 'YOUR_COMMIT_MESSAGE'
 ```
 
+#### Confirmation of your Commits with GPG Signature
+
+You can find **verified** on your commit.
+
+![Image](https://github.com/shinyay/win-setup/assets/3072734/07f296ab-9de9-4d02-97a9-b1e822c4d6b5)
+
 # 2. WSL Customization
 
 ## WSL
