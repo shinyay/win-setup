@@ -1528,6 +1528,8 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 ### Install on Linux(WSL2)
 
+- [x] Installation
+
 You can install Azure CLI by **Homebrew**.
 
 ```shell
