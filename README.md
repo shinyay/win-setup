@@ -1520,6 +1520,8 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 # 5. Microsoft Azure
 
+- [Microsoft Azure Portal](https://portal.azure.com/#home)
+
 ## Azure CLI
 
 - [What is the Azure CLI?](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
