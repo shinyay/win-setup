@@ -1225,7 +1225,8 @@ vim $HOME/.config/fish/config.fish
 
 ```shell
 function set_abbr
-        abbr --add code 'code-insiders'
+        abbr --add code code-insider
+        abbr --add history peco_select_history
 end
 
 if status is-interactive
