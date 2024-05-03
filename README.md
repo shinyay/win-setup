@@ -1289,7 +1289,7 @@ snap find vscode
 sudo snap install code-insiders --classic
 ```
 
-Abbreviate `code-insiders`
+The following abbreviation is added to `config.fish`
 
 ```shell
 abbr --add code 'code-insiders'
