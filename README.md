@@ -1173,6 +1173,8 @@ docker completion fish > $HOME/.config/fish/completions/docker.fish
 
 ## Docker
 
+![Image](https://github.com/shinyay/win-setup/assets/3072734/c0351b8f-f1c4-43ee-9dea-542e9a28aa53)
+
 ### Docker Desktop for Windows
 
 - [x] Installation
