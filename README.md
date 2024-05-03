@@ -437,6 +437,23 @@ You selected this USER-ID:
 Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
 ```
 
+#### Confirm your GPG Key
+
+```shell
+gpg --list-secret-keys --keyid-format LONG
+```
+
+```shell
+-----------------------------------------
+sec   rsa4096 2022-03-21 [SC] [expires: 2024-03-20]
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid           [ ultimate ] <user@example.com>
+ssb   rsa4096 2022-03-21 [E] [expires: 2024-03-20]
+
+```
+
+`XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` is your GPG Key
+
 # 2. WSL Customization
 
 ## WSL
