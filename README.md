@@ -1522,7 +1522,7 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 ## Azure CLI
 
-
+- [What is the Azure CLI?](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 
 # 6. Development Environment on Dev containers
 
