@@ -462,6 +462,12 @@ git config --global user.signingkey <GPG Key>
 git config --global commit.gpgsign true
 ```
 
+#### Add new GPG key
+
+- [Add new GPG Key](https://github.com/settings/gpg/new)
+
+![Add new GPG Key](https://github.com/shinyay/win-setup/assets/3072734/8b25238a-27bf-4218-8e90-4d29b85cd5ae)
+
 # 2. WSL Customization
 
 ## WSL
