@@ -1203,6 +1203,20 @@ sudo systemctl stop docker
 sudo systemctl start docker
 ```
 
+## Abbreviation for Fish
+
+`abbr`: manage fish abbreviations
+
+```shell
+abbr --add NAME [--position command | anywhere] [-r | --regex PATTERN]
+                [--set-cursor[=MARKER]] ([-f | --function FUNCTION] | EXPANSION)
+abbr --erase NAME ...
+abbr --rename OLD_WORD NEW_WORD
+abbr --show
+abbr --list
+abbr --query NAME ...
+```
+
 # 3. Terminal Customization
 
 ## Startup
