@@ -1269,7 +1269,6 @@ end
 - **Transparency - Background opacity**: `90%`
 - **Window - Scrollbar Visibility**: `Hidden`
 
-
 # 4. Visual Studio Code
 
 ! [vscode](https://code.visualstudio.com/assets/images/code-stable.png)
