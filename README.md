@@ -1230,7 +1230,7 @@ function set_abbr
         abbr --add code code-insider
         abbr --add history peco_select_history
         abbr --add ls -lahF
-        abbr --add ga 'git add -v __path__'
+        abbr --add ga git add -v
 end
 
 if status is-interactive
