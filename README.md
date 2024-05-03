@@ -1526,6 +1526,14 @@ Controls whether turning on Zen Mode also hides the status bar at the bottom of 
 
 - [What is the Azure CLI?](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 
+### Install
+
+You can install Azure CLI by `winget` on PowerShell.
+
+```shell
+winget install -e --id Microsoft.AzureCLI
+```
+
 # 6. Development Environment on Dev containers
 
 ![devcontainers](https://user-images.githubusercontent.com/10041279/93239062-e1b9a480-f747-11ea-94fb-3d50b14fd9b1.png)
