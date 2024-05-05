@@ -1733,6 +1733,8 @@ To search AI knowledge base for examples, use: az find "az "
 az login
 ```
 
+You check your subscription at the folloing and set it to Azure CLI
+
 ```shell
 az account set --subscription "<YOUR_SUBSCRIPTION_NAME>"
 ```
