@@ -650,6 +650,11 @@ Update Copilot in the CLI
 gh extension upgrade gh-copilot
 ```
 
+```shell
+[copilot]: upgraded from v1.0.1 to v1.0.2
+✓ Successfully upgraded extension
+```
+
 #### Explain a command
 
 > You can ask Copilot in the CLI to explain a command
