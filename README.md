@@ -1417,6 +1417,10 @@ The following extesions are also installed:
 
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
+The folloing extention is installed:
+
+- [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
+
 ## `Text Editor`
 
 **Settings** - Everything starts from `Ctrl` + `,`
