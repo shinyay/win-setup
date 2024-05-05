@@ -1727,6 +1727,8 @@ To search AI knowledge base for examples, use: az find "az "
 
 </details>
 
+### Getting Started with Azure CLI
+
 # 6. Development Environment on Dev containers
 
 ![devcontainers](https://user-images.githubusercontent.com/10041279/93239062-e1b9a480-f747-11ea-94fb-3d50b14fd9b1.png)
