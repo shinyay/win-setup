@@ -1412,6 +1412,8 @@ The following extesions are also installed:
 ### GitHub Copilot
 
 - [x] Installation
+  - Windows
+  - WSL2(Linux)
 
 > GitHub Copilot provides autocomplete-style suggestions from an AI pair programmer as you code. You can receive suggestions from GitHub Copilot either by starting to write the code you want to use, or by writing a natural language comment describing what you want the code to do.
 
