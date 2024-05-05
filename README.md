@@ -1421,6 +1421,9 @@ The folloing extention is installed:
 
 - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
 
+Use `ctrl` + `i` to open incline chat.
+Type `/` to view all available chat commands.
+
 ## `Text Editor`
 
 **Settings** - Everything starts from `Ctrl` + `,`
