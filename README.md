@@ -1409,6 +1409,12 @@ The following extesions are also installed:
 
   ![image](https://github.com/shinyay/win-setup/assets/3072734/d2a8dec6-3a3f-4893-8a4f-4b7ebaa8fedb)
 
+### GitHub Copilot
+
+- [x] Installation
+
+> GitHub Copilot provides autocomplete-style suggestions from an AI pair programmer as you code. You can receive suggestions from GitHub Copilot either by starting to write the code you want to use, or by writing a natural language comment describing what you want the code to do.
+
 ## `Text Editor`
 
 **Settings** - Everything starts from `Ctrl` + `,`
