@@ -1741,6 +1741,12 @@ az account set --subscription "<YOUR_SUBSCRIPTION_NAME>"
 
 ### Microsoft Dev Box
 
+#### Install the Dev Center extension
+
+```shell
+az extension add --name devcenter --allow-preview true
+```
+
 ### Azure Spring Apps
 
 # 6. Development Environment on Dev containers
