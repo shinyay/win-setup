@@ -1426,6 +1426,13 @@ The folloing extention is installed:
 Use `ctrl` + `i` to open incline chat.
 Type `/` to view all available chat commands.
 
+### Docker for Visual Studio Code
+
+- [x] Installation
+  - WSL2(Linux)
+
+> The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
+
 ## `Text Editor`
 
 **Settings** - Everything starts from `Ctrl` + `,`
