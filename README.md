@@ -1872,39 +1872,45 @@ services:
 
 ```json
 {
-	"name": "Playground - Java",
-  "dockerComposeFile": "compose.yaml",
-	"service": "playground-java",
-	"workspaceFolder": "/workspace",
-	"remoteUser": "vscode",
-
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installMaven": "false",
-			"installGradle": "true"
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-azuretools.vscode-docker"
-			],
-			"settings": {
-				"editor.formatOnSave": true,
-				"workbench.colorCustomizations": {
-					"titleBar.activeBackground": "#19549C",
-					"titleBar.activeForeground": "#ffffff",
-					"activityBar.background": "#02A7E3",
-					"activityBar.foreground": "#ffffff"
-				}
-			}
-		}
-	}
-
-	// "forwardPorts": [],
-
-	// "postCreateCommand": "java -version"
+    "name": "Playground - Java",
+    "dockerComposeFile": "compose.yaml",
+    "service": "playground-java",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "none",
+            "installMaven": "false",
+            "installGradle": "true"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "redhat.java",
+                "vscjava.vscode-java-debug",
+                "vscjava.vscode-java-dependency",
+                "vscjava.vscode-java-test",
+                "vscjava.vscode-maven",
+                "SonarSource.sonarlint-vscode",
+                "vmware.vscode-boot-dev-pack",
+                "MicroProfile-Community.vscode-microprofile-pack",
+                "redhat.vscode-quarkus"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "workbench.colorCustomizations": {
+                    "titleBar.activeBackground": "#19549C",
+                    "titleBar.activeForeground": "#ffffff",
+                    "activityBar.background": "#02A7E3",
+                    "activityBar.foreground": "#ffffff"
+                }
+            }
+        }
+    }
+    // "forwardPorts": [],
+    // "postCreateCommand": "java -version"
 }
 ```
 
