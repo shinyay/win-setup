@@ -1741,6 +1741,8 @@ az account set --subscription "<YOUR_SUBSCRIPTION_NAME>"
 
 ### Microsoft Dev Box
 
+![Image](https://github.com/shinyay/win-setup/assets/3072734/e4e07ccd-e1df-4e2f-ba3b-f6d823d092f2)
+
 #### Install the Dev Center extension
 
 ```shell
