@@ -566,7 +566,7 @@ git config --global alias.alias 'config --get-regexp ^alias\.'
 - [x] Configuration
 
 ```shell
-git config --global alias.st 'status --short'
+git config --global alias.st 'status --verbose --short --branch --untracked-files'
 ```
 
 #### `git log`
