@@ -1747,6 +1747,10 @@ az account set --subscription "<YOUR_SUBSCRIPTION_NAME>"
 az extension add --name devcenter --allow-preview true
 ```
 
+```shell
+az extension list
+```
+
 ### Azure Spring Apps
 
 # 6. Development Environment on Dev containers
