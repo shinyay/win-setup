@@ -336,10 +336,16 @@ brew doctor
 
 ### Update and Upgrade
 
-- Update the lost of formulae and versions in Homebrew
+- Update the list of formulae and versions in Homebrew
 
 ```shell
 brew update
+```
+
+- Check for installed formulae that have been updated since their installation
+
+```shell
+brew outdated
 ```
 
 
