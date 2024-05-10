@@ -334,6 +334,15 @@ brew install gcc
 brew doctor
 ```
 
+### Update and Upgrade
+
+- Update the lost of formulae and versions in Homebrew
+
+```shell
+brew update
+```
+
+
 ## Git
 
 ![image](https://github.com/shinyay/win-setup/assets/3072734/936457fa-c308-420f-a0cc-46aae10aeef9)
