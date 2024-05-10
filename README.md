@@ -348,6 +348,11 @@ brew update
 brew outdated
 ```
 
+- Upgrade the installed packages to their latest versions
+
+```shell
+brew upgrade
+```
 
 ## Git
 
