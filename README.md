@@ -953,6 +953,22 @@ rm -fr download
 
 - [ ] Installation
 
+### Custome Functions for Fish
+
+#### Clear Cahaces
+
+Clear Caches and turn off and on Swap aria
+
+```shell
+function clearCaches
+    sudo sh -c "echo 3 > '/proc/sys/vm/drop_caches' && swapoff -a && swapon -a"
+end
+```
+
+```shell
+funcsave clearCaches
+```
+
 ## Fish Plugin
 
 ### Peco
@@ -1330,11 +1346,13 @@ vim $HOME/.config/fish/config.fish
 
 ```shell
 function set_abbr
-        abbr --add code code-insider
-        abbr --add history peco_select_history
-        abbr --add ls -lahF
-        abbr --add ga git add -v
-        abbr --add gc git commit -S -m
+	abbr --add code		code-insiders
+	abbr --add history	peco_select_history
+	abbr --add l	 	ls -lahF
+	abbr --add ga		git add -v
+	abbr --add gc		git commit -S -m
+	abbr --add gcpast	git commit -S --date=format:relative:1.day.ago -m
+	abbr --add copilot	gh copilot suggest
 end
 
 if status is-interactive
