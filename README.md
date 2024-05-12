@@ -969,6 +969,12 @@ end
 funcsave clearCaches
 ```
 
+Confirl a persisntent file
+
+```shell
+ls -l ~/.config/fish/functions/clearCaches.fish
+```
+
 ## Fish Plugin
 
 ### Peco
