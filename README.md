@@ -2213,6 +2213,17 @@ multipassd  1.13.1+win
 
 # 2. Windows Tools
 
+## OBS Studio
+
+- [ ] Installation
+
+> OBS Studio is a free and open-source software for video recording and live streaming.
+
+```shell
+winget search obs
+winget install OBSProject.OBSStudio
+```
+
 ## Obsidian
 
 - [ ] Installation
