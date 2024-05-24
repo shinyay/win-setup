@@ -2215,7 +2215,7 @@ multipassd  1.13.1+win
 
 ## OBS Studio
 
-- [ ] Installation
+- [x] Installation
 
 > OBS Studio is a free and open-source software for video recording and live streaming.
 
