@@ -2226,11 +2226,12 @@ winget install OBSProject.OBSStudio
 
 ## DaVinci Resolve 19
 
-- [ ] Installation
+- [x] Installation
 
 > DaVinci Resolve 19 is a professional video editing software that includes everything professional editors need to cut blockbuster films, television shows, and commercials.
 
 - [DaVinci Resolve 19](https://www.blackmagicdesign.com/products/davinciresolve/)
+  - DaVinci Resolve 19 Beta 3 (as of May 25, 2024)
 
 ## Obsidian
 
