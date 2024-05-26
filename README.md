@@ -2215,6 +2215,8 @@ multipassd  1.13.1+win
 
 ## OBS Studio
 
+![obs](https://github.com/shinyay/win-setup/assets/3072734/24380db9-d604-497d-aa4b-c32a7393964d)
+
 - [x] Installation
 
 > OBS Studio is a free and open-source software for video recording and live streaming.
