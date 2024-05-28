@@ -2237,6 +2237,8 @@ winget install OBSProject.OBSStudio
 - [DaVinci Resolve 19](https://www.blackmagicdesign.com/products/davinciresolve/)
   - DaVinci Resolve 19 Beta 3 (as of May 25, 2024)
 
+## ShurePlus MOTIV
+
 ## Obsidian
 
 - [ ] Installation
