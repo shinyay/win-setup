@@ -2246,6 +2246,8 @@ winget install OBSProject.OBSStudio
 > ShurePlus MOTIV is a free app that allows users to record high-quality audio with their MOTIV microphones and make real-time adjustments to gain, stereo width, equalization, and compression.
 
 ```shell
+winget search shure
+winget install Shure.ShurePlusMOTIV
 ```
 
 ## Obsidian
