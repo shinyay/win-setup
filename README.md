@@ -2239,6 +2239,9 @@ winget install OBSProject.OBSStudio
 
 ## ShurePlus MOTIV
 
+![shure](https://github.com/shinyay/win-setup/assets/3072734/f1c77c42-ae01-4047-b0de-c1c1c3e31ca8)
+
+
 ## Obsidian
 
 - [ ] Installation
