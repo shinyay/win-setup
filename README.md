@@ -1122,6 +1122,8 @@ brew tap SDKMAN/tap
 brew install SDKMAN-cli
 ```
 
+#### SDKMAN for Fish extension
+
 Makes command sdk from SDKMAN! usable from fish, including auto-completion. Also adds binaries from installed SDKs to the PATH.
 
 - [reitzig/sdkman-for-fish](https://github.com/reitzig/sdkman-for-fish)
