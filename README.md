@@ -2412,3 +2412,15 @@ winget install Anki.Anki
 winget search ankimotiv
 winget install Shure.ShurePlusMOTIV
 ```
+
+## PowerToys
+
+- [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
+
+> Microsoft PowerToys is a set of utilities for power users to tune and streamline their Windows experience for greater productivity.
+
+- [x] Installation
+
+```shell
+winget install --id Microsoft.PowerToys --source winget
+```
