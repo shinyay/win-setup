@@ -327,7 +327,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 ```
 
 ```shell
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/shinyay/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/shinyay/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 sudo apt-get install build-essential
 brew install gcc
@@ -2411,4 +2411,16 @@ winget install Anki.Anki
 ```shell
 winget search ankimotiv
 winget install Shure.ShurePlusMOTIV
+```
+
+## PowerToys
+
+- [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/)
+
+> Microsoft PowerToys is a set of utilities for power users to tune and streamline their Windows experience for greater productivity.
+
+- [x] Installation
+
+```shell
+winget install --id Microsoft.PowerToys --source winget
 ```
