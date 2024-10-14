@@ -387,7 +387,7 @@ which git
 ```shell
 git --version
 
-git version 2.44.0
+git version 2.47.0
 ```
 
 ### Git Global Configuration
