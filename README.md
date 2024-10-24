@@ -808,9 +808,11 @@ brew doctor
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
+Fisher version, as of Oct 24, 2024
+
 ```shell
 fisher -v
-fisher, version 4.4.4
+fisher, version 4.4.5
 ```
 
 ### Fish Prompt - Tide
