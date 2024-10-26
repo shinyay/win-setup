@@ -971,7 +971,7 @@ end
 funcsave clearCaches
 ```
 
-Confirl a persisntent file
+Confirm a persisntent file
 
 ```shell
 ls -l ~/.config/fish/functions/clearCaches.fish
