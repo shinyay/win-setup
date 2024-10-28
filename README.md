@@ -409,6 +409,12 @@ git config --global init.defaultBranch main && \
 git config pull.ff only
 ```
 
+Check your configuration:
+
+```shell
+git config list --global
+```
+
 ### SSH Key for GitHub
 
 #### Fine-grained personal access tokens
@@ -971,7 +977,7 @@ end
 funcsave clearCaches
 ```
 
-Confirl a persisntent file
+Confirm a persisntent file
 
 ```shell
 ls -l ~/.config/fish/functions/clearCaches.fish
