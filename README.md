@@ -443,7 +443,7 @@ cat $HOME/.ssh/id_ed25519.pub | clip.exe
 #### Generate GPG Key
 
 ```shell
-gpg --gen-key
+gpg --full-generate-key
 ```
 
 ```shell
@@ -451,7 +451,29 @@ gpg (GnuPG) 2.4.4; Copyright (C) 2024 g10 Code GmbH
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
-Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+Please select what kind of key you want:
+   (1) RSA and RSA
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (9) ECC (sign and encrypt) *default*
+  (10) ECC (sign only)
+  (14) Existing key from card
+Your selection?
+Please select which elliptic curve you want:
+   (1) Curve 25519 *default*
+   (4) NIST P-384
+   (6) Brainpool P-256
+Your selection?
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0)
+Key does not expire at all
+Is this correct? (y/N) y
 
 GnuPG needs to construct a user ID to identify your key.
 
@@ -460,8 +482,10 @@ Email address: <GITHUB_EMAIL_ADDRESS>
 You selected this USER-ID:
     "YOUR_NAME <YOUR_EMAIL_ADDRESS>"
 
-Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
 ```
+
+And then, Type a secure passphrase.
 
 #### Confirm your GPG Key
 
