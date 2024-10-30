@@ -651,8 +651,8 @@ brew install gh
 ```shell
 gh --version
 
-gh version 2.48.0 (2024-04-17)
-https://github.com/cli/cli/releases/tag/v2.48.0
+gh version 2.62.0 (2024-11-14)
+https://github.com/cli/cli/releases/tag/v2.62.0
 ```
 
 ### GitHub Authentication
