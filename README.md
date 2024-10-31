@@ -701,8 +701,16 @@ gh extension upgrade gh-copilot
 ```
 
 ```shell
-[copilot]: upgraded from v1.0.1 to v1.0.2
+[copilot]: upgraded from v1.0.1 to v1.0.5
 ✓ Successfully upgraded extension
+```
+
+Confirm your version
+
+```shell
+gh copilot -v
+
+version 1.0.5 (2024-09-12)
 ```
 
 #### Explain a command
