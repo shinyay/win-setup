@@ -1032,6 +1032,14 @@ fisher install oh-my-fish/plugin-peco
 abbr -a history peco_select_history
 ```
 
+Confirm your version
+
+```shell
+peco --version
+
+peco version v0.5.11 (built with go1.20.2)
+```
+
 ### fzf
 
 #### fzf
