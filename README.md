@@ -1054,6 +1054,14 @@ peco version v0.5.11 (built with go1.20.2)
 brew install fzf
 ```
 
+Confirm your version
+
+```shell
+fzf --version
+
+0.56.3 (brew)
+```
+
 #### bat
 
 - [x] Installation bat
@@ -1066,6 +1074,14 @@ brew install fzf
 brew install bat
 ```
 
+Confirm your version
+
+```shell
+bat --version
+
+bat 0.24.0
+```
+
 #### fd
 
 - [x] Installation fd
@@ -1076,6 +1092,14 @@ brew install bat
 
 ```shell
 brew install fd
+```
+
+Confirm your version
+
+```shell
+fd --version
+
+fd 10.2.0
 ```
 
 #### fzf for Fish
