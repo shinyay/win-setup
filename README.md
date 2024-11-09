@@ -1189,6 +1189,8 @@ fish_logo blue cyan green
 
 #### SDKMAN with Homebrew
 
+- [SDKMAN!](https://sdkman.io/), The Software Development Kit Manager
+
 ```shell
 brew tap SDKMAN/tap
 brew install SDKMAN-cli
