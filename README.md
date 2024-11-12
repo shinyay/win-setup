@@ -1415,7 +1415,20 @@ sudo systemctl start docker
 
 ## SDKMAN!
 
+### Enable Beta Channel
 
+```shell
+sed -ie "s/sdkman_beta_channel=false/sdkman_beta_channel=true/g" ~/.sdkman/etc/config
+```
+
+### Java
+
+- OpenJDK
+  - `24.ea.23`
+
+```shell
+sdk install java 24.ea.23-open
+```
 
 ## Abbreviation for Fish
 
