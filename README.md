@@ -1430,6 +1430,14 @@ sed -ie "s/sdkman_beta_channel=false/sdkman_beta_channel=true/g" ~/.sdkman/etc/c
 sdk install java 24.ea.23-open
 ```
 
+### Kotlin
+
+- `2.0.21`
+
+```shell
+sdk install kotlin
+```
+
 ## Abbreviation for Fish
 
 `abbr`: manage fish abbreviations
