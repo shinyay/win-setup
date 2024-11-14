@@ -1438,6 +1438,14 @@ sdk install java 24.ea.23-open
 sdk install kotlin
 ```
 
+### Ki
+
+- `0.5.2`
+
+```shell
+sdk install ki
+```
+
 ## Abbreviation for Fish
 
 `abbr`: manage fish abbreviations
