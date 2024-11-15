@@ -1446,6 +1446,16 @@ sdk install kotlin
 sdk install ki
 ```
 
+### Spring Boot
+
+- `3.3.5`
+
+```shell
+sdk install springboot
+```
+
+
+
 ## Abbreviation for Fish
 
 `abbr`: manage fish abbreviations
