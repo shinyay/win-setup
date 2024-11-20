@@ -1430,6 +1430,15 @@ sed -ie "s/sdkman_beta_channel=false/sdkman_beta_channel=true/g" ~/.sdkman/etc/c
 sdk install java 24.ea.23-open
 ```
 
+- Microsoft OpenJDK
+  - `21.0.5-ms`
+  - `11.0.25-ms`
+
+```shell
+sdk install java 21.0.5-ms
+sdk install java 11.0.25-ms
+```
+
 ### Kotlin
 
 - `2.0.21`
@@ -1445,6 +1454,16 @@ sdk install kotlin
 ```shell
 sdk install ki
 ```
+
+### Spring Boot
+
+- `3.3.5`
+
+```shell
+sdk install springboot
+```
+
+
 
 ## Abbreviation for Fish
 
