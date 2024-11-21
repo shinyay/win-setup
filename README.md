@@ -1463,7 +1463,13 @@ sdk install ki
 sdk install springboot
 ```
 
+### Maven
 
+- `3.9.9`
+
+```shell
+sdk install maven 3.9.9
+```
 
 ## Abbreviation for Fish
 
