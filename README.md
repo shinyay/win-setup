@@ -1594,6 +1594,8 @@ The following extesions are also installed:
 
   ![image](https://github.com/shinyay/win-setup/assets/3072734/d2a8dec6-3a3f-4893-8a4f-4b7ebaa8fedb)
 
+### GitHub
+
 ### GitHub Copilot
 
 - [x] Installation
@@ -1610,6 +1612,11 @@ The folloing extention is installed:
 
 Use `ctrl` + `i` to open incline chat.
 Type `/` to view all available chat commands.
+
+### Java
+
+### Azure
+
 
 ### Docker for Visual Studio Code
 
