@@ -1613,6 +1613,9 @@ The folloing extention is installed:
 Use `ctrl` + `i` to open incline chat.
 Type `/` to view all available chat commands.
 
+- [GitHub Copilot (Next Edit Suggestions)]()
+- [GitHub Copilot Workspace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-workspace)
+
 ### Java
 
 ### Azure
