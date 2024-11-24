@@ -1596,6 +1596,13 @@ The following extesions are also installed:
 
 ### GitHub
 
+- [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)
+- [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
+- [GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub)
+- [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
+- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
+
+
 ### GitHub Copilot
 
 - [x] Installation
