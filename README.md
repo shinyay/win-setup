@@ -1601,7 +1601,7 @@ The following extesions are also installed:
 - [GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub)
 - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 - [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
-
+- [CodeQL](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 
 ### GitHub Copilot
 
