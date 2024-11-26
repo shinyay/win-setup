@@ -1625,6 +1625,8 @@ Type `/` to view all available chat commands.
 
 ### Java
 
+- [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+
 ### Azure
 
 
