@@ -1629,6 +1629,8 @@ Type `/` to view all available chat commands.
 
 ### Azure
 
+- [Azure Tools](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
+- [Azure Account](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 
 ### Docker for Visual Studio Code
 
