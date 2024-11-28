@@ -1628,7 +1628,7 @@ Type `/` to view all available chat commands.
 - [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
 ### Azure
-
+- [GitHub Copilot for Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-github-copilot)
 - [Azure Tools](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 - [Azure Account](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 
