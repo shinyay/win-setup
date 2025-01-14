@@ -1275,7 +1275,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### git
 
-- [x] Installation
+- [ ] Installation
 
 > `git` - the stupid content tracker
 
