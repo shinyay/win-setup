@@ -53,6 +53,13 @@ winget search 'Windows Terminal'
 winget install Microsoft.WindowsTerminal.Preview
 ```
 
+## Microsoft Terminal Canary
+
+- [x] Installation
+
+Install Microsoft Terminal Canary from the following site:
+- [Microsoft Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary)
+
 ## ULE4JIS / alt-ime-ahk
 
 If your keyaboard layout is **Japanese**, you can try the following tools when you use the US Keyboad layout.
