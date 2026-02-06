@@ -643,6 +643,18 @@ git config --global alias.glog "log --pretty='format:%C(yellow)%h %C(green)%cd %
 git config --global alias.count 'shortlog -e -s -n'
 ```
 
+## Copilot CLI
+
+- [GitHub Copilot CLI (Public Preview)](https://github.com/github/copilot-cli)
+
+```shell
+brew install copilot-cli
+```
+
+```shell
+brew install copilot-cli@prerelease
+```
+
 ## GitHub CLI
 
 - [x] Installation
