@@ -414,7 +414,21 @@ git config --global color.branch auto && \
 git config --global fetch.prune true && \
 git config --global init.defaultBranch main && \
 git config pull.ff only
+
+# Modern Git settings (added 2026-02-22)
+git config --global pull.rebase true
+git config --global push.autoSetupRemote true
+git config --global merge.conflictstyle zdiff3
+git config --global diff.algorithm histogram
+git config --global rerere.enabled true
+git config --global rebase.autoStash true
+git config --global rebase.autoSquash true
+git config --global commit.verbose true
+git config --global diff.colorMoved default
+git config --global diff.colorMovedWS allow-indentation-change
 ```
+
+> **See [README-Git.md](README-Git.md)** for comprehensive Git configuration details including delta pager, lazygit, GPG signing, SSH config, and gh CLI aliases.
 
 Check your configuration:
 
@@ -1240,8 +1254,8 @@ And then open a new terminal/shell to load SDKMAN!.
 sdk version
 
 SDKMAN!
-script: 5.18.2
-native: 0.4.6
+script: latest+bb56144
+native: 0.7.20
 ```
 
 ### autopair.fish
@@ -1369,7 +1383,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### docker
 
-- [ ] Installation (completion file not yet generated)
+- [x] Installation (generated 235-line completion file)
 
 After Docker installation, you can do the following:
 
@@ -1378,6 +1392,8 @@ docker completion fish > $HOME/.config/fish/completions/docker.fish
 ```
 
 ## Docker
+
+> See [README-Docker.md](README-Docker.md) for detailed Docker configuration.
 
 ![Image](https://github.com/shinyay/win-setup/assets/3072734/c0351b8f-f1c4-43ee-9dea-542e9a28aa53)
 
@@ -1497,41 +1513,37 @@ sed -ie "s/sdkman_beta_channel=false/sdkman_beta_channel=true/g" ~/.sdkman/etc/c
 
 ### Java
 
-- OpenJDK
-  - `24.ea.23`
+- OpenJDK (default)
+  - `25.0.2-open` **(LTS, current default)**
 
 ```shell
-sdk install java 24.ea.23-open
+sdk install java 25.0.2-open
+sdk default java 25.0.2-open
 ```
 
 - Microsoft OpenJDK
-  - `21.0.5-ms`
-  - `11.0.25-ms`
+  - `21.0.10-ms` (LTS)
+  - `17.0.18-ms` (LTS)
+  - `11.0.30-ms` (LTS)
 
 ```shell
-sdk install java 21.0.5-ms
-sdk install java 11.0.25-ms
-```
-
-- Microsoft OpenJDK (additional)
-  - `17.0.14-ms`
-
-```shell
-sdk install java 17.0.14-ms
+sdk install java 21.0.10-ms
+sdk install java 17.0.18-ms
+sdk install java 11.0.30-ms
 ```
 
 - Azul Zulu
-  - `8.0.432-zulu`
-  - `7.0.352-zulu`
+  - `8.0.472-zulu`
 
 ```shell
-sdk install java 8.0.432-zulu
-sdk install java 7.0.352-zulu
+sdk install java 8.0.472-zulu
 ```
+
+> Java 7 and Java 24 EA have been removed. Java 23.0.1 (non-LTS) has been replaced by Java 25 LTS.
 
 ### Kotlin
 
-- `2.0.21`
+- `2.3.10`
 
 ```shell
 sdk install kotlin
@@ -1547,7 +1559,7 @@ sdk install ki
 
 ### Spring Boot
 
-- `3.3.5`
+- `3.5.11`
 
 ```shell
 sdk install springboot
@@ -1555,11 +1567,31 @@ sdk install springboot
 
 ### Maven
 
-- `3.9.9`
+- `3.9.12`
 
 ```shell
-sdk install maven 3.9.9
+sdk install maven 3.9.12
 ```
+
+### Gradle
+
+- `8.14.4`
+
+```shell
+sdk install gradle 8.14.4
+```
+
+### JBang
+
+- `0.137.0`
+
+```shell
+sdk install jbang
+```
+
+> JBang is a modern Java scripting tool — run `.java` files like scripts with inline dependency declarations.
+
+> See [README-Java.md](README-Java.md) for detailed Java/SDKMAN configuration.
 
 ## Abbreviation for Fish
 
@@ -1585,11 +1617,16 @@ vim $HOME/.config/fish/config.fish
 function set_abbr
 	abbr --add code		code-insiders
 	abbr --add history	_fzf_search_history
-	abbr --add l	 	ls -lahF
+	abbr --add l	 	eza -lahF
+	abbr --add tree		eza --tree
 	abbr --add ga		git add -v
 	abbr --add gc		git commit -S -m
 	abbr --add gcpast	git commit -S --date=format:relative:1.day.ago -m
-	abbr --add copilot	gh copilot suggest
+	abbr --add lg		lazygit
+	abbr --add dps		docker ps
+	abbr --add di		docker images
+	abbr --add dcu		docker compose up -d
+	abbr --add dcd		docker compose down
 end
 
 if status is-interactive
@@ -2369,7 +2406,7 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 
 ## Kotlin
 
-> Kotlin SDK (`2.0.21`) is managed via SDKMAN! — see the [SDKMAN section](#sdkman-for-fish) above.
+> Kotlin SDK (`2.3.10`) is managed via SDKMAN! — see the [SDKMAN section](#sdkman-for-fish) above.
 
 ## Rust
 
@@ -2377,7 +2414,7 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 
 ## TypeScript
 
-- [ ] Not yet installed (Node.js v22.22.0 is available via NVM)
+- [ ] Not yet installed (Node.js v22.22.0 and v24.13.1 are available via NVM)
 
 ## Python
 
@@ -2399,13 +2436,13 @@ Install Dev Container CLI.
 
 > The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
 
-- [ ] Installation
+- [x] Installation
 
 - [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
 ## Azure CLI
 
-- [ ] Installation
+- [x] Installation
 
 > The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.
 
@@ -2443,7 +2480,7 @@ azd version 1.23.3 (commit c53baf4180b8636f4366cd9d9f621755db75f370)
 - [nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
 ```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 ```
 
 NVM adds Node.js to `fish_user_paths`:
@@ -2464,6 +2501,13 @@ v22.22.0
 
 npm --version
 10.9.4
+```
+
+```shell
+nvm install 24
+
+node --version
+v24.13.1
 ```
 
 ### Global npm packages
