@@ -1,7 +1,7 @@
 # Docker Engine — Detailed Configuration Reference
 
 > **Environment:** WSL2 / Ubuntu on Windows 11  
-> **Last updated:** 2026-02-21
+> **Last updated:** 2026-02-22
 
 ---
 
@@ -52,7 +52,7 @@
 |------|-------|
 | **Product** | Docker Engine (Community Edition) |
 | **Version** | `27.3.1` |
-| **API Version** | `1.46` |
+| **API Version** | `1.47` |
 | **Platform** | `linux/amd64` |
 | **OS** | Ubuntu 24.04.1 LTS (WSL2) |
 | **Kernel** | `6.6.87.2-microsoft-standard-WSL2` |
@@ -256,8 +256,11 @@ docker run --log-driver=local --log-opt max-size=10m myimage
 
 | Item | Value |
 |------|-------|
-| **Total images** | `88` |
+| **Total images** | `50` (after cleanup) |
+| **Total size** | `37.24 GB` |
 | **Registry** | Docker Hub (default) |
+
+> **Cleanup performed (2026-02-22):** Pruned dangling images, stopped containers, orphaned networks, and build cache — reclaimed ~20 GB total.
 
 ```shell
 # List all images
@@ -285,8 +288,8 @@ docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" | sort -k3 -
 | Item | Value |
 |------|-------|
 | **Running** | `0` |
-| **Stopped** | `3` (dev containers) |
-| **Total** | `3` |
+| **Stopped** | `0` (pruned) |
+| **Total** | `0` |
 
 ```shell
 # List running containers
@@ -470,7 +473,7 @@ wsl --shutdown
 | Item | Value |
 |------|-------|
 | **Completion file** | `~/.config/fish/completions/docker.fish` |
-| **Status** | ❌ Not yet generated |
+| **Status** | ✅ Generated (235 lines) |
 | **Generator** | Built-in `docker completion` command |
 
 #### Generate Docker Fish Completion
@@ -493,17 +496,24 @@ docker <Tab>
 
 > **Note:** Docker Compose and Buildx completions are included via the main `docker` completion since they are CLI plugins.
 
-### Useful Fish Abbreviations
+### Configured Fish Abbreviations
 
-These abbreviations can be added to the `set_abbr` function in `~/.config/fish/config.fish`:
+The following abbreviations are configured in the `set_abbr` function in `~/.config/fish/config.fish`:
+
+| Abbreviation | Expansion | Description |
+|-------------|-----------|-------------|
+| `dps` | `docker ps` | List running containers |
+| `di` | `docker images` | List images |
+| `dcu` | `docker compose up -d` | Start Compose services in detached mode |
+| `dcd` | `docker compose down` | Stop Compose services |
+
+#### Additional Useful Abbreviations (Optional)
+
+These can be added to `config.fish` if desired:
 
 ```fish
-abbr --add dps   docker ps
 abbr --add dpsa  docker ps -a
-abbr --add di    docker images
 abbr --add dex   docker exec -it
-abbr --add dcu   docker compose up -d
-abbr --add dcd   docker compose down
 abbr --add dcl   docker compose logs -f
 abbr --add dsp   docker system prune -f
 ```
@@ -643,18 +653,64 @@ Custom daemon configuration can be added to `/etc/docker/daemon.json`:
 }
 ```
 
+> ⚠️ **No `daemon.json` exists on this environment.** Without it, container logs grow unbounded. It is **strongly recommended** to create this file with log rotation settings.
+
 After modifying, restart the daemon:
 
 ```shell
 sudo systemctl restart docker
 ```
 
-### Fish Completion Reminder
+### Fish Completion Status
 
-Docker Fish shell completion has **not yet been generated**. To enable it:
+Docker Fish shell completion has been **generated** at `~/.config/fish/completions/docker.fish` (235 lines).
 
 ```shell
+# Regenerate if Docker is upgraded
 docker completion fish > $HOME/.config/fish/completions/docker.fish
 ```
 
-This is also noted in [README-Fish.md — Completions](README-Fish.md#completions).
+### Upgrade Recommendation
+
+Docker Engine is currently at **27.3.1** (September 2024), which is **2 major versions behind** the latest 29.x release. The upgrade brings:
+
+| Feature | Version | Benefit |
+|---------|---------|---------|
+| Model Runner (local AI inference) | 28.0+ | Run LLMs locally via `docker model` |
+| GPU support for containers | 28.0+ | Native `--gpus` flag support in WSL2 |
+| Improved BuildKit performance | 28.0+ | Faster multi-stage builds, better caching |
+| Health check improvements | 29.0+ | `start-interval` for faster startup detection |
+| Compose Watch v2 | Compose 2.35+ | Hot-reload for development containers |
+
+#### Upgrade Commands (requires sudo)
+
+```shell
+# Update package index
+sudo apt-get update
+
+# Upgrade Docker Engine + all plugins
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Verify upgrade
+docker version
+
+# Regenerate Fish completion after upgrade
+docker completion fish > $HOME/.config/fish/completions/docker.fish
+```
+
+> **Note:** This upgrade uses Docker's official APT repository already configured on this system.
+
+### Maintenance Schedule
+
+Regular cleanup prevents disk bloat in dev container environments:
+
+```shell
+# Weekly: remove dangling images and stopped containers
+docker system prune -f
+
+# Monthly: clear build cache
+docker builder prune -f
+
+# Check disk usage
+docker system df
+```
