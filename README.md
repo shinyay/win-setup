@@ -810,7 +810,7 @@ brew install fish
 ```shell
 fish --version
 
-fish, version 3.7.1
+fish, version 4.3.3
 ```
 
 Check the PATH for `fish`.
@@ -869,7 +869,7 @@ Fisher version, as of Oct 24, 2024
 
 ```shell
 fisher -v
-fisher, version 4.4.5
+fisher, version 4.4.8
 ```
 
 ### Fish Prompt - Tide
@@ -1078,7 +1078,7 @@ Confirm your version
 ```shell
 fzf --version
 
-0.56.3 (brew)
+0.67.0 (Homebrew)
 ```
 
 #### bat
@@ -1098,7 +1098,7 @@ Confirm your version
 ```shell
 bat --version
 
-bat 0.24.0
+bat 0.26.1
 ```
 
 #### fd
@@ -1118,7 +1118,7 @@ Confirm your version
 ```shell
 fd --version
 
-fd 10.2.0
+fd 10.3.0
 ```
 
 #### fzf for Fish
