@@ -1037,26 +1037,17 @@ ls -l ~/.config/fish/functions/clearCaches.fish
 ## Fish Plugin
 
 ### Peco
-- [x] Installation
+- [ ] ~~Installation~~ (Removed — replaced by fzf.fish for history search)
 
-> Simplistic interactive filtering tool
+> Simplistic interactive filtering tool. Replaced by `fzf.fish` which provides superior `Ctrl+R` history search via fzf.
 
-By pushing `ctrl` + `r`, you can search shell history
-
-- [oh-my-fish/plugin-peco](https://github.com/oh-my-fish/plugin-peco)
+~~- [oh-my-fish/plugin-peco](https://github.com/oh-my-fish/plugin-peco)~~
 
 ```shell
-brew install peco
-fisher install oh-my-fish/plugin-peco
-abbr -a history peco_select_history
-```
-
-Confirm your version
-
-```shell
-peco --version
-
-peco version v0.5.11 (built with go1.20.2)
+# Removed:
+# brew install peco
+# fisher install oh-my-fish/plugin-peco
+# abbr -a history peco_select_history
 ```
 
 ### fzf
@@ -1146,16 +1137,31 @@ echo "" | tee -a $HOME/.config/fish/config.fish
 |`Ctrl`+`Alt`+`s`|`git status`|
 |`Ctrl`+`Alt`+`l`|`git log`|
 
-### z
+### ~~z~~ → zoxide
 
 - [x] Installation
 
-By z, it tracks the directory you have visited
+> `zoxide` is a smarter `cd` command, inspired by `z` and `autojump`. It remembers which directories you use most frequently and lets you jump to them with minimal keystrokes.
 
-- [jethrokuan/z](https://github.com/jethrokuan/z)
+~~- [jethrokuan/z](https://github.com/jethrokuan/z)~~ (Removed — replaced by zoxide)
+- [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ```shell
-fisher install jethrokuan/z
+brew install zoxide
+# Removed: fisher install jethrokuan/z
+```
+
+Add to `config.fish`:
+
+```fish
+zoxide init fish | source
+```
+
+Usage:
+
+```shell
+z work        # Jump to most frecent directory matching "work"
+zi work       # Interactive selection with fzf
 ```
 
 ### fish-bd
@@ -1578,7 +1584,7 @@ vim $HOME/.config/fish/config.fish
 ```shell
 function set_abbr
 	abbr --add code		code-insiders
-	abbr --add history	peco_select_history
+	abbr --add history	_fzf_search_history
 	abbr --add l	 	ls -lahF
 	abbr --add ga		git add -v
 	abbr --add gc		git commit -S -m

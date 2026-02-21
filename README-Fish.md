@@ -15,7 +15,7 @@
 - [Installed Fisher Plugins](#installed-fisher-plugins)
   - [Tide (Prompt)](#tide-prompt)
   - [fzf.fish (Fuzzy Finder)](#fzffish-fuzzy-finder)
-  - [peco (Interactive Filtering)](#peco-interactive-filtering)
+  - [zoxide (Directory Jumping)](#zoxide-directory-jumping)
   - [z (Directory Jumping)](#z-directory-jumping)
   - [fish-bd (Go Back to Parent)](#fish-bd-go-back-to-parent)
   - [fish_logo (ASCII Art)](#fish_logo-ascii-art)
@@ -97,7 +97,7 @@ echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> $HOME/.config/fish
 ```fish
 function set_abbr
 	abbr --add code		code-insiders
-	abbr --add history	peco_select_history
+	abbr --add history	_fzf_search_history
 	abbr --add l	 	ls -lahF
 	abbr --add ga		git add -v
 	abbr --add gc		git commit -S -m
@@ -110,6 +110,7 @@ if status is-interactive
     set_abbr
 end
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+zoxide init fish | source
 fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs
 ```
 
@@ -118,6 +119,7 @@ fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs
 1. **`set_abbr`** — Defines abbreviations (expanded inline when typed) for common commands
 2. **Interactive guard** — Only sets abbreviations in interactive sessions
 3. **Homebrew shellenv** — Adds Homebrew's `bin`, `sbin`, `HOMEBREW_PREFIX`, etc. to the environment
+4. **zoxide init** — Initializes zoxide (`z` command) for smart directory jumping
 4. **fzf bindings** — Overrides default fzf.fish keybindings:
    - `Ctrl+F` → Search directories
    - `Ctrl+L` → Search git log
@@ -164,8 +166,6 @@ fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs
 │   ├── fish_prompt.fish           #   Tide prompt
 │   ├── fisher.fish                #   Fisher plugin manager
 │   ├── fzf_configure_bindings.fish #  fzf.fish bindings
-│   ├── peco_kill.fish             #   peco kill process
-│   ├── peco_select_history.fish   #   peco history search
 │   ├── sdk.fish                   #   SDKMAN! wrapper
 │   ├── sponge_filter_*.fish       #   sponge history cleanup
 │   ├── tide.fish                  #   Tide CLI
@@ -207,9 +207,7 @@ fisher remove <plugin>         # Remove a plugin
 ```
 jorgebucaran/fisher
 ilancosman/tide@v6
-oh-my-fish/plugin-peco
 patrickf1/fzf.fish
-jethrokuan/z
 0rax/fish-bd
 laughedelic/fish_logo
 reitzig/sdkman-for-fish@v2.1.0
@@ -317,49 +315,40 @@ fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs
 
 ---
 
-### peco (Interactive Filtering)
+### ~~peco~~ (Removed)
 
-> Simplistic interactive filtering tool. Push `Ctrl+R` to search shell history (when fzf.fish is not overriding it).
-
-| Item | Value |
-|------|-------|
-| **GitHub** | [oh-my-fish/plugin-peco](https://github.com/oh-my-fish/plugin-peco) |
-| **peco version** | `0.5.11` |
-
-#### Install
-
-```shell
-brew install peco
-fisher install oh-my-fish/plugin-peco
-```
-
-#### Functions provided
-
-- `peco_select_history` — Interactive history search (mapped to `history` abbreviation)
-- `peco_kill` — Interactive process kill
+> Replaced by `fzf.fish` which provides superior `Ctrl+R` history search. The `history` abbreviation now maps to `_fzf_search_history`.
 
 ---
 
-### z (Directory Jumping)
+### zoxide (Directory Jumping)
 
-> Tracks directories you visit and lets you jump to them by partial name.
+> A smarter `cd` command, inspired by `z` and `autojump`. Remembers which directories you use most frequently. Replaces `jethrokuan/z`.
 
 | Item | Value |
 |------|-------|
-| **GitHub** | [jethrokuan/z](https://github.com/jethrokuan/z) |
-| **Data file** | `~/.local/share/z/data` |
+| **GitHub** | [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide) |
+| **Version** | `0.9.9` |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/zoxide` |
 
 #### Install
 
 ```shell
-fisher install jethrokuan/z
+brew install zoxide
+```
+
+Add to `config.fish`:
+
+```fish
+zoxide init fish | source
 ```
 
 #### Usage
 
 ```shell
 z work        # Jump to most frecent directory matching "work"
-zo work       # Open matching directory (without cd)
+zi work       # Interactive selection with fzf
+z -           # Jump to previous directory
 ```
 
 ---
@@ -527,7 +516,7 @@ Abbreviations are defined in the `set_abbr` function in `config.fish` and loaded
 | Abbreviation | Expands To | Description |
 |-------------|------------|-------------|
 | `code` | `code-insiders` | Open VS Code Insiders |
-| `history` | `peco_select_history` | Interactive history with peco |
+| `history` | `_fzf_search_history` | Interactive history search with fzf |
 | `l` | `ls -lahF` | Detailed file listing |
 | `ga` | `git add -v` | Git add (verbose) |
 | `gc` | `git commit -S -m` | Git signed commit |
@@ -932,7 +921,8 @@ fish_user_paths = /home/shinyay/.nvm/versions/node/v22.22.0/bin
 | `fzf` | 0.68.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fzf` |
 | `bat` | 0.26.1 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/bat` |
 | `fd` | 10.3.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fd` |
-| `peco` | 0.5.11 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/peco` |
+| `peco` | ~~0.5.11~~ | ~~Homebrew~~ | Removed (replaced by fzf.fish) |
+| `zoxide` | 0.9.9 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/zoxide` |
 | `git` | 2.53.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/git` |
 | `gh` | 2.87.2 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/gh` |
 | `jq` | 1.8.1 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/jq` |
