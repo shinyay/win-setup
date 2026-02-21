@@ -304,7 +304,7 @@ Terminal settings:
 - [x] Installation
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ```shell
@@ -570,7 +570,7 @@ sudo apt update && sudo apt upgrade
 brew update && brew upgrade
 ```
 
-### Requred Packages Installation
+### Required Packages Installation
 
 #### Basic Packages
 
@@ -659,14 +659,13 @@ git config --global alias.count 'shortlog -e -s -n'
 
 ## Copilot CLI
 
-- [GitHub Copilot CLI (Public Preview)](https://github.com/github/copilot-cli)
+> **Note:** The standalone `copilot-cli` npm package has been deprecated. GitHub Copilot in the CLI is now a `gh` extension — see [GitHub Copilot in the CLI](#github-copilot-in-the-cli) below.
+
+~~- [GitHub Copilot CLI (Public Preview)](https://github.com/github/copilot-cli)~~
 
 ```shell
-brew install copilot-cli
-```
-
-```shell
-brew install copilot-cli@prerelease
+# Deprecated: brew install copilot-cli
+# Use: gh extension install github/gh-copilot
 ```
 
 ## GitHub CLI
@@ -715,7 +714,7 @@ gh config set editor vim
 > GitHub Copilot in the CLI is an extension for GitHub CLI which provides a chat-like interface in the terminal that allows you to ask questions about commands you run from the command line.
 
 
-If you are have not authenticated with your GitHub account, login.
+If you have not authenticated with your GitHub account, login.
 
 ```shell
 gh auth login
@@ -812,6 +811,8 @@ Suggestion:
 ![image](https://github.com/shinyay/win-setup/assets/3072734/183c576c-1737-4f3b-bd3b-5d16b03d0575)
 
 - [Fish](https://fishshell.com/)
+
+> **See [README-Fish.md](README-Fish.md)** for comprehensive Fish shell configuration details including plugins, completions, abbreviations, and custom functions.
 
 ### Fish Install
 
@@ -1363,13 +1364,9 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### git
 
-- [ ] Installation
+- [x] Built-in (Fish 4.x includes comprehensive git completions via Homebrew)
 
-> `git` - the stupid content tracker
-
-```shell
-curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/git.fish > $HOME/.config/fish/completions/git.fish
-```
+> Git completions are provided by Fish shell at `/home/linuxbrew/.linuxbrew/share/fish/completions/git.fish`. No manual installation required.
 
 ### gh
 
@@ -1671,7 +1668,7 @@ end
 
 > Visual Studio Code, often referred to as VSCode, is a free and open-source code editor optimized for building and debugging modern web and cloud applications. It supports various programming languages and comes with features like IntelliSense for smart completions based on variable types, function definitions, and imported modules, built-in Git commands, and debugging tools. It's highly customizable and extensible with various extensions. It's available on multiple platforms including Linux, macOS, and Windows.
 
-## Visual Studioc Code on Windows
+## Visual Studio Code on Windows
 
 - [x] Installation
 
@@ -1680,7 +1677,7 @@ winget search VisualStudioCode
 winget install Microsoft.VisualStudioCode.Insiders
 ```
 
-## Visual Studioc Code on Ubuntu with Windows Subsystem for Linux (WSL)
+## Visual Studio Code on Ubuntu with Windows Subsystem for Linux (WSL)
 
 - [x] Installation
 
@@ -1710,7 +1707,7 @@ sudo apt-get install wget ca-certificates
 
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
-The following extesions are also installed:
+The following extensions are also installed:
 
   - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
   - [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
@@ -1727,8 +1724,8 @@ The following extesions are also installed:
 - [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
 - [GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub)
 - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
-- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
-- [CodeQL](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
+- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+- [CodeQL](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-codeql)
 
 ### GitHub Copilot
 
@@ -1740,15 +1737,15 @@ The following extesions are also installed:
 
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
-The folloing extention is installed:
+The following extension is installed:
 
 - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
 
-Use `ctrl` + `i` to open incline chat.
+Use `ctrl` + `i` to open inline chat.
 Type `/` to view all available chat commands.
 
-- [GitHub Copilot (Next Edit Suggestions)]()
-- [GitHub Copilot Workspace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-workspace)
+- [GitHub Copilot (Next Edit Suggestions)](https://code.visualstudio.com/docs/copilot/next-edit-suggestions)
+- ~~[GitHub Copilot Workspace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-workspace)~~ (Now integrated into Copilot Chat agent mode)
 
 ### Java
 
@@ -1756,8 +1753,8 @@ Type `/` to view all available chat commands.
 
 ### Azure
 - [GitHub Copilot for Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-github-copilot)
-- [Azure Tools](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
-- [Azure Account](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
+- [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+- [Azure Resources](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureresourcegroups)
 
 ### Docker for Visual Studio Code
 
@@ -1765,6 +1762,8 @@ Type `/` to view all available chat commands.
   - WSL2(Linux)
 
 > The Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. It also provides one-click debugging of Node.js, Python, and .NET inside a container.
+
+> **See [README-VSCode.md](README-VSCode.md)** for comprehensive VS Code configuration details including all 60 extensions, Copilot settings, agent/MCP configuration, and terminal settings.
 
 ## `Text Editor`
 
@@ -1854,7 +1853,7 @@ When enabled, will trim trailing whitespace when saving a file.
 
 > Specifies the color theme used in the workbench when Window
 
-- [x] `Tomorrow Night Blue`
+- [x] `GitHub Dark Colorblind (Beta)`
 
 ## `Workbench` - `Zen Mode`
 
@@ -2472,6 +2471,8 @@ azd version 1.23.3 (commit c53baf4180b8636f4366cd9d9f621755db75f370)
 ```
 
 ## NVM (Node Version Manager)
+
+> **See [README-DevTools.md](README-DevTools.md)** for comprehensive development tools reference including all Homebrew packages, NVM, uv, ripgrep, eza, tldr, yq, and more.
 
 - [x] Installation
 
