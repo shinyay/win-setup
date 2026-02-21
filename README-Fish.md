@@ -98,7 +98,8 @@ echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> $HOME/.config/fish
 function set_abbr
 	abbr --add code		code-insiders
 	abbr --add history	_fzf_search_history
-	abbr --add l	 	ls -lahF
+	abbr --add l	 	eza -lahF
+	abbr --add tree		eza --tree
 	abbr --add ga		git add -v
 	abbr --add gc		git commit -S -m
 	abbr --add gcpast	git commit -S --date=format:relative:1.day.ago -m
@@ -517,7 +518,8 @@ Abbreviations are defined in the `set_abbr` function in `config.fish` and loaded
 |-------------|------------|-------------|
 | `code` | `code-insiders` | Open VS Code Insiders |
 | `history` | `_fzf_search_history` | Interactive history search with fzf |
-| `l` | `ls -lahF` | Detailed file listing |
+| `l` | `eza -lahF` | Detailed file listing (eza) |
+| `tree` | `eza --tree` | Tree view of directory |
 | `ga` | `git add -v` | Git add (verbose) |
 | `gc` | `git commit -S -m` | Git signed commit |
 | `gcpast` | `git commit -S --date=format:relative:1.day.ago -m` | Backdated signed commit |

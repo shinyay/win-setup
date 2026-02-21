@@ -1,7 +1,7 @@
 # Development Tools — Detailed Reference
 
 > **Environment:** WSL2 / Ubuntu on Windows 11  
-> **Last updated:** 2026-02-21
+> **Last updated:** 2026-02-22
 
 ---
 
@@ -31,11 +31,15 @@
 - [Chromium](#chromium)
 - [Utility Tools](#utility-tools)
   - [jq (JSON Processor)](#jq-json-processor)
+  - [yq (YAML Processor)](#yq-yaml-processor)
   - [tmux (Terminal Multiplexer)](#tmux-terminal-multiplexer)
   - [Vim (Text Editor)](#vim-text-editor)
   - [bat (Cat with Syntax Highlighting)](#bat-cat-with-syntax-highlighting)
   - [fd (Fast Find Alternative)](#fd-fast-find-alternative)
   - [fzf (Fuzzy Finder)](#fzf-fuzzy-finder)
+  - [ripgrep (Fast Grep Alternative)](#ripgrep-fast-grep-alternative)
+  - [eza (Modern ls Replacement)](#eza-modern-ls-replacement)
+  - [tldr (Simplified Man Pages)](#tldr-simplified-man-pages)
 - [Homebrew — Full Package Inventory](#homebrew--full-package-inventory)
   - [Formulae](#formulae)
   - [Casks](#casks)
@@ -49,25 +53,29 @@ All development tools installed in this WSL2 environment, with version, install 
 
 | Tool | Version | Installed via | Purpose |
 |------|---------|---------------|---------|
-| **NVM** | 0.40.1 | install script | Node.js version manager |
-| **Node.js** | v22.22.0 | NVM | JavaScript runtime |
-| **npm** | 10.9.4 | NVM (bundled) | Node.js package manager |
+| **NVM** | 0.40.4 | install script | Node.js version manager |
+| **Node.js** | v22.22.0 (default) / v24.13.1 | NVM | JavaScript runtime |
+| **npm** | 10.9.4 (Node 22) / 11.8.0 (Node 24) | NVM (bundled) | Node.js package manager |
 | **Python** | 3.12.3 | Ubuntu (system) | Python runtime |
-| **uv** | latest | standalone installer | Fast Python package manager |
-| **kubectl** | latest | Homebrew | Kubernetes CLI |
+| **uv** | 0.10.4 | standalone installer | Fast Python package manager |
+| **kubectl** | v1.35.1 | Homebrew | Kubernetes CLI |
 | **Helm** | v4.1.1 | Homebrew | Kubernetes package manager |
-| **Azure CLI** | 2.75.0 | Homebrew / apt | Azure management CLI |
+| **Azure CLI** | 2.75.0 | apt | Azure management CLI |
 | **azd** | 1.23.6 | Homebrew | Azure Developer CLI |
 | **Copilot CLI** | 0.0.414 | Homebrew (cask) | AI-powered CLI assistant |
 | **Marp CLI** | 4.2.3 | npm (global) | Markdown → slides |
 | **GnuCOBOL** | 3.1.2 | apt | COBOL compiler |
-| **Chromium** | latest | Snap | Web browser |
+| **Chromium** | 145.0.7632.45 | Snap | Web browser |
 | **jq** | 1.8.1 | Homebrew | JSON processor |
+| **yq** | 4.52.4 | Homebrew | YAML processor |
 | **tmux** | 3.4 | Ubuntu (system) | Terminal multiplexer |
 | **Vim** | 9.1 | Ubuntu (system) | Text editor |
 | **bat** | 0.26.1 | Homebrew | Syntax-highlighted cat |
 | **fd** | 10.3.0 | Homebrew | Fast find alternative |
 | **fzf** | 0.68.0 | Homebrew | Fuzzy finder |
+| **ripgrep** | 15.1.0 | Homebrew | Fast grep alternative |
+| **eza** | latest | Homebrew | Modern ls replacement |
+| **tldr** | 1.6.1 | Homebrew | Simplified man pages |
 
 ---
 
@@ -79,14 +87,14 @@ All development tools installed in this WSL2 environment, with version, install 
 
 | Item | Value |
 |------|-------|
-| **Version** | `0.40.1` |
+| **Version** | `0.40.4` |
 | **Install dir** | `~/.nvm` |
 | **GitHub** | [nvm-sh/nvm](https://github.com/nvm-sh/nvm) |
 
 #### Install NVM
 
 ```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 ```
 
 #### Fish Shell Integration
@@ -116,16 +124,32 @@ nvm ls-remote --lts          # List available LTS versions
 
 | Item | Value |
 |------|-------|
-| **Node.js version** | `v22.22.0` |
-| **npm version** | `10.9.4` |
+| **Node.js (default)** | `v22.22.0` (LTS "Jod") |
+| **Node.js (available)** | `v24.13.1` (LTS "Krypton") |
+| **npm (Node 22)** | `10.9.4` |
+| **npm (Node 24)** | `11.8.0` |
 | **Binary (node)** | `~/.nvm/versions/node/v22.22.0/bin/node` |
 | **Binary (npm)** | `~/.nvm/versions/node/v22.22.0/bin/npm` |
+
+#### Installed Node.js Versions
+
+| Version | Codename | Status | npm |
+|---------|----------|--------|-----|
+| v22.22.0 | Jod | **Default** (LTS) | 10.9.4 |
+| v24.13.1 | Krypton | Available (LTS) | 11.8.0 |
+
+> **Node.js 24 LTS "Krypton"** is installed and available. Key features: V8 engine v13.6, npm 11, `using` keyword for resource management, OpenSSL 3.5 with higher security defaults, better ESM/CJS interop. Switch with `nvm use 24`.
 
 #### Verify
 
 ```shell
 node --version    # v22.22.0
 npm --version     # 10.9.4
+
+# Switch to Node 24
+nvm use 24        # (run in bash)
+node --version    # v24.13.1
+npm --version     # 11.8.0
 ```
 
 ---
@@ -180,6 +204,7 @@ which python3        # /usr/bin/python3
 | Item | Value |
 |------|-------|
 | **Binary** | `~/.local/bin/uv` |
+| **Version** | `0.10.4` |
 | **Installed via** | Standalone installer |
 | **GitHub** | [astral-sh/uv](https://github.com/astral-sh/uv) |
 
@@ -298,8 +323,8 @@ helm template my-release bitnami/nginx   # Render templates locally
 | Item | Value |
 |------|-------|
 | **Version** | `2.75.0` |
-| **Installed via** | Homebrew and apt (both available) |
-| **Binary** | `/home/linuxbrew/.linuxbrew/bin/az` |
+| **Installed via** | apt (system package) |
+| **Binary** | `/usr/bin/az` |
 
 #### Install
 
@@ -597,6 +622,47 @@ cat data.jsonl | jq -c '.status'
 
 ---
 
+### yq (YAML Processor)
+
+> A lightweight YAML, JSON, and XML processor — like `jq` but for YAML. Essential for Kubernetes/Helm workflows.
+
+| Item | Value |
+|------|-------|
+| **Version** | `4.52.4` |
+| **Installed via** | Homebrew |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/yq` |
+| **GitHub** | [mikefarah/yq](https://github.com/mikefarah/yq) |
+
+#### Install
+
+```shell
+brew install yq
+```
+
+#### Usage
+
+```shell
+# Read a YAML field
+yq '.metadata.name' deployment.yaml
+
+# Update a field in-place
+yq -i '.spec.replicas = 3' deployment.yaml
+
+# Convert YAML to JSON
+yq -o json deployment.yaml
+
+# Convert JSON to YAML
+yq -P data.json
+
+# Extract from Kubernetes manifests
+yq '.spec.template.spec.containers[0].image' deployment.yaml
+
+# Multi-document YAML (K8s manifests)
+yq eval 'select(.kind == "Service")' manifests.yaml
+```
+
+---
+
 ### tmux (Terminal Multiplexer)
 
 > Terminal multiplexer — split panes, create windows, detach and reattach sessions.
@@ -788,73 +854,287 @@ fzf is primarily used through the `fzf.fish` Fisher plugin. See [README-Fish.md]
 
 ---
 
+### ripgrep (Fast Grep Alternative)
+
+> Ultra-fast regex search tool that respects `.gitignore` — a modern replacement for `grep`. Written in Rust.
+
+| Item | Value |
+|------|-------|
+| **Version** | `15.1.0` |
+| **Installed via** | Homebrew |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/rg` |
+| **GitHub** | [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) |
+
+#### Install
+
+```shell
+brew install ripgrep
+```
+
+#### Usage
+
+```shell
+# Search for a pattern recursively
+rg "TODO"                             # Search all files for "TODO"
+
+# Search specific file types
+rg -t py "import"                     # Search only Python files
+rg -t js "function"                   # Search only JavaScript files
+
+# Case-insensitive search
+rg -i "error"                         # Case-insensitive
+
+# Show context lines
+rg -C 3 "pattern"                     # 3 lines before and after each match
+
+# Search with regex
+rg '\bfn\s+\w+' -t rust               # Rust function definitions
+
+# Count matches per file
+rg -c "TODO"                          # Count occurrences per file
+
+# Show only filenames
+rg -l "pattern"                       # Files containing pattern
+rg -L "pattern"                       # Files NOT containing pattern
+
+# Glob patterns
+rg "error" -g "*.log"                 # Search only .log files
+rg "error" -g "!*.min.js"            # Exclude minified JS
+```
+
+#### Why ripgrep over grep
+
+- **10–100x faster** than GNU grep for large codebases
+- **Respects `.gitignore`** automatically (skips ignored files)
+- **Skips binary files** by default
+- **Unicode support** built-in
+- **Used by VS Code** as the backend search engine
+
+---
+
+### eza (Modern ls Replacement)
+
+> A modern, maintained replacement for `ls` with colors, icons, tree view, and Git awareness.
+
+| Item | Value |
+|------|-------|
+| **Installed via** | Homebrew |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/eza` |
+| **GitHub** | [eza-community/eza](https://github.com/eza-community/eza) |
+| **Fish abbreviation** | `l` → `eza -lahF`, `tree` → `eza --tree` |
+
+#### Install
+
+```shell
+brew install eza
+```
+
+#### Usage
+
+```shell
+# Basic listing (like ls)
+eza                                   # List files
+eza -la                               # Long format with hidden files
+eza -lahF                             # Long + hidden + classify (l abbreviation)
+
+# Tree view
+eza --tree                            # Tree view (tree abbreviation)
+eza --tree --level=2                  # Tree, max 2 levels deep
+
+# Git integration
+eza -la --git                         # Show Git status per file
+eza --tree --git-ignore               # Tree view, skip .gitignore'd files
+
+# Sorting
+eza -la --sort=modified               # Sort by modification time
+eza -la --sort=size                   # Sort by file size
+
+# Colorized and categorized
+eza --icons                           # Show file type icons (requires Nerd Font)
+eza -la --header                      # Show column headers
+```
+
+#### Fish Shell Abbreviations
+
+```fish
+abbr --add l     eza -lahF            # Replaces ls -lahF
+abbr --add tree  eza --tree           # Quick tree view
+```
+
+---
+
+### tldr (Simplified Man Pages)
+
+> Community-driven simplified man pages — shows practical examples instead of exhaustive documentation.
+
+| Item | Value |
+|------|-------|
+| **Version** | `1.6.1` |
+| **Installed via** | Homebrew |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/tldr` |
+| **Website** | [tldr.sh](https://tldr.sh/) |
+
+#### Install
+
+```shell
+brew install tldr
+```
+
+#### Usage
+
+```shell
+# Look up a command
+tldr tar                              # Practical examples for tar
+tldr git-rebase                       # Git rebase examples
+tldr docker-compose                   # Docker Compose examples
+tldr kubectl                          # kubectl examples
+
+# Update the local cache
+tldr --update                         # Download latest pages
+```
+
+#### Why tldr over man
+
+- **Example-driven** — shows the 5–10 most common use cases
+- **Community-maintained** — covers 10,000+ commands
+- **Fast** — instant results vs. scrolling through man pages
+
+---
+
+### yq (YAML Processor)
+
+> A lightweight YAML, JSON, and XML processor — like `jq` but for YAML. Essential for Kubernetes/Helm workflows.
+
+| Item | Value |
+|------|-------|
+| **Version** | `4.52.4` |
+| **Installed via** | Homebrew |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/yq` |
+| **GitHub** | [mikefarah/yq](https://github.com/mikefarah/yq) |
+
+#### Install
+
+```shell
+brew install yq
+```
+
+#### Usage
+
+```shell
+# Read a YAML field
+yq '.metadata.name' deployment.yaml
+
+# Update a field
+yq -i '.spec.replicas = 3' deployment.yaml
+
+# Convert YAML to JSON
+yq -o json deployment.yaml
+
+# Convert JSON to YAML
+yq -P data.json
+
+# Merge YAML files
+yq eval-all '. as $item ireduce ({}; . * $item)' a.yaml b.yaml
+
+# Extract from Kubernetes manifests
+yq '.spec.template.spec.containers[0].image' deployment.yaml
+
+# Multi-document YAML (common in K8s)
+yq eval 'select(.kind == "Service")' manifests.yaml
+
+# Validate YAML syntax
+yq eval '.' config.yaml > /dev/null
+```
+
+#### Integration with Kubernetes/Helm
+
+```shell
+# Extract image from Helm values
+yq '.image.repository' values.yaml
+
+# Update Helm chart version
+yq -i '.version = "2.0.0"' Chart.yaml
+
+# Process kubectl output
+kubectl get pods -o yaml | yq '.items[].metadata.name'
+```
+
+---
+
 ## Homebrew — Full Package Inventory
 
 | Item | Value |
 |------|-------|
 | **Prefix** | `/home/linuxbrew/.linuxbrew` |
-| **Formulae count** | 53 |
+| **Formulae count** | 60 |
 | **Cask count** | 1 |
 
 ### Formulae
 
-All Homebrew formulae installed on this system (53 packages):
+All Homebrew formulae installed on this system (60 packages):
 
 | # | Package | Description |
 |---|---------|-------------|
-| 1 | `autoconf` | Automatic configure script builder |
-| 2 | `azure-cli` | Azure command-line interface |
-| 3 | `azd` | Azure Developer CLI |
-| 4 | `bat` | Cat clone with syntax highlighting |
-| 5 | `bzip2` | Compression utility |
-| 6 | `ca-certificates` | Mozilla's CA certificate bundle |
-| 7 | `curl` | HTTP client |
-| 8 | `expat` | XML parser library |
-| 9 | `fd` | Simple, fast find alternative |
-| 10 | `fish` | Friendly Interactive Shell |
-| 11 | `fzf` | Fuzzy finder |
-| 12 | `gcc` | GNU Compiler Collection |
-| 13 | `gettext` | Internationalization utilities |
-| 14 | `gh` | GitHub CLI |
-| 15 | `git` | Distributed version control |
-| 16 | `gmp` | GNU Multiple Precision Arithmetic |
-| 17 | `helm` | Kubernetes package manager |
-| 18 | `isl` | Integer Set Library |
-| 19 | `jq` | JSON processor |
-| 20 | `kubernetes-cli` | Kubernetes CLI (kubectl) |
-| 21 | `libcrypt` | Library for one-way data hashing |
-| 22 | `libevent` | Asynchronous event library |
-| 23 | `libgit2` | Git library (C implementation) |
-| 24 | `libidn2` | Internationalized domain names library |
-| 25 | `libnghttp2` | HTTP/2 C library |
-| 26 | `libpsl` | Public Suffix List library |
-| 27 | `libssh2` | SSH2 library |
-| 28 | `libunistring` | Unicode string library |
-| 29 | `libxml2` | XML parser |
-| 30 | `linux-headers@5.15` | Linux kernel headers |
-| 31 | `lz4` | Fast compression algorithm |
-| 32 | `m4` | Macro processor |
-| 33 | `mpc` | Complex number arithmetic library |
-| 34 | `mpfr` | Multiple-precision floating-point |
-| 35 | `ncurses` | Terminal handling library |
-| 36 | `oniguruma` | Regular expression library |
-| 37 | `openssl@3` | TLS/SSL toolkit |
-| 38 | `pcre2` | Regular expression library (Perl-compatible) |
-| 39 | `pkg-config` | Compiler flag configuration tool |
-| 40 | `readline` | Library for command-line editing |
-| 41 | `sdkman-cli` | Software Development Kit Manager |
-| 42 | `sqlite` | Embedded SQL database |
-| 43 | `unzip` | Archive decompression |
-| 44 | `utf8proc` | Unicode processing library |
-| 45 | `xz` | Data compression (LZMA) |
-| 46 | `zip` | Archive compression |
-| 47 | `zlib` | Compression library |
-| 48 | `zoxide` | Smarter cd command |
-| 49 | `zstd` | Fast compression algorithm |
-| 50 | `glib` | GLib core application library |
-| 51 | `libyaml` | YAML parser library |
-| 52 | `python@3.12` | Python (Homebrew build) |
-| 53 | `ruby` | Ruby programming language |
+| 1 | `acl` | Access control list utilities |
+| 2 | `azd` | Azure Developer CLI |
+| 3 | `bat` | Cat clone with syntax highlighting |
+| 4 | `binutils` | GNU binary utilities |
+| 5 | `brotli` | Brotli compression |
+| 6 | `bzip2` | Compression utility |
+| 7 | `ca-certificates` | Mozilla's CA certificate bundle |
+| 8 | `curl` | HTTP client |
+| 9 | `cyrus-sasl` | SASL authentication library |
+| 10 | `expat` | XML parser library |
+| 11 | `eza` | Modern ls replacement |
+| 12 | `fd` | Simple, fast find alternative |
+| 13 | `fish` | Friendly Interactive Shell |
+| 14 | `fzf` | Fuzzy finder |
+| 15 | `gcc` | GNU Compiler Collection |
+| 16 | `gettext` | Internationalization utilities |
+| 17 | `gh` | GitHub CLI |
+| 18 | `git` | Distributed version control |
+| 19 | `git-delta` | Syntax-highlighting diff pager |
+| 20 | `gmp` | GNU Multiple Precision Arithmetic |
+| 21 | `helm` | Kubernetes package manager |
+| 22 | `isl` | Integer Set Library |
+| 23 | `jq` | JSON processor |
+| 24 | `keyutils` | Key management utilities |
+| 25 | `krb5` | Kerberos authentication |
+| 26 | `kubernetes-cli` | Kubernetes CLI (kubectl) |
+| 27 | `lazygit` | Terminal UI for Git |
+| 28 | `libedit` | Command-line editor library |
+| 29 | `libgit2` | Git library (C implementation) |
+| 30 | `libidn2` | Internationalized domain names library |
+| 31 | `libmpc` | Complex number arithmetic library |
+| 32 | `libnghttp2` | HTTP/2 C library |
+| 33 | `libnghttp3` | HTTP/3 C library |
+| 34 | `libngtcp2` | QUIC protocol library |
+| 35 | `libssh2` | SSH2 library |
+| 36 | `libunistring` | Unicode string library |
+| 37 | `libxcrypt` | Extended crypt library |
+| 38 | `libxml2` | XML parser |
+| 39 | `libzip` | Zip library |
+| 40 | `lz4` | Fast compression algorithm |
+| 41 | `mpfr` | Multiple-precision floating-point |
+| 42 | `ncurses` | Terminal handling library |
+| 43 | `oniguruma` | Regular expression library |
+| 44 | `openldap` | LDAP directory access library |
+| 45 | `openssl@3` | TLS/SSL toolkit |
+| 46 | `pcre2` | Regular expression library (Perl-compatible) |
+| 47 | `readline` | Library for command-line editing |
+| 48 | `ripgrep` | Fast regex search tool |
+| 49 | `sdkman-cli` | Software Development Kit Manager |
+| 50 | `sqlite` | Embedded SQL database |
+| 51 | `tldr` | Simplified man pages |
+| 52 | `unzip` | Archive decompression |
+| 53 | `util-linux` | Linux system utilities |
+| 54 | `xz` | Data compression (LZMA) |
+| 55 | `yq` | YAML processor |
+| 56 | `zip` | Archive compression |
+| 57 | `zlib` | Compression library |
+| 58 | `zlib-ng-compat` | Optimized compression library |
+| 59 | `zoxide` | Smarter cd command |
+| 60 | `zstd` | Fast compression algorithm |
 
 > **Note:** Run `brew list --formula` to verify the current list. Some packages are dependencies installed automatically.
 
@@ -881,6 +1161,9 @@ All Snap packages installed on this system:
 | `core22` | Core snap (Ubuntu 22.04 base) |
 | `core24` | Core snap (Ubuntu 24.04 base) |
 | `cups` | Common Unix Printing System |
+| `gnome-46-2404` | GNOME 46 platform snap |
+| `gtk-common-themes` | GTK common themes |
+| `mesa-2404` | Mesa 3D graphics library |
 | `snapd` | Snap daemon (package manager) |
 
 #### List installed snaps
