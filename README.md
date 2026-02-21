@@ -947,7 +947,7 @@ set -g theme_nerd_fonts no
 set -g theme_show_exit_status yes
 set -g theme_display_jobs_verbose yes
 set -g default_user your_normal_user
-set -g theme_color_scheme loght
+set -g theme_color_scheme light
 set -g fish_prompt_pwd_dir_length 0
 set -g theme_project_dir_length 1
 set -g theme_newline_cursor yes
@@ -1003,7 +1003,7 @@ rm -fr download
 
 1. Open settings: `ctrl` + `,`
 2. Select **Ubuntu 24.04 LTS**
-3. Select **Aditional settings** > **Appearance**
+3. Select **Additional settings** > **Appearance**
 4. Choose **Moralerspace Radon NF** from **Font face**
 
 ### Cica font
@@ -1012,11 +1012,11 @@ rm -fr download
 
 - [ ] Installation
 
-### Custome Functions for Fish
+### Custom Functions for Fish
 
-#### Clear Cahaces
+#### Clear Caches
 
-Clear Caches and turn off and on Swap aria
+Clear Caches and turn off and on Swap area
 
 ```shell
 function clearCaches
@@ -1028,7 +1028,7 @@ end
 funcsave clearCaches
 ```
 
-Confirm a persisntent file
+Confirm a persistent file
 
 ```shell
 ls -l ~/.config/fish/functions/clearCaches.fish
