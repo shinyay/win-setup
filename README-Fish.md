@@ -37,7 +37,7 @@
 | Item | Value |
 |------|-------|
 | **Shell** | Fish (Friendly Interactive Shell) |
-| **Version** | `4.3.3` |
+| **Version** | `4.5.0` |
 | **Binary** | `/home/linuxbrew/.linuxbrew/bin/fish` |
 | **Installed via** | Homebrew (Linuxbrew) |
 | **Default shell** | Yes (`$SHELL` = `/home/linuxbrew/.linuxbrew/bin/fish`) |
@@ -134,10 +134,13 @@ fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs
 ├── fish_variables                 # Universal variables (auto-managed)
 ├── conf.d/                        # Auto-loaded configuration snippets
 │   ├── _tide_init.fish            #   Tide prompt initialization
+│   ├── autopair.fish              #   autopair.fish plugin init
+│   ├── done.fish                  #   done notification plugin init
 │   ├── fish_frozen_key_bindings.fish  # Key bindings migration (Fish 4.3)
 │   ├── fish_frozen_theme.fish     #   Theme colors migration (Fish 4.3)
 │   ├── fzf.fish                   #   fzf.fish plugin init
 │   ├── sdk.fish                   #   SDKMAN! for Fish init
+│   ├── sponge.fish                #   sponge history cleanup init
 │   ├── uv.env.fish                #   UV (Python) environment
 │   └── z.fish                     #   z directory jumper init
 ├── completions/                   # Tab completion scripts
@@ -164,9 +167,10 @@ fzf_configure_bindings --directory=\cf --git_log=\cl --git_status=\cs
 │   ├── peco_kill.fish             #   peco kill process
 │   ├── peco_select_history.fish   #   peco history search
 │   ├── sdk.fish                   #   SDKMAN! wrapper
+│   ├── sponge_filter_*.fish       #   sponge history cleanup
 │   ├── tide.fish                  #   Tide CLI
 │   ├── tide/                      #   Tide sub-functions
-│   └── _tide_*, _fzf_*, __z*     #   Plugin internal functions
+│   └── _tide_*, _fzf_*, _autopair_*, _sponge_*, __z*  # Plugin internal functions
 └── themes/                        # Custom themes (empty)
 ```
 
@@ -209,6 +213,9 @@ jethrokuan/z
 0rax/fish-bd
 laughedelic/fish_logo
 reitzig/sdkman-for-fish@v2.1.0
+jorgebucaran/autopair.fish
+meaningful-ooo/sponge
+franciscolourenco/done
 ```
 
 ---
@@ -428,6 +435,88 @@ fisher install reitzig/sdkman-for-fish@v2.1.0
 | Maven | 3.9.9 |
 | Spring Boot | 3.3.5 |
 | Ki | 0.5.2 |
+
+---
+
+### autopair.fish (Bracket Auto-Completion)
+
+> Auto-complete matching pairs in the Fish command line — like IDE bracket pairing for the terminal.
+
+| Item | Value |
+|------|-------|
+| **GitHub** | [jorgebucaran/autopair.fish](https://github.com/jorgebucaran/autopair.fish) |
+
+#### Install
+
+```shell
+fisher install jorgebucaran/autopair.fish
+```
+
+#### Features
+
+- **Auto-insert:** Typing `(` produces `()` with cursor between them
+- **Smart deletion:** Backspace on `(|)` removes both brackets
+- **Skip-over:** Typing `)` when cursor is before `)` skips instead of doubling
+- Works with: `()`, `[]`, `{}`, `""`, `''`
+
+---
+
+### sponge (History Cleanup)
+
+> Automatically removes failed commands and typos from Fish history.
+
+| Item | Value |
+|------|-------|
+| **GitHub** | [meaningful-ooo/sponge](https://github.com/meaningful-ooo/sponge) |
+| **Requires** | Fish 3.2+ |
+
+#### Install
+
+```shell
+fisher install meaningful-ooo/sponge
+```
+
+Zero configuration needed — works automatically. Commands with non-zero exit codes are removed from history.
+
+#### Configuration (optional)
+
+```fish
+# Filter by regex pattern
+set -U sponge_regex_patterns "password|token|secret"
+
+# Purge on exit instead of immediately
+set -U sponge_purge_only_on_exit true
+```
+
+---
+
+### done (Command Notifications)
+
+> Sends a desktop notification when a long-running command finishes and your terminal is not focused.
+
+| Item | Value |
+|------|-------|
+| **GitHub** | [franciscolourenco/done](https://github.com/franciscolourenco/done) |
+| **Notification backend** | `notify-send` (Linux) |
+
+#### Install
+
+```shell
+fisher install franciscolourenco/done
+```
+
+#### Configuration
+
+```fish
+# Minimum command duration to trigger notification (default: 5000ms)
+set -U __done_min_cmd_duration 5000
+
+# Exclude specific commands from notifications
+set -U __done_exclude '^git (?!push|pull|fetch)'
+
+# Enable notification sound
+set -U __done_notify_sound 1
+```
 
 ---
 
@@ -838,14 +927,14 @@ fish_user_paths = /home/shinyay/.nvm/versions/node/v22.22.0/bin
 
 | Tool | Version | Installed via | Binary |
 |------|---------|--------------|--------|
-| `fish` | 4.3.3 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fish` |
+| `fish` | 4.5.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fish` |
 | `fisher` | 4.4.8 | Fisher | `~/.config/fish/functions/fisher.fish` |
-| `fzf` | 0.67.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fzf` |
+| `fzf` | 0.68.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fzf` |
 | `bat` | 0.26.1 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/bat` |
 | `fd` | 10.3.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fd` |
 | `peco` | 0.5.11 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/peco` |
-| `git` | 2.52.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/git` |
-| `gh` | 2.86.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/gh` |
+| `git` | 2.53.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/git` |
+| `gh` | 2.87.2 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/gh` |
 | `jq` | 1.8.1 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/jq` |
 | `helm` | 4.1.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/helm` |
 | `kubectl` | 1.35.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/kubectl` |
@@ -854,29 +943,13 @@ fish_user_paths = /home/shinyay/.nvm/versions/node/v22.22.0/bin
 
 ## Misc / Cleanup Notes
 
-### Stale temporary files in `~/.config/fish/`
+### ~~Stale temporary files in `~/.config/fish/`~~ ✅ Cleaned
 
-The following files appear to be leftover temp files and can be safely removed:
+The following leftover temp files have been removed (2026-02-21):
 
-```
-fish_variablesKVhQGicCtv    (0 bytes)
-fish_variablesUTAdZScUNs    (0 bytes)
-fish_variableslaMTd8ikBP    (139 KB)
-fish_variablesqctenvqm0x    (139 KB)
-fish_variableszjlr134h9G    (0 bytes)
-fishd.tmp.CB4lfO            (4 KB)
-fishd.tmp.E2corw            (0 bytes)
-fishd.tmp.xsNiKE            (0 bytes)
-fish_prompt.fish.bak        (backup file)
-```
-
-To clean up:
-
-```shell
-rm ~/.config/fish/fish_variables{KVhQGicCtv,UTAdZScUNs,laMTd8ikBP,qctenvqm0x,zjlr134h9G}
-rm ~/.config/fish/fishd.tmp.*
-rm ~/.config/fish/functions/fish_prompt.fish.bak
-```
+- `fish_variablesKVhQGicCtv`, `fish_variablesUTAdZScUNs`, `fish_variableslaMTd8ikBP`, `fish_variablesqctenvqm0x`, `fish_variableszjlr134h9G`
+- `fishd.tmp.CB4lfO`, `fishd.tmp.E2corw`, `fishd.tmp.xsNiKE`
+- `functions/fish_prompt.fish.bak`
 
 ### `~/git.fish`
 

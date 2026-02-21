@@ -394,7 +394,7 @@ which git
 ```shell
 git --version
 
-git version 2.52.0
+git version 2.53.0
 ```
 
 ### Git Global Configuration
@@ -670,8 +670,8 @@ brew install gh
 ```shell
 gh --version
 
-gh version 2.86.0 (2026-01-21)
-https://github.com/cli/cli/releases/tag/v2.86.0
+gh version 2.87.2 (2026-02-20)
+https://github.com/cli/cli/releases/tag/v2.87.2
 ```
 
 ### GitHub Authentication
@@ -810,7 +810,7 @@ brew install fish
 ```shell
 fish --version
 
-fish, version 4.3.3
+fish, version 4.5.0
 ```
 
 Check the PATH for `fish`.
@@ -1078,7 +1078,7 @@ Confirm your version
 ```shell
 fzf --version
 
-0.67.0 (Homebrew)
+0.68.0 (Homebrew)
 ```
 
 #### bat
@@ -1236,6 +1236,55 @@ sdk version
 SDKMAN!
 script: 5.18.2
 native: 0.4.6
+```
+
+### autopair.fish
+
+- [x] Installation
+
+> Auto-complete matching pairs (brackets, quotes) in the Fish command line — like IDE bracket pairing for the terminal.
+
+- [jorgebucaran/autopair.fish](https://github.com/jorgebucaran/autopair.fish)
+
+```shell
+fisher install jorgebucaran/autopair.fish
+```
+
+Features:
+- Automatically inserts closing `()`, `[]`, `{}`, `""`, `''`
+- Smart deletion (backspace removes both)
+- Skip-over behavior (typing `)` when cursor is before `)` skips instead of doubling)
+
+### sponge
+
+- [x] Installation
+
+> Clean Fish history from typos automatically. Removes commands that returned non-zero exit codes from history.
+
+- [meaningful-ooo/sponge](https://github.com/meaningful-ooo/sponge)
+
+```shell
+fisher install meaningful-ooo/sponge
+```
+
+Zero configuration needed — works automatically in the background.
+
+### done
+
+- [x] Installation
+
+> Automatically sends a desktop notification when a long-running command finishes and your terminal is not in the foreground.
+
+- [franciscolourenco/done](https://github.com/franciscolourenco/done)
+
+```shell
+fisher install franciscolourenco/done
+```
+
+Default: notifies for commands running longer than 5 seconds. Configurable:
+
+```shell
+set -U __done_min_cmd_duration 5000  # time in ms
 ```
 
 ## Fish Completion
