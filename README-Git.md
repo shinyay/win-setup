@@ -1,7 +1,7 @@
 # Git & GitHub — Detailed Configuration Reference
 
 > **Environment:** WSL2 / Ubuntu on Windows 11  
-> **Last updated:** 2026-02-21
+> **Last updated:** 2026-02-22
 
 ---
 
@@ -15,19 +15,30 @@
   - [\[color\]](#color)
   - [\[fetch\]](#fetch)
   - [\[init\]](#init)
-  - [\[gpg\] / \[commit\]](#gpg--commit)
+  - [\[gpg\] / \[commit\] / \[tag\]](#gpg--commit--tag)
+  - [\[pull\]](#pull)
+  - [\[push\]](#push)
+  - [\[merge\]](#merge)
+  - [\[diff\]](#diff)
+  - [\[rerere\]](#rerere)
+  - [\[rebase\]](#rebase)
+  - [\[interactive\] / \[delta\]](#interactive--delta)
   - [\[alias\]](#alias)
 - [Alias Usage Examples](#alias-usage-examples)
+- [Diff Pager — delta](#diff-pager--delta)
+- [Git TUI — lazygit](#git-tui--lazygit)
 - [SSH Setup](#ssh-setup)
   - [Key Inventory](#key-inventory)
+  - [SSH Config (`~/.ssh/config`)](#ssh-config-sshconfig)
   - [Testing SSH Connection](#testing-ssh-connection)
   - [Generating a New Key](#generating-a-new-key)
 - [GPG Setup](#gpg-setup)
   - [Key Details](#key-details)
-  - [Enabling Commit Signing](#enabling-commit-signing)
+  - [Commit Signing (Enabled)](#commit-signing-enabled)
   - [Useful GPG Commands](#useful-gpg-commands)
 - [GitHub CLI (`gh`)](#github-cli-gh)
   - [Authentication](#authentication)
+  - [Aliases](#aliases)
   - [Common Commands](#common-commands)
   - [Extension: gh-copilot](#extension-gh-copilot)
 - [GitHub Copilot CLI](#github-copilot-cli)
@@ -55,6 +66,9 @@
 | **Editor** | `vim -c "set fenc=utf-8"` |
 | **SSH key (primary)** | `~/.ssh/id_ed25519` (Ed25519, 2024-10-23) |
 | **GPG key** | `ed25519/C6D9D44B7BC5117F` (2024-11-15) |
+| **Commit signing** | GPG, globally enabled (`commit.gpgsign = true`) |
+| **Diff pager** | `delta` 0.18.2 (syntax-highlighting, side-by-side) |
+| **Git TUI** | `lazygit` 0.59.0 |
 | **GitHub CLI** | `gh` v2.87.2, logged in as `shinyay` |
 | **Copilot CLI** | v0.0.414 (`copilot-cli@prerelease`) |
 
@@ -113,6 +127,7 @@ These values appear in every commit as the `Author:` line. They should match you
 | `safecrlf` | `true` | Warn if a line-ending conversion could corrupt data |
 | `autocrlf` | `false` | Do **not** auto-convert line endings (keep LF on Linux) |
 | `editor` | `vim -c "set fenc=utf-8"` | Use Vim as the commit message editor, forcing UTF-8 encoding |
+| `pager` | `delta` | Use delta as the diff pager (syntax-highlighting, side-by-side) |
 
 ```ini
 [core]
@@ -120,6 +135,7 @@ These values appear in every commit as the `Author:` line. They should match you
 	safecrlf = true
 	autocrlf = false
 	editor = vim -c "set fenc=utf-8"
+	pager = delta
 ```
 
 #### Why these values?
@@ -178,27 +194,148 @@ With `prune = true`, every `git fetch` (and `git pull`) automatically runs the e
 
 ---
 
-### [gpg] / [commit]
+### [gpg] / [commit] / [tag]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `gpg.format` | `openpgp` | Use OpenPGP (GPG) format for commit signing |
+| `user.signingkey` | `C6D9D44B7BC5117F` | GPG key ID used for signing |
+| `commit.gpgsign` | `true` | **Automatically sign all commits** |
+| `commit.verbose` | `true` | Show diff in commit editor for more informed messages |
+| `tag.gpgsign` | `true` | **Automatically sign all tags** |
 
 ```ini
 [gpg]
+	format = openpgp
 [commit]
+	verbose = true
+	gpgsign = true
+[tag]
+	gpgsign = true
 ```
 
-> **⚠️ Note:** These sections are present but **empty**. GPG commit signing is **not currently enabled** in the global gitconfig.
->
-> The GPG key (`ed25519/C6D9D44B7BC5117F`) exists and is valid, but the following settings are **not configured**:
->
-> | Missing setting | What it would do |
-> |----------------|------------------|
-> | `gpg.format = ssh` or omitted | Specify the signing format |
-> | `commit.gpgsign = true` | Auto-sign all commits |
-> | `tag.gpgsign = true` | Auto-sign all tags |
-> | `user.signingkey = C6D9D44B7BC5117F` | Specify which GPG key to use |
->
-> See [Enabling Commit Signing](#enabling-commit-signing) for how to activate GPG signing globally.
->
-> **However**, the Fish abbreviation `gc` expands to `git commit -S -m`, which passes the `-S` flag to sign individual commits on a per-command basis.
+> ✅ **GPG signing is globally enabled.** All commits and tags are automatically signed with key `C6D9D44B7BC5117F`. The Fish abbreviation `gc` also includes `-S` for explicit signing.
+
+---
+
+### [pull]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `rebase` | `true` | Rebase local commits on top of upstream changes instead of creating merge commits |
+
+```ini
+[pull]
+	rebase = true
+```
+
+This keeps history linear. When you `git pull`, your local commits are replayed on top of the remote branch rather than creating a merge commit.
+
+---
+
+### [push]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `autoSetupRemote` | `true` | Automatically set upstream tracking on first push (no more `--set-upstream`) |
+| `default` | `current` | Push only the current branch (not all branches) |
+
+```ini
+[push]
+	autoSetupRemote = true
+	default = current
+```
+
+- **`autoSetupRemote`** eliminates the need for `git push --set-upstream origin branch-name` on the first push of a new branch.
+- **`default = current`** is safer than `matching` — it only pushes the branch you're currently on.
+
+---
+
+### [merge]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `conflictstyle` | `zdiff3` | Show three-way conflict markers with ancestor context (cleaner than diff3) |
+
+```ini
+[merge]
+	conflictstyle = zdiff3
+```
+
+`zdiff3` (zero-diff3) is an improvement over `diff3` that provides cleaner conflict markers by removing lines that are identical in all three versions. Requires Git 2.37+.
+
+---
+
+### [diff]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `algorithm` | `histogram` | Use the histogram diff algorithm (better output than default Myers) |
+| `colorMoved` | `default` | Highlight moved code blocks in a different color |
+
+```ini
+[diff]
+	algorithm = histogram
+	colorMoved = default
+```
+
+- **`histogram`** produces more readable diffs, especially for code where lines are moved or refactored.
+- **`colorMoved`** visually distinguishes moved lines from added/removed lines — very useful during code review.
+
+---
+
+### [rerere]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `enabled` | `true` | **Re**use **Re**corded **Re**solution — remember how you resolved conflicts |
+
+```ini
+[rerere]
+	enabled = true
+```
+
+When you resolve a merge conflict, Git records the resolution. If the same conflict appears again (e.g., during a rebase), Git automatically applies the same resolution. This is a huge time-saver for long-running branches.
+
+---
+
+### [rebase]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `autoStash` | `true` | Automatically stash uncommitted changes before rebase, re-apply after |
+| `autoSquash` | `true` | Automatically apply `fixup!` and `squash!` prefixes during interactive rebase |
+
+```ini
+[rebase]
+	autoStash = true
+	autoSquash = true
+```
+
+- **`autoStash`** means you never need to manually `git stash` before rebasing — Git does it automatically.
+- **`autoSquash`** works with `git commit --fixup=<SHA>` to automatically squash fixup commits during `git rebase -i`.
+
+---
+
+### [interactive] / [delta]
+
+| Key | Value | Description |
+|-----|-------|-------------|
+| `interactive.diffFilter` | `delta --color-only` | Use delta for `git add -p` interactive diff display |
+| `delta.navigate` | `true` | Enable `n`/`N` navigation between diff hunks in delta |
+| `delta.side-by-side` | `true` | Show diffs in side-by-side view |
+| `delta.line-numbers` | `true` | Show line numbers in diff output |
+
+```ini
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+```
+
+See [Diff Pager — delta](#diff-pager--delta) for full delta documentation.
 
 ---
 
@@ -299,6 +436,111 @@ $ git count
 
 ---
 
+## Diff Pager — delta
+
+| Item | Value |
+|------|-------|
+| **Tool** | [delta](https://github.com/dandavison/delta) |
+| **Version** | `0.18.2` |
+| **Installed via** | Homebrew (`brew install git-delta`) |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/delta` |
+
+delta is a syntax-highlighting pager for `git diff`, `git log`, `git show`, and `grep` output. It uses bat's syntax themes for language-aware highlighting.
+
+### Features
+
+- **Syntax highlighting** — Language-aware coloring using bat's themes
+- **Side-by-side view** — Two-column diff display (`delta.side-by-side = true`)
+- **Line numbers** — Shown in gutter (`delta.line-numbers = true`)
+- **Word-level diff** — Highlights changed words within lines, not just changed lines
+- **Hunk navigation** — Press `n`/`N` to jump between diff hunks (`delta.navigate = true`)
+- **Moved code detection** — Works with `diff.colorMoved = default`
+- **Interactive staging** — Renders `git add -p` with syntax highlighting via `interactive.diffFilter`
+
+### Configuration in `~/.gitconfig`
+
+```ini
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+```
+
+### Useful Commands
+
+```shell
+# Preview available dark themes
+delta --list-syntax-themes --dark
+
+# Show syntax themes with sample output
+delta --show-syntax-themes --dark
+
+# Set a specific theme
+git config --global delta.syntax-theme 'Dracula'
+
+# Disable side-by-side for narrow terminals
+git config --global delta.side-by-side false
+```
+
+### Fish Completion
+
+delta installs Fish completions automatically to:
+```
+/home/linuxbrew/.linuxbrew/share/fish/vendor_completions.d/
+```
+
+---
+
+## Git TUI — lazygit
+
+| Item | Value |
+|------|-------|
+| **Tool** | [lazygit](https://github.com/jesseduffield/lazygit) |
+| **Version** | `0.59.0` |
+| **Installed via** | Homebrew (`brew install lazygit`) |
+| **Binary** | `/home/linuxbrew/.linuxbrew/bin/lazygit` |
+| **Fish abbreviation** | `lg` → `lazygit` |
+
+lazygit is a terminal UI for Git that provides a keyboard-driven interface for all Git operations.
+
+### Key Features
+
+- **Stage individual lines/hunks** — Precise staging without `git add -p`
+- **Interactive rebasing** — Visual rebase with drag-and-drop reordering
+- **Cherry-pick & bisect** — Visual commit selection
+- **Merge conflict resolution** — Side-by-side conflict viewer
+- **Undo/redo** — Safely reverse any operation
+- **Worktree support** — Manage multiple working directories
+- **Custom commands** — Bind your own shortcuts
+
+### Quick Start
+
+```shell
+# Launch (from any Git repository)
+lazygit
+# or use the Fish abbreviation:
+lg
+```
+
+### Navigation
+
+| Key | Action |
+|-----|--------|
+| `1`-`5` | Switch panels (Status, Files, Branches, Commits, Stash) |
+| `Enter` | View details / expand |
+| `Space` | Stage/unstage file |
+| `c` | Commit |
+| `p` | Push |
+| `P` | Pull |
+| `z` | Undo |
+| `?` | Show all keybindings |
+
+---
+
 ## SSH Setup
 
 ### Key Inventory
@@ -309,9 +551,28 @@ $ git count
 | `~/.ssh/id_ed25519.pub` | Ed25519 | 2024-10-23 | Public key (uploaded to GitHub) |
 | `~/.ssh/id_rsa` | RSA | 2025-02-24 | RSA key |
 | `~/.ssh/id_rsa.pub` | RSA | 2025-02-24 | RSA public key |
+| `~/.ssh/config` | — | — | SSH host configuration |
 | `~/.ssh/known_hosts` | — | — | Host key fingerprints for verified servers |
 
 > **Primary key:** `id_ed25519` — Ed25519 is the recommended algorithm for GitHub. It provides better security and performance than RSA with shorter keys.
+
+### SSH Config (`~/.ssh/config`)
+
+```
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+```
+
+| Directive | Value | Purpose |
+|-----------|-------|---------|
+| `Host` | `github.com` | Match rule for GitHub connections |
+| `HostName` | `github.com` | Actual hostname to connect to |
+| `User` | `git` | SSH user (always `git` for GitHub) |
+| `IdentityFile` | `~/.ssh/id_ed25519` | Use Ed25519 key specifically |
+| `IdentitiesOnly` | `yes` | Only use the specified key (don't try all keys) |
 
 ### Testing SSH Connection
 
@@ -379,26 +640,15 @@ ssb   cv25519/230DB758D3E040D1 2024-11-15 [E]
 
 ---
 
-### Enabling Commit Signing
+### Commit Signing (Enabled)
 
-> **Current state:** GPG signing is **not globally enabled** in `~/.gitconfig`. The `[gpg]` and `[commit]` sections are empty.
+> ✅ **GPG signing is globally enabled.** All commits and tags are automatically signed.
 
-To enable GPG commit signing globally, run:
-
-```shell
-# Tell Git which key to use
-git config --global user.signingkey C6D9D44B7BC5117F
-
-# Auto-sign all commits
-git config --global commit.gpgsign true
-
-# Auto-sign all tags
-git config --global tag.gpgsign true
-```
-
-This would add the following to `~/.gitconfig`:
+The following settings in `~/.gitconfig` enable automatic signing:
 
 ```ini
+[gpg]
+	format = openpgp
 [user]
 	signingkey = C6D9D44B7BC5117F
 [commit]
@@ -407,7 +657,17 @@ This would add the following to `~/.gitconfig`:
 	gpgsign = true
 ```
 
-> **Workaround in use:** The Fish abbreviation `gc` → `git commit -S -m` already passes the `-S` flag, which signs individual commits without requiring global configuration.
+No manual `-S` flag needed — every `git commit` and `git tag` is automatically signed.
+
+#### Verifying signed commits
+
+```shell
+# Check signature of latest commit
+git log --show-signature -1
+
+# Verify a specific commit
+git verify-commit HEAD
+```
 
 ### Uploading GPG Key to GitHub
 
@@ -468,6 +728,28 @@ gh auth refresh -s <scope>
 | `read:org` | Read-only access to organization membership |
 | `gist` | Create and manage gists |
 | `admin:public_key` | Manage SSH public keys |
+
+### Aliases
+
+| Alias | Expands to | Description |
+|-------|-----------|-------------|
+| `co` | `pr checkout` | Check out a PR locally |
+| `prc` | `pr create --fill` | Create a PR with auto-filled title/body |
+| `prv` | `pr view --web` | View current PR in browser |
+| `prm` | `pr merge --squash --delete-branch` | Squash-merge PR and delete branch |
+| `prl` | `pr list` | List open PRs |
+| `rv` | `repo view --web` | View current repo in browser |
+| `il` | `issue list` | List open issues |
+| `ic` | `issue create` | Create a new issue |
+
+```shell
+# Usage examples
+gh co 42          # Check out PR #42
+gh prc            # Create PR from current branch
+gh prv            # Open current PR in browser
+gh prm 42         # Squash-merge PR #42
+gh il             # List issues
+```
 
 ### Common Commands
 
@@ -602,6 +884,7 @@ Defined in `~/.config/fish/config.fish` inside the `set_abbr` function:
 | `ga` | `git add -v` | Stage files with verbose output showing each added file |
 | `gc` | `git commit -S -m` | Create a GPG-signed commit with an inline message |
 | `gcpast` | `git commit -S --date=format:relative:1.day.ago -m` | Create a GPG-signed commit backdated by one day |
+| `lg` | `lazygit` | Launch lazygit TUI |
 
 #### Usage
 
@@ -620,7 +903,7 @@ $ gcpast "fix: patch applied yesterday"
 # Expands to: git commit -S --date=format:relative:1.day.ago -m "fix: patch applied yesterday"
 ```
 
-> **Why `-S`?** The abbreviation includes `-S` (uppercase) to GPG-sign each commit, even though `commit.gpgsign` is not set globally. This is an explicit, per-commit signing approach.
+> **Why `-S`?** The abbreviation includes `-S` (uppercase) to GPG-sign each commit. With `commit.gpgsign = true` now set globally, the `-S` flag is redundant but harmless — it serves as an explicit reminder that signing is active.
 
 ---
 
@@ -681,11 +964,13 @@ Git is the 4th item in the left prompt: `vi_mode` → `os` → `pwd` → **`git`
 [user]
 	name = shinyay
 	email = shinya.com@gmail.com
+	signingkey = C6D9D44B7BC5117F
 [core]
 	quotepath = false
 	safecrlf = true
 	autocrlf = false
 	editor = vim -c "set fenc=utf-8"
+	pager = delta
 [color]
 	diff = auto
 	status = auto
@@ -695,11 +980,37 @@ Git is the 4th item in the left prompt: `vi_mode` → `os` → `pwd` → **`git`
 [init]
 	defaultBranch = main
 [gpg]
+	format = openpgp
 [commit]
+	verbose = true
+	gpgsign = true
 [alias]
 	alias = config --get-regexp ^alias\.
 	st = status --verbose --short --branch --untracked-files
 	plog = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
 	glog = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%c' --all --graph
 	count = shortlog -e -s -n
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+	default = current
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[rerere]
+	enabled = true
+[rebase]
+	autoStash = true
+	autoSquash = true
+[tag]
+	gpgsign = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
 ```
