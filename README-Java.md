@@ -1,7 +1,7 @@
 # Java & SDKMAN! — Detailed Configuration Reference
 
 > **Environment:** WSL2 / Ubuntu on Windows 11  
-> **Last updated:** 2026-02-21
+> **Last updated:** 2026-02-22
 
 ---
 
@@ -14,24 +14,25 @@
   - [Directory Structure](#directory-structure)
   - [Fish Shell Integration (sdkman-for-fish)](#fish-shell-integration-sdkman-for-fish)
 - [Installed Java Versions](#installed-java-versions)
-  - [OpenJDK 24 EA 23 (`24.ea.23-open`)](#openjdk-24-ea-23-24ea23-open)
-  - [OpenJDK 23.0.1 (`23.0.1-open`) — Current](#openjdk-2301-2301-open--current)
-  - [Microsoft Build of OpenJDK 21.0.5 (`21.0.5-ms`)](#microsoft-build-of-openjdk-2105-2105-ms)
-  - [Microsoft Build of OpenJDK 17.0.14 (`17.0.14-ms`)](#microsoft-build-of-openjdk-17014-17014-ms)
-  - [Microsoft Build of OpenJDK 11.0.25 (`11.0.25-ms`)](#microsoft-build-of-openjdk-11025-11025-ms)
-  - [Azul Zulu 8.0.432 (`8.0.432-zulu`)](#azul-zulu-80432-80432-zulu)
-  - [Azul Zulu 7.0.352 (`7.0.352-zulu`)](#azul-zulu-70352-70352-zulu)
+  - [OpenJDK 25.0.2 (`25.0.2-open`) — Current (LTS)](#openjdk-2502-2502-open--current-lts)
+  - [Microsoft Build of OpenJDK 21.0.10 (`21.0.10-ms`)](#microsoft-build-of-openjdk-21010-21010-ms)
+  - [Microsoft Build of OpenJDK 17.0.18 (`17.0.18-ms`)](#microsoft-build-of-openjdk-17018-17018-ms)
+  - [Microsoft Build of OpenJDK 11.0.30 (`11.0.30-ms`)](#microsoft-build-of-openjdk-11030-11030-ms)
+  - [Azul Zulu 8.0.472 (`8.0.472-zulu`)](#azul-zulu-80472-80472-zulu)
 - [Other SDKs](#other-sdks)
-  - [Kotlin (`2.0.21`)](#kotlin-2021)
+  - [Kotlin (`2.3.10`)](#kotlin-2310)
   - [Ki — Kotlin Interactive Shell (`0.5.2`)](#ki--kotlin-interactive-shell-052)
-  - [Maven (`3.9.9`)](#maven-399)
-  - [Spring Boot CLI (`3.3.5`)](#spring-boot-cli-335)
+  - [Maven (`3.9.12`)](#maven-3912)
+  - [Spring Boot CLI (`3.5.11`)](#spring-boot-cli-3511)
+  - [Gradle (`8.14.4`)](#gradle-8144)
+  - [JBang (`0.137.0`)](#jbang-01370)
 - [Switching Versions](#switching-versions)
   - [Switching Java Versions](#switching-java-versions)
   - [Switching Other SDK Versions](#switching-other-sdk-versions)
   - [Project-Level Version Pinning (`.sdkmanrc`)](#project-level-version-pinning-sdkmanrc)
 - [PATH Configuration](#path-configuration)
 - [Common SDKMAN! Commands Reference](#common-sdkman-commands-reference)
+- [Upgrade Recommendations](#upgrade-recommendations)
 - [VS Code Integration](#vs-code-integration)
   - [Java Extension Pack](#java-extension-pack)
   - [Spring Boot Extensions](#spring-boot-extensions)
@@ -44,12 +45,12 @@
 
 | Item | Value |
 |------|-------|
-| **Current Java** | OpenJDK 23.0.1 (`23.0.1-open`) |
-| **Total JDKs installed** | 7 |
-| **SDK manager** | SDKMAN! (script: 5.18.2, native: 0.4.6) |
+| **Current Java** | OpenJDK 25.0.2 (`25.0.2-open`) |
+| **Total JDKs installed** | 5 |
+| **SDK manager** | SDKMAN! (script: latest+bb56144, native: 0.7.20) |
 | **SDKMAN_DIR** | `~/.sdkman` |
 | **Fish integration** | `reitzig/sdkman-for-fish@v2.1.0` |
-| **Additional SDKs** | Kotlin 2.0.21, Ki 0.5.2, Maven 3.9.9, Spring Boot CLI 3.3.5 |
+| **Additional SDKs** | Kotlin 2.3.10, Ki 0.5.2, Maven 3.9.12, Spring Boot CLI 3.5.11, Gradle 8.14.4, JBang 0.137.0 |
 | **VS Code extensions** | 12 Java-related extensions installed |
 
 - [SDKMAN! Official Site](https://sdkman.io/)
@@ -84,16 +85,16 @@ fisher install reitzig/sdkman-for-fish@v2.1.0
 ```shell
 sdk version
 # SDKMAN!
-#  script: 5.18.2
-#  native: 0.4.6
+#  script: latest+bb56144
+#  native: 0.7.20
 ```
 
 ### Version Information
 
 | Component | Value |
 |-----------|-------|
-| **Script version** | 5.18.2 |
-| **Native version** | 0.4.6 |
+| **Script version** | latest+bb56144 |
+| **Native version** | 0.7.20 |
 | **SDKMAN_DIR** | `~/.sdkman` |
 | **Candidates dir** | `~/.sdkman/candidates/` |
 | **Config file** | `~/.sdkman/etc/config` |
@@ -103,36 +104,40 @@ sdk version
 
 ```
 ~/.sdkman/
-├── archives/                       # Downloaded SDK archives (.zip, .tar.gz)
+├── archives/
 ├── bin/
-│   └── sdkman-init.sh              # SDKMAN! initialization script (Bash)
-├── candidates/                     # Installed SDK versions
+│   └── sdkman-init.sh
+├── candidates/
 │   ├── java/
-│   │   ├── 24.ea.23-open/          #   OpenJDK 24 EA 23
-│   │   ├── 23.0.1-open/            #   OpenJDK 23.0.1
-│   │   ├── 21.0.5-ms/              #   Microsoft OpenJDK 21
-│   │   ├── 17.0.14-ms/             #   Microsoft OpenJDK 17
-│   │   ├── 11.0.25-ms/             #   Microsoft OpenJDK 11
-│   │   ├── 8.0.432-zulu/           #   Azul Zulu 8
-│   │   ├── 7.0.352-zulu/           #   Azul Zulu 7
-│   │   └── current -> 23.0.1-open  #   Symlink to active version
+│   │   ├── 25.0.2-open/            #   OpenJDK 25 LTS (default)
+│   │   ├── 21.0.10-ms/             #   Microsoft OpenJDK 21 LTS
+│   │   ├── 17.0.18-ms/             #   Microsoft OpenJDK 17 LTS
+│   │   ├── 11.0.30-ms/             #   Microsoft OpenJDK 11 LTS
+│   │   ├── 8.0.472-zulu/           #   Azul Zulu 8
+│   │   └── current -> 25.0.2-open  #   Symlink to active version
 │   ├── kotlin/
-│   │   ├── 2.0.21/
-│   │   └── current -> 2.0.21
+│   │   ├── 2.3.10/
+│   │   └── current -> 2.3.10
 │   ├── ki/
 │   │   ├── 0.5.2/
 │   │   └── current -> 0.5.2
 │   ├── maven/
-│   │   ├── 3.9.9/
-│   │   └── current -> 3.9.9
-│   └── springboot/
-│       ├── 3.3.5/
-│       └── current -> 3.3.5
+│   │   ├── 3.9.12/
+│   │   └── current -> 3.9.12
+│   ├── springboot/
+│   │   ├── 3.5.11/
+│   │   └── current -> 3.5.11
+│   ├── gradle/
+│   │   ├── 8.14.4/
+│   │   └── current -> 8.14.4
+│   └── jbang/
+│       ├── 0.137.0/
+│       └── current -> 0.137.0
 ├── etc/
-│   └── config                      # SDKMAN! configuration
-├── src/                            # SDKMAN! source scripts
-├── tmp/                            # Temporary files
-└── var/                            # State files
+│   └── config
+├── src/
+├── tmp/
+└── var/
 ```
 
 ### Fish Shell Integration (sdkman-for-fish)
@@ -158,9 +163,9 @@ The plugin wraps SDKMAN!'s Bash-based `sdk` command so it can be used from Fish.
 #### Usage in Fish
 
 ```fish
-sdk install java 23.0.1-open    # Install a Java version
-sdk use java 21.0.5-ms          # Switch Java for current session
-sdk default java 23.0.1-open    # Set default Java version
+sdk install java 25.0.2-open    # Install a Java version
+sdk use java 21.0.10-ms          # Switch Java for current session
+sdk default java 25.0.2-open    # Set default Java version
 sdk list java                   # List available Java versions
 sdk current                     # Show current SDK versions
 ```
@@ -169,68 +174,38 @@ sdk current                     # Show current SDK versions
 
 ## Installed Java Versions
 
-7 JDK versions are installed, covering Java 7 through Java 24 (Early Access).
+5 JDK versions are installed, covering Java 8 through Java 25 LTS.
 
 | # | Vendor | Version | Identifier | LTS | Status |
 |---|--------|---------|-----------|-----|--------|
-| 1 | OpenJDK | 24 EA 23 | `24.ea.23-open` | No (EA) | local only |
-| 2 | OpenJDK | 23.0.1 | `23.0.1-open` | No | **installed, current** |
-| 3 | Microsoft | 21.0.5 | `21.0.5-ms` | **Yes** | local only |
-| 4 | Microsoft | 17.0.14 | `17.0.14-ms` | **Yes** | local only |
-| 5 | Microsoft | 11.0.25 | `11.0.25-ms` | **Yes** | local only |
-| 6 | Azul Zulu | 8.0.432 | `8.0.432-zulu` | **Yes** | local only |
-| 7 | Azul Zulu | 7.0.352 | `7.0.352-zulu` | **Yes** | installed |
+| 1 | OpenJDK | 25.0.2 | `25.0.2-open` | **Yes (LTS)** | **installed, current** |
+| 2 | Microsoft | 21.0.10 | `21.0.10-ms` | **Yes** | installed |
+| 3 | Microsoft | 17.0.18 | `17.0.18-ms` | **Yes** | installed |
+| 4 | Microsoft | 11.0.30 | `11.0.30-ms` | **Yes** | installed |
+| 5 | Azul Zulu | 8.0.472 | `8.0.472-zulu` | **Yes** | installed |
 
 > **"local only"** means the version was installed and is available locally but is not set as the current default.
 
 ---
 
-### OpenJDK 24 EA 23 (`24.ea.23-open`)
+### OpenJDK 25.0.2 (`25.0.2-open`) — Current (LTS)
 
 | Item | Value |
 |------|-------|
 | **Vendor** | OpenJDK (Oracle) |
-| **Version** | 24 Early Access, Build 23 |
-| **Identifier** | `24.ea.23-open` |
-| **LTS** | No (Early Access) |
-| **Status** | local only |
-| **Install path** | `~/.sdkman/candidates/java/24.ea.23-open/` |
-| **Release** | [openjdk.org/projects/jdk/24](https://openjdk.org/projects/jdk/24/) |
-
-#### Install
-
-```shell
-sdk install java 24.ea.23-open
-```
-
-#### Key features (preview)
-
-- Ahead-of-Time class loading & linking
-- Stream Gatherers (standard)
-- Structured Concurrency (preview)
-- Scoped Values (preview)
-- Flexible Constructor Bodies (standard)
-
----
-
-### OpenJDK 23.0.1 (`23.0.1-open`) — Current
-
-| Item | Value |
-|------|-------|
-| **Vendor** | OpenJDK (Oracle) |
-| **Version** | 23.0.1 |
-| **Identifier** | `23.0.1-open` |
-| **LTS** | No |
+| **Version** | 25.0.2 |
+| **Identifier** | `25.0.2-open` |
+| **LTS** | **Yes** |
 | **Status** | **installed, current default** |
-| **Install path** | `~/.sdkman/candidates/java/23.0.1-open/` |
-| **Symlink** | `~/.sdkman/candidates/java/current -> 23.0.1-open` |
-| **Release** | [openjdk.org/projects/jdk/23](https://openjdk.org/projects/jdk/23/) |
+| **Install path** | `~/.sdkman/candidates/java/25.0.2-open/` |
+| **Symlink** | `~/.sdkman/candidates/java/current -> 25.0.2-open` |
+| **Release** | [openjdk.org/projects/jdk/25](https://openjdk.org/projects/jdk/25/) |
 
 #### Install & set as default
 
 ```shell
-sdk install java 23.0.1-open
-sdk default java 23.0.1-open
+sdk install java 25.0.2-open
+sdk default java 25.0.2-open
 ```
 
 #### Key features
@@ -244,22 +219,22 @@ sdk default java 23.0.1-open
 
 ---
 
-### Microsoft Build of OpenJDK 21.0.5 (`21.0.5-ms`)
+### Microsoft Build of OpenJDK 21.0.10 (`21.0.10-ms`)
 
 | Item | Value |
 |------|-------|
 | **Vendor** | Microsoft |
-| **Version** | 21.0.5 |
-| **Identifier** | `21.0.5-ms` |
+| **Version** | 21.0.10 |
+| **Identifier** | `21.0.10-ms` |
 | **LTS** | **Yes** (until Sep 2028) |
-| **Status** | local only |
-| **Install path** | `~/.sdkman/candidates/java/21.0.5-ms/` |
+| **Status** | installed |
+| **Install path** | `~/.sdkman/candidates/java/21.0.10-ms/` |
 | **Release** | [learn.microsoft.com/en-us/java/openjdk](https://learn.microsoft.com/en-us/java/openjdk/) |
 
 #### Install
 
 ```shell
-sdk install java 21.0.5-ms
+sdk install java 21.0.10-ms
 ```
 
 #### Key features (Java 21 LTS)
@@ -274,22 +249,22 @@ sdk install java 21.0.5-ms
 
 ---
 
-### Microsoft Build of OpenJDK 17.0.14 (`17.0.14-ms`)
+### Microsoft Build of OpenJDK 17.0.18 (`17.0.18-ms`)
 
 | Item | Value |
 |------|-------|
 | **Vendor** | Microsoft |
-| **Version** | 17.0.14 |
-| **Identifier** | `17.0.14-ms` |
+| **Version** | 17.0.18 |
+| **Identifier** | `17.0.18-ms` |
 | **LTS** | **Yes** (until Sep 2027) |
-| **Status** | local only |
-| **Install path** | `~/.sdkman/candidates/java/17.0.14-ms/` |
+| **Status** | installed |
+| **Install path** | `~/.sdkman/candidates/java/17.0.18-ms/` |
 | **Release** | [learn.microsoft.com/en-us/java/openjdk](https://learn.microsoft.com/en-us/java/openjdk/) |
 
 #### Install
 
 ```shell
-sdk install java 17.0.14-ms
+sdk install java 17.0.18-ms
 ```
 
 #### Key features (Java 17 LTS)
@@ -303,22 +278,22 @@ sdk install java 17.0.14-ms
 
 ---
 
-### Microsoft Build of OpenJDK 11.0.25 (`11.0.25-ms`)
+### Microsoft Build of OpenJDK 11.0.30 (`11.0.30-ms`)
 
 | Item | Value |
 |------|-------|
 | **Vendor** | Microsoft |
-| **Version** | 11.0.25 |
-| **Identifier** | `11.0.25-ms` |
+| **Version** | 11.0.30 |
+| **Identifier** | `11.0.30-ms` |
 | **LTS** | **Yes** (until Sep 2027) |
-| **Status** | local only |
-| **Install path** | `~/.sdkman/candidates/java/11.0.25-ms/` |
+| **Status** | installed |
+| **Install path** | `~/.sdkman/candidates/java/11.0.30-ms/` |
 | **Release** | [learn.microsoft.com/en-us/java/openjdk](https://learn.microsoft.com/en-us/java/openjdk/) |
 
 #### Install
 
 ```shell
-sdk install java 11.0.25-ms
+sdk install java 11.0.30-ms
 ```
 
 #### Key features (Java 11 LTS)
@@ -332,22 +307,22 @@ sdk install java 11.0.25-ms
 
 ---
 
-### Azul Zulu 8.0.432 (`8.0.432-zulu`)
+### Azul Zulu 8.0.472 (`8.0.472-zulu`)
 
 | Item | Value |
 |------|-------|
 | **Vendor** | Azul Systems (Zulu) |
-| **Version** | 8.0.432 (Java SE 8) |
-| **Identifier** | `8.0.432-zulu` |
+| **Version** | 8.0.472 (Java SE 8) |
+| **Identifier** | `8.0.472-zulu` |
 | **LTS** | **Yes** (extended support) |
-| **Status** | local only |
-| **Install path** | `~/.sdkman/candidates/java/8.0.432-zulu/` |
+| **Status** | installed |
+| **Install path** | `~/.sdkman/candidates/java/8.0.472-zulu/` |
 | **Release** | [azul.com/downloads](https://www.azul.com/downloads/) |
 
 #### Install
 
 ```shell
-sdk install java 8.0.432-zulu
+sdk install java 8.0.472-zulu
 ```
 
 #### Key features (Java 8)
@@ -363,53 +338,22 @@ sdk install java 8.0.432-zulu
 
 ---
 
-### Azul Zulu 7.0.352 (`7.0.352-zulu`)
-
-| Item | Value |
-|------|-------|
-| **Vendor** | Azul Systems (Zulu) |
-| **Version** | 7.0.352 (Java SE 7) |
-| **Identifier** | `7.0.352-zulu` |
-| **LTS** | **Yes** (end of life) |
-| **Status** | installed |
-| **Install path** | `~/.sdkman/candidates/java/7.0.352-zulu/` |
-| **Release** | [azul.com/downloads](https://www.azul.com/downloads/) |
-
-#### Install
-
-```shell
-sdk install java 7.0.352-zulu
-```
-
-#### Key features (Java 7)
-
-- Try-with-resources
-- Diamond Operator (`<>`)
-- Strings in `switch`
-- Multi-catch exceptions
-- NIO.2 (New I/O)
-- Fork/Join framework
-
-> **Note:** Java 7 is used for legacy project maintenance. It has reached end of life.
-
----
-
 ## Other SDKs
 
-### Kotlin (`2.0.21`)
+### Kotlin (`2.3.10`)
 
 | Item | Value |
 |------|-------|
-| **Version** | 2.0.21 |
+| **Version** | 2.3.10 |
 | **Status** | current |
-| **Install path** | `~/.sdkman/candidates/kotlin/2.0.21/` |
+| **Install path** | `~/.sdkman/candidates/kotlin/2.3.10/` |
 | **PATH entry** | `~/.sdkman/candidates/kotlin/current/bin` |
 | **Official site** | [kotlinlang.org](https://kotlinlang.org/) |
 
 #### Install
 
 ```shell
-sdk install kotlin 2.0.21
+sdk install kotlin 2.3.10
 ```
 
 #### Included tools
@@ -423,7 +367,7 @@ sdk install kotlin 2.0.21
 
 #### Key features (Kotlin 2.0)
 
-- K2 compiler (stable) — significantly faster compilation
+- K2 compiler (now default) — significantly faster compilation
 - Smart cast improvements
 - Kotlin Multiplatform stable
 - `data object` declarations
@@ -456,20 +400,20 @@ Ki provides an enhanced Kotlin REPL with syntax highlighting, auto-completion, a
 
 ---
 
-### Maven (`3.9.9`)
+### Maven (`3.9.12`)
 
 | Item | Value |
 |------|-------|
-| **Version** | 3.9.9 |
+| **Version** | 3.9.12 |
 | **Status** | current |
-| **Install path** | `~/.sdkman/candidates/maven/3.9.9/` |
+| **Install path** | `~/.sdkman/candidates/maven/3.9.12/` |
 | **PATH entry** | `~/.sdkman/candidates/maven/current/bin` |
 | **Official site** | [maven.apache.org](https://maven.apache.org/) |
 
 #### Install
 
 ```shell
-sdk install maven 3.9.9
+sdk install maven 3.9.12
 ```
 
 #### Common commands
@@ -485,20 +429,20 @@ mvn archetype:generate                 # Generate project from archetype
 
 ---
 
-### Spring Boot CLI (`3.3.5`)
+### Spring Boot CLI (`3.5.11`)
 
 | Item | Value |
 |------|-------|
-| **Version** | 3.3.5 |
+| **Version** | 3.5.11 |
 | **Status** | current |
-| **Install path** | `~/.sdkman/candidates/springboot/3.3.5/` |
+| **Install path** | `~/.sdkman/candidates/springboot/3.5.11/` |
 | **PATH entry** | `~/.sdkman/candidates/springboot/current/bin` |
 | **Official site** | [spring.io](https://spring.io/) |
 
 #### Install
 
 ```shell
-sdk install springboot 3.3.5
+sdk install springboot 3.5.11
 ```
 
 #### Common commands
@@ -512,6 +456,58 @@ spring shell                           # Launch Spring Shell
 
 ---
 
+### Gradle (`8.14.4`)
+
+| Item | Value |
+|------|-------|
+| **Version** | 8.14.4 |
+| **Status** | current |
+| **Install path** | `~/.sdkman/candidates/gradle/8.14.4/` |
+| **PATH entry** | `~/.sdkman/candidates/gradle/current/bin` |
+| **Official site** | [gradle.org](https://gradle.org/) |
+
+#### Install
+
+```shell
+sdk install gradle 8.14.4
+```
+
+#### Verify
+
+```shell
+gradle --version
+```
+
+> **Note:** Many workspace projects use Gradle wrappers (`./gradlew`), which pin a specific Gradle version per project. This system-level Gradle installation is useful for bootstrapping new projects.
+
+---
+
+### JBang (`0.137.0`)
+
+| Item | Value |
+|------|-------|
+| **Version** | 0.137.0 |
+| **Status** | current |
+| **Install path** | `~/.sdkman/candidates/jbang/0.137.0/` |
+| **PATH entry** | `~/.sdkman/candidates/jbang/current/bin` |
+| **Official site** | [jbang.dev](https://www.jbang.dev/) |
+
+Modern Java scripting tool. Run `.java` files like scripts with inline dependencies.
+
+#### Install
+
+```shell
+sdk install jbang
+```
+
+#### Example usage
+
+```shell
+jbang init hello.java && jbang hello.java
+```
+
+---
+
 ## Switching Versions
 
 ### Switching Java Versions
@@ -519,7 +515,7 @@ spring shell                           # Launch Spring Shell
 #### Switch for the current session only
 
 ```shell
-sdk use java 21.0.5-ms
+sdk use java 21.0.10-ms
 ```
 
 > This sets `JAVA_HOME` and updates `PATH` for the current shell session only. When you open a new terminal, it reverts to the default.
@@ -527,7 +523,7 @@ sdk use java 21.0.5-ms
 #### Switch the default permanently
 
 ```shell
-sdk default java 21.0.5-ms
+sdk default java 21.0.10-ms
 ```
 
 > This updates the `~/.sdkman/candidates/java/current` symlink. All new shells will use this version.
@@ -536,39 +532,39 @@ sdk default java 21.0.5-ms
 
 ```shell
 sdk current java
-# Using java version 23.0.1-open
+# Using java version 25.0.2-open
 
 java -version
-# openjdk version "23.0.1" 2024-10-15
-# OpenJDK Runtime Environment (build 23.0.1+11)
-# OpenJDK 64-Bit Server VM (build 23.0.1+11, mixed mode, sharing)
+# openjdk version "25.0.2" 2025-07-15
+# OpenJDK Runtime Environment (build 25.0.2+9)
+# OpenJDK 64-Bit Server VM (build 25.0.2+9, mixed mode, sharing)
 ```
 
 #### Quick-switch examples
 
 ```shell
 # Switch to Java 21 LTS for a Spring Boot 3.x project
-sdk use java 21.0.5-ms
+sdk use java 21.0.10-ms
 
 # Switch to Java 17 LTS for an older Spring Boot 2.x project
-sdk use java 17.0.14-ms
+sdk use java 17.0.18-ms
 
 # Switch to Java 11 for legacy microservices
-sdk use java 11.0.25-ms
+sdk use java 11.0.30-ms
 
 # Switch to Java 8 for legacy enterprise apps
-sdk use java 8.0.432-zulu
+sdk use java 8.0.472-zulu
 
 # Switch back to latest
-sdk use java 23.0.1-open
+sdk use java 25.0.2-open
 ```
 
 ### Switching Other SDK Versions
 
 ```shell
-sdk use kotlin 2.0.21
-sdk use maven 3.9.9
-sdk use springboot 3.3.5
+sdk use kotlin 2.3.10
+sdk use maven 3.9.12
+sdk use springboot 3.5.11
 ```
 
 ### Project-Level Version Pinning (`.sdkmanrc`)
@@ -577,8 +573,8 @@ Create a `.sdkmanrc` file in your project root to automatically switch SDK versi
 
 ```properties
 # .sdkmanrc
-java=21.0.5-ms
-maven=3.9.9
+java=21.0.10-ms
+maven=3.9.12
 ```
 
 #### Enable auto-env in SDKMAN! config
@@ -589,7 +585,7 @@ Edit `~/.sdkman/etc/config`:
 sdkman_auto_env=true
 ```
 
-When `sdkman_auto_env=true`, SDKMAN! automatically runs `sdk env` when you `cd` into a directory containing `.sdkmanrc`.
+When `sdkman_auto_env=true`, SDKMAN! automatically runs `sdk env` when you `cd` into a directory containing `.sdkmanrc`. This is enabled by default in this setup, so version switching is fully automatic per project.
 
 #### Manual usage
 
@@ -607,6 +603,8 @@ sdk env clear         # Reset to default versions
 SDKMAN! adds the following entries to `PATH` (via `current` symlinks):
 
 ```
+~/.sdkman/candidates/jbang/current/bin
+~/.sdkman/candidates/gradle/current/bin
 ~/.sdkman/candidates/springboot/current/bin
 ~/.sdkman/candidates/maven/current/bin
 ~/.sdkman/candidates/kotlin/current/bin
@@ -618,11 +616,13 @@ Each `current` directory is a symlink to the active version:
 
 | SDK | `current` → | Resolved path |
 |-----|-------------|---------------|
-| Java | `23.0.1-open` | `~/.sdkman/candidates/java/23.0.1-open/bin` |
-| Kotlin | `2.0.21` | `~/.sdkman/candidates/kotlin/2.0.21/bin` |
+| Java | `25.0.2-open` | `~/.sdkman/candidates/java/25.0.2-open/bin` |
+| Kotlin | `2.3.10` | `~/.sdkman/candidates/kotlin/2.3.10/bin` |
 | Ki | `0.5.2` | `~/.sdkman/candidates/ki/0.5.2/bin` |
-| Maven | `3.9.9` | `~/.sdkman/candidates/maven/3.9.9/bin` |
-| Spring Boot | `3.3.5` | `~/.sdkman/candidates/springboot/3.3.5/bin` |
+| Maven | `3.9.12` | `~/.sdkman/candidates/maven/3.9.12/bin` |
+| Spring Boot | `3.5.11` | `~/.sdkman/candidates/springboot/3.5.11/bin` |
+| Gradle | `8.14.4` | `~/.sdkman/candidates/gradle/8.14.4/bin` |
+| JBang | `0.137.0` | `~/.sdkman/candidates/jbang/0.137.0/bin` |
 
 > **Note:** `JAVA_HOME` is automatically set by SDKMAN! to the active Java candidate directory (e.g., `~/.sdkman/candidates/java/current`).
 
@@ -634,16 +634,16 @@ Each `current` directory is a symlink to the active version:
 
 | Command | Description |
 |---------|-------------|
-| `sdk install java 23.0.1-open` | Install a specific Java version |
-| `sdk uninstall java 7.0.352-zulu` | Uninstall a Java version |
-| `sdk rm java 7.0.352-zulu` | Alias for `uninstall` |
+| `sdk install java 25.0.2-open` | Install a specific Java version |
+| `sdk uninstall java 8.0.472-zulu` | Uninstall a Java version |
+| `sdk rm java 8.0.472-zulu` | Alias for `uninstall` |
 
 ### Version Switching
 
 | Command | Description |
 |---------|-------------|
-| `sdk use java 21.0.5-ms` | Switch Java for current session |
-| `sdk default java 23.0.1-open` | Set default Java version |
+| `sdk use java 21.0.10-ms` | Switch Java for current session |
+| `sdk default java 25.0.2-open` | Set default Java version |
 | `sdk current` | Show all current SDK versions |
 | `sdk current java` | Show current Java version |
 
@@ -664,7 +664,7 @@ Each `current` directory is a symlink to the active version:
 | `sdk env init` | Create `.sdkmanrc` with current versions |
 | `sdk env install` | Install all versions in `.sdkmanrc` |
 | `sdk env clear` | Reset to default versions |
-| `sdk home java 21.0.5-ms` | Print the home directory of a specific version |
+| `sdk home java 21.0.10-ms` | Print the home directory of a specific version |
 
 ### Maintenance
 
@@ -685,6 +685,40 @@ Each `current` directory is a symlink to the active version:
 |---------|-------------|
 | `sdk offline enable` | Enable offline mode |
 | `sdk offline disable` | Disable offline mode |
+
+---
+
+## Upgrade Recommendations
+
+### Java Version Strategy
+
+| Version | Role | Note |
+|---------|------|------|
+| **Java 25 LTS** | Default / daily driver | Current LTS, supported until 2033 |
+| **Java 21 LTS** | Previous LTS projects | Still widely used, Spring Boot 3.x baseline |
+| **Java 17 LTS** | Legacy LTS projects | Minimum for many modern frameworks |
+| **Java 11 LTS** | Legacy support | Extended support, consider migrating |
+| **Java 8** | Legacy only | Very old projects, consider migrating to 17+ |
+
+### Upcoming
+
+- **Java 26** — Expected March 2026 (non-LTS, feature release)
+- **Maven 4.0** — Currently RC5, major upgrade with build/consumer POM separation
+- **Kotlin 2.4+** — Name-based destructuring, rich errors, context receivers
+- **GraalVM** — Available via SDKMAN for native image compilation: `sdk install java 25.0.2-graalce`
+
+### Periodic Maintenance
+
+```shell
+# Update SDKMAN itself
+sdk selfupdate
+
+# Check for outdated SDKs
+sdk upgrade
+
+# List all installed versions
+sdk current
+```
 
 ---
 
@@ -772,33 +806,25 @@ Recommended `settings.json` entries for Java development with SDKMAN!-managed JD
   // Configure multiple installed JDK runtimes for project-specific use
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-24",
-      "path": "~/.sdkman/candidates/java/24.ea.23-open"
-    },
-    {
-      "name": "JavaSE-23",
-      "path": "~/.sdkman/candidates/java/23.0.1-open",
+      "name": "JavaSE-25",
+      "path": "~/.sdkman/candidates/java/25.0.2-open",
       "default": true
     },
     {
       "name": "JavaSE-21",
-      "path": "~/.sdkman/candidates/java/21.0.5-ms"
+      "path": "~/.sdkman/candidates/java/21.0.10-ms"
     },
     {
       "name": "JavaSE-17",
-      "path": "~/.sdkman/candidates/java/17.0.14-ms"
+      "path": "~/.sdkman/candidates/java/17.0.18-ms"
     },
     {
       "name": "JavaSE-11",
-      "path": "~/.sdkman/candidates/java/11.0.25-ms"
+      "path": "~/.sdkman/candidates/java/11.0.30-ms"
     },
     {
       "name": "JavaSE-1.8",
-      "path": "~/.sdkman/candidates/java/8.0.432-zulu"
-    },
-    {
-      "name": "JavaSE-1.7",
-      "path": "~/.sdkman/candidates/java/7.0.352-zulu"
+      "path": "~/.sdkman/candidates/java/8.0.472-zulu"
     }
   ],
 
