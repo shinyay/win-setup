@@ -504,6 +504,11 @@ Shows: greeting message, Fish version, Fisher version, and a colorful Fish ASCII
 | `sdk.fish` | SDKMAN! (auto-installed) |
 | `tide.fish` | Tide prompt (auto-installed) |
 
+> **Note:** Docker fish completion (`docker.fish`) is documented in README.md but has not been generated yet. To generate it:
+> ```shell
+> docker completion fish > $HOME/.config/fish/completions/docker.fish
+> ```
+
 ### Manually installed completions
 
 Downloaded from [fish-shell/completions](https://github.com/fish-shell/fish-shell/tree/master/share/completions):
@@ -805,7 +810,27 @@ Fish 4.3 migrated key bindings from universal to global scope.
 source "$HOME/.local/bin/env.fish"
 ```
 
-Loads the [UV](https://github.com/astral-sh/uv) Python package manager environment.
+Loads the [uv](https://github.com/astral-sh/uv) Python package manager environment. `uv` is an extremely fast Python package and project manager written in Rust.
+
+### NVM / Node.js Integration
+
+Node.js is managed via [NVM](https://github.com/nvm-sh/nvm) (v0.40.1). The active Node.js binary path is added to `fish_user_paths` as a universal variable:
+
+```
+fish_user_paths = /home/shinyay/.nvm/versions/node/v22.22.0/bin
+```
+
+| Tool | Version |
+|------|---------|
+| Node.js | v22.22.0 |
+| npm | 10.9.4 |
+
+**Global npm packages:**
+
+| Package | Version |
+|---------|---------|
+| `@marp-team/marp-cli` | 4.2.3 |
+| `corepack` | 0.34.0 |
 
 ---
 
@@ -819,6 +844,11 @@ Loads the [UV](https://github.com/astral-sh/uv) Python package manager environme
 | `bat` | 0.26.1 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/bat` |
 | `fd` | 10.3.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/fd` |
 | `peco` | 0.5.11 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/peco` |
+| `git` | 2.52.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/git` |
+| `gh` | 2.86.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/gh` |
+| `jq` | 1.8.1 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/jq` |
+| `helm` | 4.1.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/helm` |
+| `kubectl` | 1.35.0 | Homebrew | `/home/linuxbrew/.linuxbrew/bin/kubectl` |
 
 ---
 

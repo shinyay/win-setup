@@ -394,7 +394,7 @@ which git
 ```shell
 git --version
 
-git version 2.47.0
+git version 2.52.0
 ```
 
 ### Git Global Configuration
@@ -583,7 +583,7 @@ sudo apt-get install fontconfig
 
 #### wslu
 
-- [x] Installation
+- [ ] Installation (not fully installed — only `wslpath` available)
 
 > This is a collection of utilities for the Windows Subsystem for Linux (WSL), such as converting Linux paths to Windows paths or creating Linux application shortcuts on the Windows Desktop.
 
@@ -670,8 +670,8 @@ brew install gh
 ```shell
 gh --version
 
-gh version 2.62.0 (2024-11-14)
-https://github.com/cli/cli/releases/tag/v2.62.0
+gh version 2.86.0 (2026-01-21)
+https://github.com/cli/cli/releases/tag/v2.86.0
 ```
 
 ### GitHub Authentication
@@ -720,7 +720,7 @@ gh extension upgrade gh-copilot
 ```
 
 ```shell
-[copilot]: upgraded from v1.0.1 to v1.0.5
+[copilot]: upgraded from v1.0.5 to v1.2.0
 ✓ Successfully upgraded extension
 ```
 
@@ -729,7 +729,7 @@ Confirm your version
 ```shell
 gh copilot -v
 
-version 1.0.5 (2024-09-12)
+version 1.2.0 (2026-01-21)
 ```
 
 #### Explain a command
@@ -958,7 +958,7 @@ set -g theme_newline_prompt ''
 
 <img width="271" alt="image" src="https://github.com/shinyay/win-setup/assets/3072734/9d6adc03-11ba-42be-99b3-14d99b7845dc">
 
-- [x] Installation
+- [ ] Installation (not installed on current environment)
 
 - [Moralerspace](https://github.com/yuru7/moralerspace)
 
@@ -1314,7 +1314,7 @@ curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/comple
 
 ### docker
 
-- [x] Installation
+- [ ] Installation (completion file not yet generated)
 
 After Docker installation, you can do the following:
 
@@ -1456,6 +1456,22 @@ sdk install java 24.ea.23-open
 ```shell
 sdk install java 21.0.5-ms
 sdk install java 11.0.25-ms
+```
+
+- Microsoft OpenJDK (additional)
+  - `17.0.14-ms`
+
+```shell
+sdk install java 17.0.14-ms
+```
+
+- Azul Zulu
+  - `8.0.432-zulu`
+  - `7.0.352-zulu`
+
+```shell
+sdk install java 8.0.432-zulu
+sdk install java 7.0.352-zulu
 ```
 
 ### Kotlin
@@ -1799,10 +1815,12 @@ brew update && brew install azure-cli
 ```shell
 az version
 {
-  "azure-cli": "2.60.0",
-  "azure-cli-core": "2.60.0",
+  "azure-cli": "2.75.0",
+  "azure-cli-core": "2.75.0",
   "azure-cli-telemetry": "1.1.0",
-  "extensions": {}
+  "extensions": {
+    "ml": "2.37.2"
+  }
 }
 ```
 
@@ -2295,9 +2313,20 @@ I recommend the following Visual Studio Code Extensions for Java Development:
 [![redhat.vscode-quarkus](https://redhat.gallerycdn.vsassets.io/extensions/redhat/vscode-quarkus/1.18.2024040604/1712391376590/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus)
 
 ## Kotlin
+
+> Kotlin SDK (`2.0.21`) is managed via SDKMAN! — see the [SDKMAN section](#sdkman-for-fish) above.
+
 ## Rust
+
+- [ ] Not yet installed
+
 ## TypeScript
+
+- [ ] Not yet installed (Node.js v22.22.0 is available via NVM)
+
 ## Python
+
+> System Python `3.12.3` is available. `uv` is installed as the package manager. pyenv is not installed — see the [Python section](#python) below.
 
 ## Dev Container CLI
 
@@ -2332,12 +2361,197 @@ Install Dev Container CLI.
 brew update && brew install azure-cli
 ```
 
+## Azure Developer CLI (azd)
+
+- [x] Installation
+
+> The Azure Developer CLI (`azd`) is an open-source tool that accelerates the time it takes for you to get your application from local development environment to Azure.
+
+- [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview)
+
+```shell
+brew install azd
+```
+
+```shell
+azd version
+
+azd version 1.23.3 (commit c53baf4180b8636f4366cd9d9f621755db75f370)
+```
+
+## NVM (Node Version Manager)
+
+- [x] Installation
+
+> `nvm` is a version manager for Node.js, designed to be installed per-user, and invoked per-shell.
+
+- [nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+```
+
+NVM adds Node.js to `fish_user_paths`:
+
+```shell
+set -U fish_user_paths ~/.nvm/versions/node/(nvm current)/bin $fish_user_paths
+```
+
+### Node.js
+
+- [x] Installation
+
+```shell
+nvm install 22
+
+node --version
+v22.22.0
+
+npm --version
+10.9.4
+```
+
+### Global npm packages
+
+```shell
+npm list -g --depth=0
+```
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| `@marp-team/marp-cli` | 4.2.3 | Markdown presentation CLI |
+| `corepack` | 0.34.0 | Node.js package manager shims |
+
+## uv (Python Package Manager)
+
+- [x] Installation
+
+> An extremely fast Python package and project manager, written in Rust.
+
+- [astral-sh/uv](https://github.com/astral-sh/uv)
+
+Fish integration is configured via `~/.config/fish/conf.d/uv.env.fish`:
+
+```fish
+source "$HOME/.local/bin/env.fish"
+```
+
+## Helm
+
+- [x] Installation
+
+> The package manager for Kubernetes.
+
+- [Helm](https://helm.sh/)
+
+```shell
+brew install helm
+```
+
+```shell
+helm version --short
+
+v4.1.0+g4553a0a
+```
+
+## kubectl
+
+- [x] Installation
+
+> The Kubernetes command-line tool, `kubectl`, allows you to run commands against Kubernetes clusters.
+
+- [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+
+```shell
+brew install kubernetes-cli
+```
+
+```shell
+kubectl version --client
+```
+
+## jq
+
+- [x] Installation
+
+> `jq` is a lightweight and flexible command-line JSON processor.
+
+- [jq](https://jqlang.github.io/jq/)
+
+```shell
+brew install jq
+```
+
+```shell
+jq --version
+
+jq-1.8.1
+```
+
+## tmux
+
+- [x] Installation
+
+> `tmux` is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them and reattach them to a different terminal.
+
+- [tmux](https://github.com/tmux/tmux)
+
+```shell
+tmux -V
+
+tmux 3.4
+```
+
+## GnuCOBOL
+
+- [x] Installation
+
+> GnuCOBOL is a free, modern COBOL compiler.
+
+- [GnuCOBOL](https://gnucobol.sourceforge.io/)
+
+```shell
+sudo apt-get install gnucobol3
+```
+
+```shell
+cobc --version
+```
+
+## Chromium
+
+- [x] Installation
+
+> Chromium is an open-source browser project.
+
+```shell
+sudo snap install chromium
+```
+
+## Cline
+
+- [x] Installation
+
+> Cline is an autonomous coding agent for VS Code.
+
+Configuration directory: `~/Cline/`
+
+```
+~/Cline/
+├── Rules/
+└── Workflows/
+```
+
 
 # etc
 
 ## Python
 
+> **Note:** pyenv is not currently installed on this environment. System Python 3.12.3 is available. The `uv` package manager is used instead.
+
 ### pyenv
+
+- [ ] Installation (not installed)
 
 Simple Python Version Management: pyenv
 
